@@ -7,9 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerSystem : MonoBehaviour
 {
-    [Header("Stats")]
-    public float maxHp;
-
+    //[Header("Stats")]
     //[Header("GameObjects")]
     //[Header("Audio")]
     
@@ -33,8 +31,7 @@ public class PlayerSystem : MonoBehaviour
         playerSource.volume = 1f;
         playerSource.priority = 100;
 
-        maxHp = Config.playerMaxHp;
-        currentHp = maxHp;
+        currentHp = Config.playerMaxHp;
 
         // set up healthbar
     }
@@ -62,9 +59,9 @@ public class PlayerSystem : MonoBehaviour
         
         // update hp bar
 
-        if (currentHp > maxHp)
+        if (currentHp > Config.playerMaxHp)
         {
-            currentHp = maxHp;
+            currentHp = Config.playerMaxHp;
         }
         
         if (damage > 0)

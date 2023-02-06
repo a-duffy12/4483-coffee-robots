@@ -11,11 +11,18 @@ public class Config
     public static float difficultyMovementMod = 1f;
     public static float fieldOfView = 60f;
 
+
     [Header("Player Movement")]
     public static float movementSpeed = 10f;
     public static float dashSpeed = 100f;
     public static float dashCooldown = 1f;
-    public static float abilityCooldown = 10f;
+
+
+    [Header("Player Systems")]
+    public static float playerMaxHp = 100;
+    public static float abilityDuration = 5f;
+    public static float abilityCooldown = 20f;
+    public static float abilityDamageModifier = 0.5f;
 
     public static void GetSaveData()
     {

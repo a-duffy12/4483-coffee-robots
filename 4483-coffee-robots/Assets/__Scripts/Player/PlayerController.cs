@@ -71,6 +71,8 @@ public class PlayerController : MonoBehaviour
             dash = false;
             playerVelocity += direction * Config.dashSpeed;
         }
+
+        defaultTransform.LookAt(defaultTransform.position + direction); // temporary look function
     }
 
     #region  input functions

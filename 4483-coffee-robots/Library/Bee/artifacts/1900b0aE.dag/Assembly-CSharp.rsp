@@ -356,6 +356,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/__Scripts/Config.cs"
+"Assets/__Scripts/Player/PlayerController.cs"
+"Assets/__Scripts/Player/PlayerInventory.cs"
+"Assets/__Scripts/Player/PlayerSystem.cs"
 "Assets/__Scripts/Serialized/GameData.cs"
 "Assets/__Scripts/Serialized/SaveLoad.cs"
 -langversion:9.0

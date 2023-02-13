@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
+    public static int scrap;
+    public static int electronics;
+    public static int tech;
+
     [Header("Gameobjects")]
     public Transform firePoint;
     [SerializeField] private GameObject arPrefab;
@@ -23,6 +27,7 @@ public class PlayerInventory : MonoBehaviour
     [HideInInspector] public int currentWeaponInt;
     
     private float shootAutoWeapon;
+    private bool interact = false;
     private bool arActivated = false;
     private bool macheteActivated = false;
     private bool shotgunActivated = false;
@@ -33,6 +38,10 @@ public class PlayerInventory : MonoBehaviour
         ar = arPrefab.GetComponent<AssaultRifle>();
         machete = machetePrefab.GetComponent<Machete>();
         shotgun = shotgunPrefab.GetComponent<Shotgun>();
+
+        scrap = 0;
+        electronics = 0;
+        tech = 0;
     }
 
     void Start()
@@ -56,11 +65,18 @@ public class PlayerInventory : MonoBehaviour
             }
         }
 
+        if (interact)
+        {
+            // react to nearby stuff
+            interact = false;
+        }
+
         // update ar ammo ui
         if (Config.shotgunUnlocked)
         {
             // update shotgun ammo ui
         }
+        // update currency ui
     }
 
     void SwitchWeapons(int weaponInt)
@@ -177,6 +193,14 @@ public class PlayerInventory : MonoBehaviour
         if (Config.shotgunUnlocked && con.performed)
         {
             SwitchWeapons(shotgun.weaponInt);
+        }
+    }
+
+    public void Interact(InputAction.CallbackContext con)
+    {
+        if (con.performed)
+        {
+            interact = true;
         }
     }
 

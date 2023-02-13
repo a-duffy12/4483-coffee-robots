@@ -65,3 +65,7 @@ public class Config
         }
     }
 }
+
+interface IEnemy {
+    void DamageEnemy(float damage, string source = "");
+}

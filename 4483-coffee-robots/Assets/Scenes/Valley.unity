@@ -1209,7 +1209,19 @@ MonoBehaviour:
     m_ActionId: f21ac09e-e477-430e-9525-3c68129d7d2a
     m_ActionName: Player/SecondaryAction[/Mouse/rightButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1477272659}
+        m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3fc4ec42-c528-4bef-af9d-a21f94f95b73
     m_ActionName: Player/Interact[/Keyboard/f]
   - m_PersistentCalls:

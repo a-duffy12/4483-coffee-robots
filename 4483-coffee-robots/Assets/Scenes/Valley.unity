@@ -193,6 +193,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6823172212625065730, guid: 5a2f72a1538f7f443b45666fe5843d4d, type: 3}
   m_PrefabInstance: {fileID: 78794224}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &78794226 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6195570273625120184, guid: 5a2f72a1538f7f443b45666fe5843d4d, type: 3}
+  m_PrefabInstance: {fileID: 78794224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &367016374
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,9 +207,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 367016375}
+  - component: {fileID: 367016376}
   m_Layer: 7
   m_Name: Inventory
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,6 +234,102 @@ Transform:
   m_Father: {fileID: 1355201143}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &367016376
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367016374}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &532156555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,11 +1177,35 @@ MonoBehaviour:
     m_ActionId: a5dc9c4e-fd87-486e-84b4-266a26d9395b
     m_ActionName: Player/Ability[/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1477272659}
+        m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8887fde4-0c76-4e1b-b885-242123b3d818
     m_ActionName: Player/PrimaryAction[/Mouse/leftButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1477272659}
+        m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
+        m_MethodName: AlternateShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f21ac09e-e477-430e-9525-3c68129d7d2a
     m_ActionName: Player/SecondaryAction[/Mouse/rightButton]
   - m_PersistentCalls:
@@ -1091,15 +1217,51 @@ MonoBehaviour:
     m_ActionId: fa615e7c-6b2b-4b33-b582-d6ceccb2eb2f
     m_ActionName: Player/QuickInteract[/Keyboard/r]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1477272659}
+        m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
+        m_MethodName: Item3
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 30791631-7534-49a6-afb4-da51dee9d888
     m_ActionName: Player/Item3[/Keyboard/3]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1477272659}
+        m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
+        m_MethodName: Item2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3b1065ff-3ea0-40bb-908c-cb14d4476a71
     m_ActionName: Player/Item2[/Keyboard/2]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1477272659}
+        m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
+        m_MethodName: Item1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 167949fb-c118-4098-be07-bb04783cee3f
     m_ActionName: Player/Item1[/Keyboard/1]
   - m_PersistentCalls:
@@ -1245,7 +1407,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842a2468815f024409911e48e2f6534e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 100
+--- !u!114 &1477272659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477272652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dbe3225b29b9f74f890fa4bbbb8d734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 1096122213}
+  arPrefab: {fileID: 7287337693109414318}
+  machetePrefab: {fileID: 78794226}
+  shotgunPrefab: {fileID: 5579042926574636794}
+  currentWeaponInt: 0
 --- !u!1 &1483282611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,6 +1554,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5125964776973931048, guid: 0a571f834cae6aa40a15179c2152dadf, type: 3}
   m_PrefabInstance: {fileID: 5579042926574636792}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5579042926574636794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5505867572446382226, guid: 0a571f834cae6aa40a15179c2152dadf, type: 3}
+  m_PrefabInstance: {fileID: 5579042926574636792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7287337693109414317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1441,3 +1624,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ea164e2bccaa9b429ace557d1916b30, type: 3}
+--- !u!1 &7287337693109414318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7629303189991009911, guid: 8ea164e2bccaa9b429ace557d1916b30, type: 3}
+  m_PrefabInstance: {fileID: 7287337693109414317}
+  m_PrefabAsset: {fileID: 0}

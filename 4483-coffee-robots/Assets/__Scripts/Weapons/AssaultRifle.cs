@@ -72,6 +72,14 @@ public class AssaultRifle : MonoBehaviour
         }
     }
 
+    public void AlternateFire(Transform firePoint)
+    {
+        if (Config.alternateARUnlocked)
+        {
+            
+        }
+    }
+
     public void OverrideLastFireTime() // allows weapon to fire as soon as it is swapped to
     {
         lastFireTime = Time.time - (1/Config.fireRateAR);

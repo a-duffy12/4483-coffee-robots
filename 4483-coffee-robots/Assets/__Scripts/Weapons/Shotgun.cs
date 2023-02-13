@@ -159,6 +159,14 @@ public class Shotgun : MonoBehaviour
         }
     }
 
+    public void AlternateFire(Transform firePoint)
+    {
+        if (Config.alternateShotgunUnlocked)
+        {
+            
+        }
+    }
+
     public void OverrideLastFireTime() // allows weapon to fire as soon as it is swapped to
     {
         lastFireTime = Time.time - (1/Config.fireRateShot);

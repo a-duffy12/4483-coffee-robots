@@ -96,9 +96,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Item3",
+                    "name": "Item1",
                     "type": "Button",
-                    "id": "30791631-7534-49a6-afb4-da51dee9d888",
+                    "id": "167949fb-c118-4098-be07-bb04783cee3f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -114,9 +114,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Item1",
+                    "name": "Item3",
                     "type": "Button",
-                    "id": "167949fb-c118-4098-be07-bb04783cee3f",
+                    "id": "30791631-7534-49a6-afb4-da51dee9d888",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -276,12 +276,12 @@
                 },
                 {
                     "name": "",
-                    "id": "cd79050a-0131-49d5-bb3d-b968eb9c6aab",
-                    "path": "<Keyboard>/2",
+                    "id": "cd1d1f42-da45-41a7-a3b2-bc5a33610624",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Item2",
+                    "action": "Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -298,12 +298,12 @@
                 },
                 {
                     "name": "",
-                    "id": "cd1d1f42-da45-41a7-a3b2-bc5a33610624",
-                    "path": "<Keyboard>/tab",
+                    "id": "cd79050a-0131-49d5-bb3d-b968eb9c6aab",
+                    "path": "<Keyboard>/2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Inventory",
+                    "action": "Item2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

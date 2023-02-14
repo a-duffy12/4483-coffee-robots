@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private float aStrafe = 0f;
     
     AudioSource movementSource;
+    Camera mainCamera;
 
     private Vector3 playerVelocity;
 
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         movementSource = defaultTransform.gameObject.GetComponent<AudioSource>();
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     void Start()
@@ -50,6 +52,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Vector2 cursorPos = Mouse.current.position.ReadValue(); // get cursor position
+        Vector3 worldPos = mainCamera.ScreenToWorldPoint(new Vector3(cursorPos.x, cursorPos.y, mainCamera.transform.position.y)); // map to world coordinates
+        defaultTransform.rotation = Quaternion.LookRotation(new Vector3(worldPos.x - defaultTransform.position.x, 0f, worldPos.z - defaultTransform.position.z));
+        
         // update dash ui
     }
 
@@ -71,8 +77,6 @@ public class PlayerController : MonoBehaviour
             dash = false;
             playerVelocity += direction * Config.dashSpeed;
         }
-
-        defaultTransform.LookAt(defaultTransform.position + direction); // temporary look function
     }
 
     #region  input functions

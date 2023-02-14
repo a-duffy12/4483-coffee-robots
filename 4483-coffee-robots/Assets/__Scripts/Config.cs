@@ -13,6 +13,10 @@ public class Config
 
     [Header("Unlocks")]
     public static int gameStage = 0;
+    public static int stage1Duration = 60;
+    public static int stage2Duration = 60;
+    public static int stage3Duration = 60;
+    public static int stage4Duration = 60;
     public static bool shotgunUnlocked = false;
     public static bool alternateARUnlocked = false;
     public static bool alternateMacheteUnlocked = false;
@@ -52,6 +56,10 @@ public class Config
     public static float altKnockForceShot = 100;
     public static float altFireRateShot = 0.8f;
 
+    [Header("Coffee Plant")]
+    public static float coffeePlantMaxHp = 10000;
+    public static float buildingInteractDistance = 1f;
+
     public static void GetSaveData()
     {
         GameData savedData = SaveLoad.LoadData(); // load save file
@@ -68,4 +76,8 @@ public class Config
 
 interface IEnemy {
     void DamageEnemy(float damage, string source = "");
+}
+
+interface IBuilding {
+    void DamageBuilding(float damage, string source = "");
 }

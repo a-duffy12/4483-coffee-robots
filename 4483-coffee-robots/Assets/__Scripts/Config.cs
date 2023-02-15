@@ -13,6 +13,10 @@ public class Config
 
     [Header("Unlocks")]
     public static int gameStage = 0;
+    public static float stage1Time;
+    public static float stage2Time;
+    public static float stage3Time;
+    public static float stage4Time;
     public static int stage1Duration = 60;
     public static int stage2Duration = 60;
     public static int stage3Duration = 60;
@@ -58,7 +62,8 @@ public class Config
 
     [Header("Coffee Plant")]
     public static float coffeePlantMaxHp = 10000;
-    public static float buildingInteractDistance = 1f;
+    public static float buildingInteractDistance = 2.5f;
+    public static float buildingCanvasDistance = 15f;
 
     public static void GetSaveData()
     {

@@ -4,11 +4,16 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerSystem : MonoBehaviour
 {
     //[Header("Stats")]
-    //[Header("GameObjects")]
+    [Header("GameObjects")]
+    [SerializeField] private Image healthBar;
+    [SerializeField] private TMP_Text healthText;
+    [SerializeField] private Image abilityBar;
+    [SerializeField] private TMP_Text abilityText;
     //[Header("Audio")]
     
     [HideInInspector] public float hp { get { return currentHp; } }
@@ -33,7 +38,8 @@ public class PlayerSystem : MonoBehaviour
 
         currentHp = Config.playerMaxHp;
 
-        // set up healthbar
+        healthBar.fillAmount = Mathf.Clamp(currentHp/Config.playerMaxHp, 0, Config.playerMaxHp);
+        healthText.text = currentHp.ToString("F0");
     }
 
     // Update is called once per frame
@@ -43,6 +49,16 @@ public class PlayerSystem : MonoBehaviour
         {
             abilityActive = false;
             Debug.Log("ability ended");
+        }
+
+        abilityBar.fillAmount = 1 - Mathf.Clamp((nextAbilityTime - Time.time)/Config.abilityCooldown, 0, Config.abilityCooldown);
+        if (abilityBar.fillAmount < 1)
+        {
+            abilityText.text = (nextAbilityTime - Time.time).ToString("F1");
+        }
+        else
+        {
+            abilityText.text = "";
         }
     }
 
@@ -56,13 +72,19 @@ public class PlayerSystem : MonoBehaviour
         {
             currentHp -= damage * Config.abilityDamageModifier;
         }
-        
-        // update hp bar
 
         if (currentHp > Config.playerMaxHp)
         {
             currentHp = Config.playerMaxHp;
         }
+
+        if (currentHp > 0 && currentHp < 1)
+        {
+            currentHp = 1;
+        }
+
+        healthBar.fillAmount = Mathf.Clamp(currentHp/Config.playerMaxHp, 0, Config.playerMaxHp);
+        healthText.text = currentHp.ToString("F0");
         
         if (damage > 0)
         {

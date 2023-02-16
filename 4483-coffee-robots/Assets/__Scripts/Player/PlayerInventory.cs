@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -15,7 +16,16 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private GameObject arPrefab;
     [SerializeField] private GameObject machetePrefab;
     [SerializeField] private GameObject shotgunPrefab;
-    // ui fields
+    [SerializeField] private Image arBar;
+    [SerializeField] private TMP_Text arText;
+    [SerializeField] private GameObject arBarObj;
+    [SerializeField] private GameObject macheteBarObj;
+    [SerializeField] private Image shotgunBar;
+    [SerializeField] private TMP_Text shotgunText;
+    [SerializeField] private GameObject shotgunBarObj;
+    [SerializeField] private TMP_Text scrapText;
+    [SerializeField] private TMP_Text electronicsText;
+    [SerializeField] private TMP_Text techText;
 
     [Header("Audio")]
 
@@ -52,7 +62,15 @@ public class PlayerInventory : MonoBehaviour
         inventorySource.priority = 128;
 
         SwitchWeapons(ar.weaponInt);
-        // show inventory ui
+        
+        arBar.fillAmount = Mathf.Clamp((float)ar.currentAmmo/Config.maxAmmoAR, 0, Config.maxAmmoAR);
+        shotgunBar.fillAmount = Mathf.Clamp((float)shotgun.currentAmmo/Config.maxAmmoShot, 0, Config.maxAmmoShot);
+        arText.text = ar.currentAmmo.ToString("F0");
+        shotgunText.text = shotgun.currentAmmo.ToString("F0");
+
+        scrapText.text = scrap.ToString("F0");
+        electronicsText.text = electronics.ToString("F0");
+        techText.text = tech.ToString("F0");
     }
 
     void Update()
@@ -71,11 +89,17 @@ public class PlayerInventory : MonoBehaviour
             interact = false;
         }
 
-        // update ar ammo ui
-        if (Config.shotgunUnlocked)
+        if (currentWeaponInt == 0)
         {
-            // update shotgun ammo ui
+            arBar.fillAmount = Mathf.Clamp((float)ar.currentAmmo/Config.maxAmmoAR, 0, Config.maxAmmoAR);
+            arText.text = ar.currentAmmo.ToString("F0");
         }
+        else if (currentWeaponInt == 2)
+        {
+            shotgunBar.fillAmount = Mathf.Clamp((float)shotgun.currentAmmo/Config.maxAmmoShot, 0, Config.maxAmmoShot);
+            shotgunText.text = shotgun.currentAmmo.ToString("F0");
+        }
+
         // update currency ui
     }
 
@@ -97,6 +121,10 @@ public class PlayerInventory : MonoBehaviour
             machetePrefab.SetActive(false);
             shotgunPrefab.SetActive(false);
 
+            arBarObj.SetActive(true);
+            macheteBarObj.SetActive(false);
+            shotgunBarObj.SetActive(false);
+
             ar.OverrideLastFireTime(); // can shoot after swapping
 
             if (!arActivated)
@@ -110,6 +138,10 @@ public class PlayerInventory : MonoBehaviour
             machetePrefab.SetActive(true);
             shotgunPrefab.SetActive(false);
 
+            arBarObj.SetActive(false);
+            macheteBarObj.SetActive(true);
+            shotgunBarObj.SetActive(false);
+
             machete.OverrideLastFireTime(); // can shoot after swapping
 
             if (!macheteActivated)
@@ -122,6 +154,10 @@ public class PlayerInventory : MonoBehaviour
             arPrefab.SetActive(false);
             machetePrefab.SetActive(false);
             shotgunPrefab.SetActive(true);
+
+            arBarObj.SetActive(false);
+            macheteBarObj.SetActive(false);
+            shotgunBarObj.SetActive(true);
 
             shotgun.OverrideLastFireTime(); // can shoot after swapping
 

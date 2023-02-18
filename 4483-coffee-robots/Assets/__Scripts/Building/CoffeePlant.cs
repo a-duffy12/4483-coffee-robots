@@ -22,13 +22,11 @@ public class CoffeePlant : MonoBehaviour, IBuilding
     [SerializeField] private GameObject progressBarObj;
 
     [HideInInspector] public GameObject player;
-    [HideInInspector] public GameObject mainCamera;
     private bool startStage;
 
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
     
     void Start()

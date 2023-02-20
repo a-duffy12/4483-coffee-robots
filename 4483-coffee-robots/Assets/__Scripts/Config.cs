@@ -17,10 +17,10 @@ public class Config
     public static float stage2Time;
     public static float stage3Time;
     public static float stage4Time;
-    public static int stage1Duration = 60;
-    public static int stage2Duration = 60;
-    public static int stage3Duration = 60;
-    public static int stage4Duration = 60;
+    public static int stage1Duration = 10;
+    public static int stage2Duration = 10;
+    public static int stage3Duration = 10;
+    public static int stage4Duration = 10;
     public static bool shotgunUnlocked = false;
     public static bool alternateARUnlocked = false;
     public static bool alternateMacheteUnlocked = false;
@@ -44,6 +44,7 @@ public class Config
     public static int maxAmmoAR = 150;
     public static float altDamageAR = 15;
     public static float altFireRateAR = 0.5f;
+    public static int refillTechCostAR = 10;
 
     [Header("Machete")]
     public static float damageMachete = 80;
@@ -59,11 +60,24 @@ public class Config
     public static float altDamageShot = 30;
     public static float altKnockForceShot = 100;
     public static float altFireRateShot = 0.8f;
+    public static int refillTechCostShotgun = 15;
+
+    [Header("Buildings")]
+    public static float buildingInteractDistance = 3f;
+    public static float buildingCanvasDistance = 15f;
 
     [Header("Coffee Plant")]
     public static float coffeePlantMaxHp = 10000;
-    public static float buildingInteractDistance = 2.5f;
-    public static float buildingCanvasDistance = 15f;
+    
+    [Header("Machine Shop")]
+    public static int machineShopScrapCost = 10;
+    public static int repairElectronicsCost = 50;
+
+    [Header("Armory")]
+    public static int armoryScrapCost = 25;
+
+    [Header("Fabricator")]
+    public static int fabricatorScrapCost = 50;
 
     public static void GetSaveData()
     {
@@ -85,4 +99,11 @@ interface IEnemy {
 
 interface IBuilding {
     void DamageBuilding(float damage, string source = "");
+}
+
+enum BuildStatus {
+    Locked = 0,
+    Unlocked = 1,
+    Built = 2,
+    Damaged = 3
 }

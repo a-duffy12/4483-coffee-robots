@@ -11,6 +11,9 @@ TagManager:
   - CoffeePlant
   - Inventory
   - UI
+  - MachineShop
+  - Armory
+  - Fabricator
   layers:
   - Default
   - TransparentFX

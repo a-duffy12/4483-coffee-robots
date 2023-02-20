@@ -30,9 +30,9 @@ public class PlayerInventory : MonoBehaviour
     [Header("Audio")]
 
     AudioSource inventorySource;
-    AssaultRifle ar;
-    Machete machete;
-    Shotgun shotgun;
+    [HideInInspector] public AssaultRifle ar;
+    [HideInInspector] public Machete machete;
+    [HideInInspector] public Shotgun shotgun;
 
     [HideInInspector] public int currentWeaponInt;
     
@@ -100,7 +100,9 @@ public class PlayerInventory : MonoBehaviour
             shotgunText.text = shotgun.currentAmmo.ToString("F0");
         }
 
-        // update currency ui
+        scrapText.text = scrap.ToString("F0");
+        electronicsText.text = electronics.ToString("F0");
+        techText.text = tech.ToString("F0");
     }
 
     void SwitchWeapons(int weaponInt)

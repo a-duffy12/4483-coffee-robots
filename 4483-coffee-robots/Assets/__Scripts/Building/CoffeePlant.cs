@@ -22,11 +22,17 @@ public class CoffeePlant : MonoBehaviour, IBuilding
     [SerializeField] private GameObject progressBarObj;
 
     [HideInInspector] public GameObject player;
+    [HideInInspector] public MachineShop machineShop;
+    [HideInInspector] public Armory armory;
+    [HideInInspector] public Fabricator fabricator;
     private bool startStage;
 
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        machineShop = GameObject.FindGameObjectWithTag("MachineShop").GetComponent<MachineShop>();
+        armory = GameObject.FindGameObjectWithTag("Armory").GetComponent<Armory>();
+        fabricator = GameObject.FindGameObjectWithTag("Fabricator").GetComponent<Fabricator>();
     }
     
     void Start()
@@ -104,17 +110,16 @@ public class CoffeePlant : MonoBehaviour, IBuilding
             {
                 if (promptText.text == "Plant Coffee Seed" || promptText.text == "Start Stage 2" || promptText.text == "Start Stage 3" || promptText.text == "Start Stage 4")
                 {
-                    promptText.text = "";
-                } 
+                    promptText.text = ""; // only sets to empty if player just left text radius
+                }
             }
         }
-        else
+        else if (promptText.text == "Plant Coffee Seed" || promptText.text == "Start Stage 2" || promptText.text == "Start Stage 3" || promptText.text == "Start Stage 4")
         {
-            if (promptText.text == "Plant Coffee Seed" || promptText.text == "Start Stage 2" || promptText.text == "Start Stage 3" || promptText.text == "Start Stage 4")
-            {
-                promptText.text = "";
-            }
+            promptText.text = ""; // only sets to empty if player just left text radius
         }
+
+        startStage = false;
     }
 
     void Stage1Start()
@@ -124,7 +129,10 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage2Prefab.SetActive(false);
         stage3Prefab.SetActive(false);
         stage4Prefab.SetActive(false);
-        startStage = false;
+
+        machineShop.Unlock();
+        armory.Unlock();
+        fabricator.Unlock();
     }
 
     void Stage2Start()
@@ -134,7 +142,6 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage2Prefab.SetActive(true);
         stage3Prefab.SetActive(false);
         stage4Prefab.SetActive(false);
-        startStage = false;
         buildingCanvas.transform.position += new Vector3(0, 0.5f, 0);
     }
 
@@ -145,7 +152,6 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage2Prefab.SetActive(false);
         stage3Prefab.SetActive(true);
         stage4Prefab.SetActive(false);
-        startStage = false;
         buildingCanvas.transform.position += new Vector3(0, 1.25f, 0);
     }
 
@@ -156,7 +162,6 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage2Prefab.SetActive(false);
         stage3Prefab.SetActive(false);
         stage4Prefab.SetActive(true);
-        startStage = false;
         buildingCanvas.transform.position += new Vector3(0, 1.25f, 0);
 
         // will also need to confirm that the coffee machine has been built

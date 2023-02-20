@@ -11,8 +11,15 @@ public class Fabricator : MonoBehaviour, IBuilding
     [SerializeField] private GameObject unbuiltPrefab;
     [SerializeField] private GameObject builtPrefab;
     [SerializeField] private TMP_Text promptText;
+    [SerializeField] private GameObject menu;
+    [SerializeField] private GameObject defensePanel;
+    [SerializeField] private GameObject trapPanel;
+    [SerializeField] private Button defenseButton;
+    [SerializeField] private Button trapButton;
 
-    [HideInInspector] public GameObject player;
+    GameObject player;
+    PlayerInventory inventory;
+    PlayerInput input;
     private BuildStatus buildStatus = BuildStatus.Locked;
     private bool interact;
     private bool quickInteract;
@@ -20,12 +27,15 @@ public class Fabricator : MonoBehaviour, IBuilding
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        inventory = player.GetComponent<PlayerInventory>();
+        input = player.GetComponent<PlayerInput>();
     }
     
     void Start()
     {
         unbuiltPrefab.SetActive(false);
         builtPrefab.SetActive(false);
+        menu.SetActive(false);
     }
 
     void Update()
@@ -36,7 +46,7 @@ public class Fabricator : MonoBehaviour, IBuilding
         {
             if (buildStatus == BuildStatus.Unlocked && Config.gameStage > 0 && Config.gameStage < 5)
             {
-                promptText.text = $"Build Fabricator {Config.fabricatorScrapCost} <sprite=2>";
+                promptText.text = $"Build Fabricator {Config.fabricatorScrapCost} <sprite=2> [E]";
 
                 if (quickInteract)
                 {
@@ -45,7 +55,7 @@ public class Fabricator : MonoBehaviour, IBuilding
             }
             else if (buildStatus == BuildStatus.Built)
             {
-                promptText.text = "Open Fabricator";
+                promptText.text = "Open Fabricator [F]";
 
                 if (interact)
                 {
@@ -82,7 +92,47 @@ public class Fabricator : MonoBehaviour, IBuilding
 
     void OpenMenu()
     {
-        
+        input.SwitchCurrentActionMap("Menu");
+        menu.SetActive(true);
+
+        if (Config.gameStage < 2)
+        {
+            defensePanel.SetActive(false);
+            trapPanel.SetActive(false);
+            defenseButton.gameObject.SetActive(false);
+            trapButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            defensePanel.SetActive(true);
+            trapPanel.SetActive(false);
+            defenseButton.gameObject.SetActive(true);
+            trapButton.gameObject.SetActive(true);
+        }
+    }
+
+    public void CloseMenu()
+    {
+        input.SwitchCurrentActionMap("Player");
+        menu.SetActive(false);
+    }
+
+    public void DefensePanel()
+    {
+        if (menu.activeSelf)
+        {
+            defensePanel.SetActive(true);
+            trapPanel.SetActive(false);
+        }
+    }
+
+    public void TrapPanel()
+    {
+        if (menu.activeSelf)
+        {
+            defensePanel.SetActive(false);
+            trapPanel.SetActive(true);
+        }
     }
 
     public void DamageBuilding(float damage, string source = "") {}

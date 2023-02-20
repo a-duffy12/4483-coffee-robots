@@ -61,6 +61,7 @@ public class Config
     public static float altKnockForceShot = 100;
     public static float altFireRateShot = 0.8f;
     public static int refillTechCostShotgun = 15;
+    public static int unlockTechCostShotgun = 250;
 
     [Header("Buildings")]
     public static float buildingInteractDistance = 3f;

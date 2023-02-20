@@ -11,9 +11,13 @@ public class MachineShop : MonoBehaviour, IBuilding
     [SerializeField] private GameObject unbuiltPrefab;
     [SerializeField] private GameObject builtPrefab;
     [SerializeField] private TMP_Text promptText;
+     [SerializeField] private GameObject menu;
+    [SerializeField] private GameObject chasisPanel;
+    [SerializeField] private GameObject abilityPanel;
 
-    [HideInInspector] public GameObject player;
-    [HideInInspector] public PlayerSystem system;
+    GameObject player;
+    PlayerSystem system;
+    PlayerInput input;
     private BuildStatus buildStatus = BuildStatus.Locked;
     private bool interact;
     private bool quickInteract;
@@ -23,13 +27,15 @@ public class MachineShop : MonoBehaviour, IBuilding
     {
         player = GameObject.FindGameObjectWithTag("Player");
         system = player.GetComponent<PlayerSystem>();
+        input = player.GetComponent<PlayerInput>();
     }
     
     void Start()
     {
         unbuiltPrefab.SetActive(false);
         builtPrefab.SetActive(false);
-        PlayerInventory.scrap = 5000;
+        menu.SetActive(false);
+        PlayerInventory.scrap = 5000; // TODO
         PlayerInventory.electronics = 5000;
         PlayerInventory.tech = 5000;
     }
@@ -42,7 +48,7 @@ public class MachineShop : MonoBehaviour, IBuilding
         {
             if (buildStatus == BuildStatus.Unlocked && Config.gameStage > 0 && Config.gameStage < 5)
             {
-                promptText.text = $"Build Machine Shop {Config.machineShopScrapCost} <sprite=2>";
+                promptText.text = $"Build Machine Shop {Config.machineShopScrapCost} <sprite=2> [E]";
 
                 if (quickInteract)
                 {
@@ -54,7 +60,7 @@ public class MachineShop : MonoBehaviour, IBuilding
                 if (system.hp < Config.playerMaxHp)
                 {
                     repairCost = Config.repairElectronicsCost * Config.gameStage > 200 ? 200 : Config.repairElectronicsCost * Config.gameStage; 
-                    promptText.text = $"Repair {repairCost} <sprite=1>\n\nOpen Machine Shop";
+                    promptText.text = $"Repair {repairCost} <sprite=1> [E]\n\nOpen Machine Shop [F]";
 
                     if (quickInteract && PlayerInventory.electronics >= repairCost)
                     {
@@ -63,7 +69,7 @@ public class MachineShop : MonoBehaviour, IBuilding
                 }
                 else
                 {
-                    promptText.text = "Open Machine Shop";
+                    promptText.text = "Open Machine Shop [F]";
                 }
 
                 if (interact)
@@ -107,7 +113,34 @@ public class MachineShop : MonoBehaviour, IBuilding
 
     void OpenMenu()
     {
-        
+        input.SwitchCurrentActionMap("Menu");
+        menu.SetActive(true);
+        chasisPanel.SetActive(true);
+        abilityPanel.SetActive(false);
+    }
+
+    public void CloseMenu()
+    {
+        input.SwitchCurrentActionMap("Player");
+        menu.SetActive(false);
+    }
+
+    public void ChasisPanel()
+    {
+        if (menu.activeSelf)
+        {
+            chasisPanel.SetActive(true);
+            abilityPanel.SetActive(false);
+        }
+    }
+
+    public void AbilityPanel()
+    {
+        if (menu.activeSelf)
+        {
+            chasisPanel.SetActive(false);
+            abilityPanel.SetActive(true);
+        }
     }
 
     public void DamageBuilding(float damage, string source = "") {}

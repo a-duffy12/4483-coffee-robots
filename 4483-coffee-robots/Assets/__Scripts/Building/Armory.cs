@@ -11,9 +11,15 @@ public class Armory : MonoBehaviour, IBuilding
     [SerializeField] private GameObject unbuiltPrefab;
     [SerializeField] private GameObject builtPrefab;
     [SerializeField] private TMP_Text promptText;
+    [SerializeField] private GameObject menu;
+    [SerializeField] private GameObject arPanel;
+    [SerializeField] private GameObject machetePanel;
+    [SerializeField] private GameObject shotgunPanel;
+    [SerializeField] private Button shotgunButton;
 
-    [HideInInspector] public GameObject player;
-    [HideInInspector] public PlayerInventory inventory;
+    GameObject player;
+    PlayerInventory inventory;
+    PlayerInput input;
     private BuildStatus buildStatus = BuildStatus.Locked;
     private bool interact;
     private bool quickInteract;
@@ -23,12 +29,17 @@ public class Armory : MonoBehaviour, IBuilding
     {
         player = GameObject.FindGameObjectWithTag("Player");
         inventory = player.GetComponent<PlayerInventory>();
+        input = player.GetComponent<PlayerInput>();
     }
     
     void Start()
     {
         unbuiltPrefab.SetActive(false);
         builtPrefab.SetActive(false);
+        menu.SetActive(false);
+
+        TMP_Text text = shotgunButton.GetComponentInChildren<TMP_Text>();
+        text.text = $"Unlock {Config.unlockTechCostShotgun} <sprite=0>";
     }
 
     void Update()
@@ -39,7 +50,7 @@ public class Armory : MonoBehaviour, IBuilding
         {
             if (buildStatus == BuildStatus.Unlocked && Config.gameStage > 0 && Config.gameStage < 5)
             {
-                promptText.text = $"Build Armory {Config.armoryScrapCost} <sprite=2>";
+                promptText.text = $"Build Armory {Config.armoryScrapCost} <sprite=2> [E]";
 
                 if (quickInteract)
                 {
@@ -51,7 +62,7 @@ public class Armory : MonoBehaviour, IBuilding
                 refillCost = CalculateRefillCost(inventory);
                 if (refillCost > 0)
                 {
-                    promptText.text = $"Refill {refillCost} <sprite=0>\n\nOpen Armory";
+                    promptText.text = $"Refill {refillCost} <sprite=0> [E]\n\nOpen Armory [F]";
 
                     if (quickInteract && PlayerInventory.tech >= refillCost)
                     {
@@ -60,7 +71,7 @@ public class Armory : MonoBehaviour, IBuilding
                 }
                 else
                 {
-                    promptText.text = "Open Armory";
+                    promptText.text = "Open Armory [F]";
                 }
 
                 if (interact)
@@ -108,7 +119,67 @@ public class Armory : MonoBehaviour, IBuilding
 
     void OpenMenu()
     {
+        input.SwitchCurrentActionMap("Menu");
+        menu.SetActive(true);
+        arPanel.SetActive(true);
+        machetePanel.SetActive(false);
+        shotgunPanel.SetActive(false);
 
+        if (Config.gameStage < 2)
+        {
+            shotgunButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            shotgunButton.gameObject.SetActive(true);
+        }
+    }
+
+    public void CloseMenu()
+    {
+        input.SwitchCurrentActionMap("Player");
+        menu.SetActive(false);
+    }
+
+    public void ARPanel()
+    {
+        if (menu.activeSelf)
+        {
+            arPanel.SetActive(true);
+            machetePanel.SetActive(false);
+            shotgunPanel.SetActive(false);
+        }
+    }
+
+    public void MachetePanel()
+    {
+        if (menu.activeSelf)
+        {
+            arPanel.SetActive(false);
+            machetePanel.SetActive(true);
+            shotgunPanel.SetActive(false);
+        }
+    }
+
+    public void ShotgunPanel()
+    {
+        if (menu.activeSelf && Config.shotgunUnlocked)
+        {
+            arPanel.SetActive(false);
+            machetePanel.SetActive(false);
+            shotgunPanel.SetActive(true);
+        }
+        else if (menu.activeSelf && !Config.shotgunUnlocked && PlayerInventory.tech >= Config.unlockTechCostShotgun)
+        {
+            PlayerInventory.tech -= Config.unlockTechCostShotgun;
+            Config.shotgunUnlocked = true;
+            arPanel.SetActive(false);
+            machetePanel.SetActive(false);
+            shotgunPanel.SetActive(true);
+
+            TMP_Text text = shotgunButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Shotgun";
+        }
     }
 
     int CalculateRefillCost(PlayerInventory inventory)

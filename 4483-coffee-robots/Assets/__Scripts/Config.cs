@@ -6,12 +6,12 @@ using UnityEngine;
 public class Config
 {
     [Header("Settings")]
-    public static int difficultyLevel = 1;
+    public static Difficulty difficultyLevel = Difficulty.Normal;
     public static float difficultyDamageMod = 1f;
     public static float difficultyMovementMod = 1f;
     public static float fieldOfView = 60f;
 
-    [Header("Unlocks")]
+    [Header("Game Progress")]
     public static int gameStage = 0;
     public static float stage1Time;
     public static float stage2Time;
@@ -21,6 +21,12 @@ public class Config
     public static int stage2Duration = 10;
     public static int stage3Duration = 10;
     public static int stage4Duration = 10;
+    public static float stage1SpawnDelay = 10f;
+    public static float stage2SpawnDelay = 3f;
+    public static float stage3SpawnDelay = 0.75f;
+    public static float stage4SpawnDelay = 0.25f;
+
+    [Header("Unlocks")]
     public static bool shotgunUnlocked = false;
     public static bool alternateARUnlocked = false;
     public static bool alternateMacheteUnlocked = false;
@@ -102,9 +108,15 @@ interface IBuilding {
     void DamageBuilding(float damage, string source = "");
 }
 
-enum BuildStatus {
+public enum BuildStatus {
     Locked = 0,
     Unlocked = 1,
     Built = 2,
     Damaged = 3
+}
+
+public enum Difficulty {
+    Easy = 0,
+    Normal = 1,
+    Hard = 2
 }

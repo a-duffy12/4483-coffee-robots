@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameData
 {
     [Header("Settings")]
-    public int difficultyLevel;
+    public Difficulty difficultyLevel;
     public float difficultyDamageMod;
     public float difficultyMovementMod;
     public float fieldOfView;

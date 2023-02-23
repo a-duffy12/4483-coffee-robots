@@ -46,8 +46,6 @@ public class PlayerController : MonoBehaviour
         movementSource.spatialBlend = 1f;
         movementSource.volume = 0.7f;
         movementSource.priority = 128;
-
-        // set up dash ui
     }
 
     void Update()
@@ -55,8 +53,6 @@ public class PlayerController : MonoBehaviour
         Vector2 cursorPos = Mouse.current.position.ReadValue(); // get cursor position
         Vector3 worldPos = mainCamera.ScreenToWorldPoint(new Vector3(cursorPos.x, cursorPos.y, mainCamera.transform.position.y)); // map to world coordinates
         defaultTransform.rotation = Quaternion.LookRotation(new Vector3(worldPos.x - defaultTransform.position.x, 0f, worldPos.z - defaultTransform.position.z));
-        
-        // update dash ui
     }
 
     void FixedUpdate()

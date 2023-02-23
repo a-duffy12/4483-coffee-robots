@@ -25,6 +25,7 @@ public class Config
     public static float stage2SpawnDelay = 3f;
     public static float stage3SpawnDelay = 0.75f;
     public static float stage4SpawnDelay = 0.25f;
+    public static bool coffeeMachineBuilt = false;
 
     [Header("Unlocks")]
     public static bool shotgunUnlocked = false;
@@ -34,7 +35,7 @@ public class Config
 
     [Header("Player Movement")]
     public static float movementSpeed = 10f;
-    public static float dashSpeed = 100f;
+    public static float dashSpeed = 200f;
     public static float dashCooldown = 1f;
 
     [Header("Player Systems")]
@@ -46,7 +47,7 @@ public class Config
     [Header("Assault Rifle")]
     public static float damageAR = 10;
     public static float fireRateAR = 10f;
-    public static float rangeAR = 20;
+    public static float rangeAR = 25;
     public static int maxAmmoAR = 150;
     public static float altDamageAR = 15;
     public static float altFireRateAR = 0.5f;
@@ -55,13 +56,13 @@ public class Config
     [Header("Machete")]
     public static float damageMachete = 80;
     public static float rateMachete = 1.5f;
-    public static float rangeMachete = 1.5f;
+    public static float rangeMachete = 2.5f;
     public static float altRateMachete = 0.6f;
 
     [Header("Shotgun")]
     public static float damageShot = 16; // shoots 9 pellets
     public static float fireRateShot = 1f;
-    public static float rangeShot = 5;
+    public static float rangeShot = 10;
     public static int maxAmmoShot = 25;
     public static float altDamageShot = 30;
     public static float altKnockForceShot = 100;
@@ -86,6 +87,9 @@ public class Config
     [Header("Fabricator")]
     public static int fabricatorScrapCost = 50;
 
+    [Header("Coffee Machine")]
+    public static int coffeeMachineScrapCost = 1000;
+
     [Header("Enemy")]
     public static float loseInterestDistance = 15f;
     public static LayerMask standardSeeMask = LayerMask.GetMask("Player", "Building", "Ground");
@@ -95,10 +99,10 @@ public class Config
     public static float sentinelAttackRate = 1f;
     public static float sentinelDamage = 15;
     public static float sentinelRange = 1.2f;
-    public static float sentinelMovementSpeed = 6f;
-    public static int sentinelScrapReward = 10;
-    public static int sentinelElectronicsReward = 5;
-    public static int sentinelTechReward = 5;
+    public static float sentinelMovementSpeed = 4.5f;
+    public static int sentinelScrapReward = 15;
+    public static int sentinelElectronicsReward = 15;
+    public static int sentinelTechReward = 15;
 
     public static void GetSaveData()
     {

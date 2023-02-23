@@ -35,9 +35,9 @@ public class MachineShop : MonoBehaviour, IBuilding
         unbuiltPrefab.SetActive(false);
         builtPrefab.SetActive(false);
         menu.SetActive(false);
-        PlayerInventory.scrap = 5000; // TODO
-        PlayerInventory.electronics = 5000;
-        PlayerInventory.tech = 5000;
+        PlayerInventory.scrap = 200; // TODO
+        PlayerInventory.electronics = 200;
+        PlayerInventory.tech = 200;
     }
 
     void Update()
@@ -99,10 +99,13 @@ public class MachineShop : MonoBehaviour, IBuilding
 
     void Build()
     {
-        unbuiltPrefab.SetActive(false);
-        builtPrefab.SetActive(true);
-        buildStatus = BuildStatus.Built;
-        PlayerInventory.scrap -= Config.machineShopScrapCost;
+        if (PlayerInventory.scrap >= Config.machineShopScrapCost)
+        {
+            unbuiltPrefab.SetActive(false);
+            builtPrefab.SetActive(true);
+            buildStatus = BuildStatus.Built;
+            PlayerInventory.scrap -= Config.machineShopScrapCost;
+        }
     }
 
     void RepairPlayer(int cost)

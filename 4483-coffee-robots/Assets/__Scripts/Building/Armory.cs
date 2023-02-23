@@ -101,10 +101,13 @@ public class Armory : MonoBehaviour, IBuilding
 
     void Build()
     {
-        unbuiltPrefab.SetActive(false);
-        builtPrefab.SetActive(true);
-        buildStatus = BuildStatus.Built;
-        PlayerInventory.scrap -= Config.armoryScrapCost;
+        if (PlayerInventory.scrap >= Config.armoryScrapCost)
+        {
+            unbuiltPrefab.SetActive(false);
+            builtPrefab.SetActive(true);
+            buildStatus = BuildStatus.Built;
+            PlayerInventory.scrap -= Config.armoryScrapCost;
+        }
     }
 
     void RefillAmmo(int cost)

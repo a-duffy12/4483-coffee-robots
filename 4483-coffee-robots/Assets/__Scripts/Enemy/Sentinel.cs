@@ -47,7 +47,7 @@ public class Sentinel : MonoBehaviour, IEnemy
         currentHp = Config.sentinelMaxHp;
 
         healthBar.fillAmount = Mathf.Clamp(currentHp/Config.sentinelMaxHp, 0, Config.sentinelMaxHp);
-        canvas.transform.rotation = Quaternion.identity;
+        canvas.transform.rotation = Quaternion.Euler(45, 0, 0);
     }
 
     void Update()
@@ -84,6 +84,8 @@ public class Sentinel : MonoBehaviour, IEnemy
                 Move(player.transform);
             }
         }
+
+        canvas.transform.rotation = Quaternion.Euler(45 - transform.rotation.x, 0 - transform.rotation.y, 0 - transform.rotation.z);
     }
 
     public void DamageEnemy(float damage, string source = "")

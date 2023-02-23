@@ -42,7 +42,6 @@ public class PlayerSystem : MonoBehaviour
         healthText.text = currentHp.ToString("F0");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (abilityActive && Time.time >= abilityEndTime)
@@ -84,7 +83,14 @@ public class PlayerSystem : MonoBehaviour
         }
 
         healthBar.fillAmount = Mathf.Clamp(currentHp/Config.playerMaxHp, 0, Config.playerMaxHp);
-        healthText.text = currentHp.ToString("F0");
+        if (currentHp >=0)
+        {
+            healthText.text = currentHp.ToString("F0");
+        }
+        else
+        {
+            healthText.text = "DEAD";
+        }
         
         if (damage > 0)
         {

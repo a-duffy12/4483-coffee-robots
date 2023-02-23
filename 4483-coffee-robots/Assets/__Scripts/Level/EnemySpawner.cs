@@ -52,7 +52,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy(Vector3 position, GameObject enemy)
     {
-        Instantiate(enemy, position, Random.rotation);
+        Instantiate(enemy, position, Quaternion.identity);
         Debug.Log($"{enemy.name} spawned at ({position.x}, {position.y}, {position.z})");
 
         lastSpawnPos2 = lastSpawnPos1;

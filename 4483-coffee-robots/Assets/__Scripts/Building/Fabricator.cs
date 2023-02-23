@@ -84,10 +84,13 @@ public class Fabricator : MonoBehaviour, IBuilding
 
     void Build()
     {
-        unbuiltPrefab.SetActive(false);
-        builtPrefab.SetActive(true);
-        buildStatus = BuildStatus.Built;
-        PlayerInventory.scrap -= Config.fabricatorScrapCost;
+        if (PlayerInventory.scrap >= Config.fabricatorScrapCost)
+        {
+            unbuiltPrefab.SetActive(false);
+            builtPrefab.SetActive(true);
+            buildStatus = BuildStatus.Built;
+            PlayerInventory.scrap -= Config.fabricatorScrapCost;
+        }
     }
 
     void OpenMenu()

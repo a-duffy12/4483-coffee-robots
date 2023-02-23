@@ -25,6 +25,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
     [HideInInspector] public MachineShop machineShop;
     [HideInInspector] public Armory armory;
     [HideInInspector] public Fabricator fabricator;
+    [HideInInspector] public CoffeeMachine coffeeMachine;
     private bool startStage;
 
     void Awake()
@@ -33,6 +34,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         machineShop = GameObject.FindGameObjectWithTag("MachineShop").GetComponent<MachineShop>();
         armory = GameObject.FindGameObjectWithTag("Armory").GetComponent<Armory>();
         fabricator = GameObject.FindGameObjectWithTag("Fabricator").GetComponent<Fabricator>();
+        coffeeMachine = GameObject.FindGameObjectWithTag("CoffeeMachine").GetComponent<CoffeeMachine>();
     }
     
     void Start()
@@ -72,7 +74,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         {
             if (Config.gameStage == 0)
             {
-                promptText.text = "Plant Coffee Seed";
+                promptText.text = "Plant Coffee Seed [E]";
 
                 if (startStage)
                 {
@@ -81,7 +83,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
             }
             else if (Config.gameStage == 1 && Time.time > Config.stage1Time + Config.stage1Duration)
             {
-                promptText.text = "Start Stage 2";
+                promptText.text = "Start Stage 2 [E]";
 
                 if (startStage)
                 {
@@ -90,16 +92,20 @@ public class CoffeePlant : MonoBehaviour, IBuilding
             }
             else if (Config.gameStage == 2 && Time.time > Config.stage2Time + Config.stage2Duration)
             {
-                promptText.text = "Start Stage 3";
+                promptText.text = "Start Stage 3 [E]";
 
                 if (startStage)
                 {
                     Stage3Start();
                 }
             }
-            else if (Config.gameStage == 3 && Time.time > Config.stage3Time + Config.stage3Duration)
+            else if (Config.gameStage == 3 && Time.time > Config.stage3Time + Config.stage3Duration && !Config.coffeeMachineBuilt)
             {
-                promptText.text = "Start Stage 4";
+                promptText.text = "Requires Coffee Machine";
+            }
+            else if (Config.gameStage == 3 && Time.time > Config.stage3Time + Config.stage3Duration && Config.coffeeMachineBuilt)
+            {
+                promptText.text = "Start Stage 4 [E]";
 
                 if (startStage)
                 {
@@ -108,13 +114,13 @@ public class CoffeePlant : MonoBehaviour, IBuilding
             }
             else
             {
-                if (promptText.text == "Plant Coffee Seed" || promptText.text == "Start Stage 2" || promptText.text == "Start Stage 3" || promptText.text == "Start Stage 4")
+                if (promptText.text.StartsWith("Plant") || promptText.text.StartsWith("Start Stage")  || promptText.text.StartsWith("Requires Coffee Machine"))
                 {
                     promptText.text = ""; // only sets to empty if player just left text radius
                 }
             }
         }
-        else if (promptText.text == "Plant Coffee Seed" || promptText.text == "Start Stage 2" || promptText.text == "Start Stage 3" || promptText.text == "Start Stage 4")
+        else if (promptText.text.StartsWith("Plant") || promptText.text.StartsWith("Start Stage")  || promptText.text.StartsWith("Requires Coffee Machine"))
         {
             promptText.text = ""; // only sets to empty if player just left text radius
         }
@@ -153,6 +159,8 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage3Prefab.SetActive(true);
         stage4Prefab.SetActive(false);
         buildingCanvas.transform.position += new Vector3(0, 1.25f, 0);
+
+        coffeeMachine.Unlock();
     }
 
     void Stage4Start()

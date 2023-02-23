@@ -56,83 +56,83 @@ public class Shotgun : MonoBehaviour
 
             if (Physics.Raycast(firePoint.position, firePoint.transform.forward, out RaycastHit hit1, Config.rangeShot, hitMask))
             {
-                /*Enemy enemy = hit1.collider.gameObject.GetComponent<Enemy>();
+                IEnemy enemy = hit1.collider.gameObject.GetComponent<IEnemy>();
                 if (enemy != null)
                 {
                     enemy.DamageEnemy(Config.damageShot, weaponName);
-                }*/
+                }
             }
 
             if (Physics.Raycast(firePoint.position, downPellet, out RaycastHit hit2, Config.rangeShot, hitMask))
             {
-                /*Enemy enemy = hit2.collider.gameObject.GetComponent<Enemy>();
+                IEnemy enemy = hit2.collider.gameObject.GetComponent<IEnemy>();
                 if (enemy != null)
                 {
                     enemy.DamageEnemy(Config.damageShot, weaponName);
-                }*/
+                }
             }
 
             if (Physics.Raycast(firePoint.position, upPellet, out RaycastHit hit3, Config.rangeShot, hitMask))
             {
-                /*Enemy enemy = hit3.collider.gameObject.GetComponent<Enemy>();
+                IEnemy enemy = hit3.collider.gameObject.GetComponent<IEnemy>();
                 if (enemy != null)
                 {
                     enemy.DamageEnemy(Config.damageShot, weaponName);
-                }*/
+                }
             }
 
             if (Physics.Raycast(firePoint.position, rightPellet, out RaycastHit hit4, Config.rangeShot, hitMask))
             {
-                /*Enemy enemy = hit4.collider.gameObject.GetComponent<Enemy>();
+                IEnemy enemy = hit4.collider.gameObject.GetComponent<IEnemy>();
                 if (enemy != null)
                 {
                     enemy.DamageEnemy(Config.damageShot, weaponName);
-                }*/
+                }
             }
 
             if (Physics.Raycast(firePoint.position, leftPellet, out RaycastHit hit5, Config.rangeShot, hitMask))
             {
-                /*Enemy enemy = hit5.collider.gameObject.GetComponent<Enemy>();
+                IEnemy enemy = hit5.collider.gameObject.GetComponent<IEnemy>();
                 if (enemy != null)
                 {
                     enemy.DamageEnemy(Config.damageShot, weaponName);
-                }*/
+                }
             }
 
             if (Physics.Raycast(firePoint.position, downleftPellet, out RaycastHit hit6, Config.rangeShot, hitMask))
             {
-                /*Enemy enemy = hit6.collider.gameObject.GetComponent<Enemy>();
+                IEnemy enemy = hit6.collider.gameObject.GetComponent<IEnemy>();
                 if (enemy != null)
                 {
                     enemy.DamageEnemy(Config.damageShot, weaponName);
-                }*/
+                }
             }
 
             if (Physics.Raycast(firePoint.position, upleftPellet, out RaycastHit hit7, Config.rangeShot, hitMask))
             {
-                /*Enemy enemy = hit7.collider.gameObject.GetComponent<Enemy>();
+                IEnemy enemy = hit7.collider.gameObject.GetComponent<IEnemy>();
                 if (enemy != null)
                 {
                     enemy.DamageEnemy(Config.damageShot, weaponName);
-                }*/
+                }
             }
 
             if (Physics.Raycast(firePoint.position, downrightPellet, out RaycastHit hit8, Config.rangeShot, hitMask))
             {
-                /*Enemy enemy = hit8.collider.gameObject.GetComponent<Enemy>();
+                IEnemy enemy = hit8.collider.gameObject.GetComponent<IEnemy>();
                 if (enemy != null)
                 {
                     enemy.DamageEnemy(Config.damageShot, weaponName);
-                }*/
+                }
             }
 
             if (Physics.Raycast(firePoint.position, uprightPellet, out RaycastHit hit9, Config.rangeShot, hitMask))
             {
-                /*Enemy enemy = hit9.collider.gameObject.GetComponent<Enemy>();
+                IEnemy enemy = hit9.collider.gameObject.GetComponent<IEnemy>();
                 if (enemy != null)
                 {
                     enemy.DamageEnemy(Config.damageShot, weaponName);
-                }*/
+                }
             }
 
             currentAmmo--;

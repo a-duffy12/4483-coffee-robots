@@ -46,11 +46,11 @@ public class AssaultRifle : MonoBehaviour
         {
             if (Physics.Raycast(firePoint.position, firePoint.transform.forward, out RaycastHit hit, Config.rangeAR, hitMask))
             {
-                /*Enemy enemy = hit.collider.gameObject.GetComponent<Enemy>();
+                IEnemy enemy = hit.collider.gameObject.GetComponent<IEnemy>();
                 if (enemy != null)
                 {
-                    enemy.DamageEnemy(Config.damageAR, "weaponName");
-                }*/
+                    enemy.DamageEnemy(Config.damageAR, weaponName);
+                }
             }
 
             currentAmmo--;

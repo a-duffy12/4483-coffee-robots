@@ -86,6 +86,20 @@ public class Config
     [Header("Fabricator")]
     public static int fabricatorScrapCost = 50;
 
+    [Header("Enemy")]
+    public static float loseInterestDistance = 15f;
+    public static LayerMask standardSeeMask = LayerMask.GetMask("Player", "Building", "Ground");
+
+    [Header("Sentinel")]
+    public static float sentinelMaxHp = 100;
+    public static float sentinelAttackRate = 1f;
+    public static float sentinelDamage = 15;
+    public static float sentinelRange = 1.2f;
+    public static float sentinelMovementSpeed = 6f;
+    public static int sentinelScrapReward = 10;
+    public static int sentinelElectronicsReward = 5;
+    public static int sentinelTechReward = 5;
+
     public static void GetSaveData()
     {
         GameData savedData = SaveLoad.LoadData(); // load save file

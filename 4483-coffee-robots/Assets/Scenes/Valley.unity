@@ -359,10 +359,14 @@ MonoBehaviour:
   - {fileID: 1130866897}
   - {fileID: 1232174990}
   - {fileID: 1525048888}
-  stage1Enemies: []
-  stage2Enemies: []
-  stage3Enemies: []
-  stage4Enemies: []
+  stage1Enemies:
+  - {fileID: 8699143055446318323, guid: 275d13bdb1f12f24aab6264bfa3dc437, type: 3}
+  stage2Enemies:
+  - {fileID: 8699143055446318323, guid: 275d13bdb1f12f24aab6264bfa3dc437, type: 3}
+  stage3Enemies:
+  - {fileID: 8699143055446318323, guid: 275d13bdb1f12f24aab6264bfa3dc437, type: 3}
+  stage4Enemies:
+  - {fileID: 8699143055446318323, guid: 275d13bdb1f12f24aab6264bfa3dc437, type: 3}
 --- !u!1 &75959171
 GameObject:
   m_ObjectHideFlags: 0

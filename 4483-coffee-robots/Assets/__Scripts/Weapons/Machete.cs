@@ -34,11 +34,11 @@ public class Machete : MonoBehaviour
         {
             if (Physics.Raycast(firePoint.position, firePoint.transform.forward, out RaycastHit hit, Config.rangeMachete, hitMask))
             {
-                /*Enemy enemy = hit.collider.gameObject.GetComponent<Enemy>();
+                IEnemy enemy = hit.collider.gameObject.GetComponent<IEnemy>();
                 if (enemy != null)
                 {
-                    enemy.DamageEnemy(Config.damageMachete, "weaponName");
-                }*/
+                    enemy.DamageEnemy(Config.damageMachete, weaponName);
+                }
             }
 
             lastAttackTime = Time.time;

@@ -100,9 +100,20 @@ public class Sentinel : MonoBehaviour, IEnemy
 
         if (currentHp <= 0)
         {
-            PlayerInventory.scrap += Config.sentinelScrapReward;
-            PlayerInventory.electronics += Config.sentinelElectronicsReward;
-            PlayerInventory.tech += Config.sentinelTechReward;
+
+            if (source == "assault_rifle" || source == "machete" || source == "shotgun") // player killed enemy
+            {
+                PlayerInventory.scrap += (int)(Config.sentinelScrapReward * Config.activeKillMod);
+                PlayerInventory.electronics += (int)(Config.sentinelElectronicsReward  * Config.activeKillMod);
+                PlayerInventory.tech += (int)(Config.sentinelTechReward  * Config.activeKillMod);
+            }
+            else
+            {
+                PlayerInventory.scrap += Config.sentinelScrapReward;
+                PlayerInventory.electronics += Config.sentinelElectronicsReward;
+                PlayerInventory.tech += Config.sentinelTechReward;
+            }
+            
 
             //source.clip = deathAudio;
             //source.Play();

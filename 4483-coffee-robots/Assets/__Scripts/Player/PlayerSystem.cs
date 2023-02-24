@@ -115,10 +115,14 @@ public class PlayerSystem : MonoBehaviour
 
     IEnumerator KillPlayer()
     {
+        // death audio
+
+        Time.timeScale = 0.0001f;
+
         yield return new WaitForSeconds(0.0005f);
 
-        //Scene scene = SceneManager.GetActiveScene();
-        //SceneManager.LoadScene(scene.name);
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 
     #region input functions

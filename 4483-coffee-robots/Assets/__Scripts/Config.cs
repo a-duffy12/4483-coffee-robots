@@ -92,6 +92,7 @@ public class Config
 
     [Header("Enemy")]
     public static float loseInterestDistance = 15f;
+    public static float activeKillMod = 2f;
     public static LayerMask standardSeeMask = LayerMask.GetMask("Player", "Building", "Ground");
 
     [Header("Sentinel")]

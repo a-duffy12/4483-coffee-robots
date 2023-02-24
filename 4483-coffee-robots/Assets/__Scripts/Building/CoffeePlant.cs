@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CoffeePlant : MonoBehaviour, IBuilding
 {
@@ -22,6 +23,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
     [SerializeField] private GameObject progressBarObj;
 
     [HideInInspector] public GameObject player;
+    PlayerInput input;
     [HideInInspector] public MachineShop machineShop;
     [HideInInspector] public Armory armory;
     [HideInInspector] public Fabricator fabricator;
@@ -31,6 +33,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        input = player.GetComponent<PlayerInput>();
         machineShop = GameObject.FindGameObjectWithTag("MachineShop").GetComponent<MachineShop>();
         armory = GameObject.FindGameObjectWithTag("Armory").GetComponent<Armory>();
         fabricator = GameObject.FindGameObjectWithTag("Fabricator").GetComponent<Fabricator>();
@@ -48,6 +51,17 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
         healthBar.fillAmount = Mathf.Clamp(currentHp/Config.coffeePlantMaxHp, 0, Config.coffeePlantMaxHp);
         progressBarObj.SetActive(false);
+
+        Time.timeScale = 1f;
+        input.SwitchCurrentActionMap("Player");
+        Config.gameStage = 0;
+
+        // reset unlocks
+        Config.coffeeMachineBuilt = false;
+        Config.shotgunUnlocked = false;
+        Config.alternateARUnlocked = false;
+        Config.alternateMacheteUnlocked = false;
+        Config.alternateShotgunUnlocked = false;
     }
 
     void Update()
@@ -171,8 +185,6 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage3Prefab.SetActive(false);
         stage4Prefab.SetActive(true);
         buildingCanvas.transform.position += new Vector3(0, 1.25f, 0);
-
-        // will also need to confirm that the coffee machine has been built
     }
 
     void StageProgress()
@@ -250,15 +262,22 @@ public class CoffeePlant : MonoBehaviour, IBuilding
     IEnumerator WinGame()
     {
         Config.gameStage = 5;
+        input.SwitchCurrentActionMap("Menu");
+        promptText.text = "Congratulations!";
+        Time.timeScale = 0.0001f;
 
-         yield return new WaitForSeconds(0.0005f);
+        // win audio
 
-        //Scene scene = SceneManager.GetActiveScene();
-        //SceneManager.LoadScene(scene.name);
+        yield return new WaitForSeconds(0.0005f);
+
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 
     void LoseGame()
     {
+        input.SwitchCurrentActionMap("Menu");
+        promptText.text = "The coffee has been lost...";
         PlayerSystem system = player.GetComponent<PlayerSystem>();
         system.DamagePlayer(Config.playerMaxHp * 2, "coffee_plant");
     }

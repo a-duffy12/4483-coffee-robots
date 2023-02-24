@@ -236,6 +236,8 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
     public void DamageBuilding(float damage, string source = "")
     {
+        damage = (float)Mathf.FloorToInt(damage);
+        
         currentHp -= damage;
         healthBar.fillAmount = Mathf.Clamp(currentHp/Config.coffeePlantMaxHp, 0, Config.coffeePlantMaxHp);
 
@@ -265,6 +267,12 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         input.SwitchCurrentActionMap("Menu");
         promptText.text = "Congratulations!";
         Time.timeScale = 0.0001f;
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies) // destroy all remaining enemies
+        {
+            Destroy(enemy);
+        }
 
         // win audio
 

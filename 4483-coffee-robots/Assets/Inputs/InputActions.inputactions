@@ -314,9 +314,9 @@
             "id": "35732b28-e9ba-4740-a615-68ee52119b0c",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Unpause",
                     "type": "Button",
-                    "id": "4a58544d-49c3-4d16-b2f0-c6b48f3c0393",
+                    "id": "62e83908-3002-4c00-b9de-e9f6bb39966a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -326,12 +326,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "76f533df-31e3-4f14-9926-12991f0d99dc",
-                    "path": "",
+                    "id": "6bd8cb2d-6074-4e30-8291-7fc8eeb1a22e",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Unpause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

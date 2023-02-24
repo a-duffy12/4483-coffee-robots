@@ -63,6 +63,8 @@ public class PlayerSystem : MonoBehaviour
 
     public void DamagePlayer(float damage, string source = "")
     {
+        damage = (float)Mathf.FloorToInt(damage);
+        
         if (!abilityActive)
         {
             currentHp -= damage;

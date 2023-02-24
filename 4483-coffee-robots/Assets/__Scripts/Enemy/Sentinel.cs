@@ -90,6 +90,8 @@ public class Sentinel : MonoBehaviour, IEnemy
 
     public void DamageEnemy(float damage, string source = "")
     {
+        damage = (float)Mathf.FloorToInt(damage);
+
         currentHp -= damage;
         healthBar.fillAmount = Mathf.Clamp(currentHp/Config.sentinelMaxHp, 0, Config.sentinelMaxHp);
 

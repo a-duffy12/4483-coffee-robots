@@ -52,7 +52,10 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 cursorPos = Mouse.current.position.ReadValue(); // get cursor position
         Vector3 worldPos = mainCamera.ScreenToWorldPoint(new Vector3(cursorPos.x, cursorPos.y, mainCamera.transform.position.y)); // map to world coordinates
-        defaultTransform.rotation = Quaternion.LookRotation(new Vector3(worldPos.x - defaultTransform.position.x, 0f, worldPos.z - defaultTransform.position.z));
+        if (Physics.Raycast(mainCamera.gameObject.transform.position, (worldPos - mainCamera.gameObject.transform.position), out RaycastHit hit, 1000, LayerMask.GetMask("Ground"))) // draw line from camera through cursor to ground
+        {
+            defaultTransform.LookAt(new Vector3(hit.point.x, defaultTransform.position.y, hit.point.z));
+        }
     }
 
     void FixedUpdate()

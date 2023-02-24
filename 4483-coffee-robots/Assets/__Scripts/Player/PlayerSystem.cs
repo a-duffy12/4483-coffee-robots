@@ -83,7 +83,7 @@ public class PlayerSystem : MonoBehaviour
         }
 
         healthBar.fillAmount = Mathf.Clamp(currentHp/Config.playerMaxHp, 0, Config.playerMaxHp);
-        if (currentHp >=0)
+        if (currentHp > 0)
         {
             healthText.text = currentHp.ToString("F0");
         }

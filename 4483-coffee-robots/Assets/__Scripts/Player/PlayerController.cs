@@ -76,6 +76,8 @@ public class PlayerController : MonoBehaviour
             dash = false;
             playerVelocity += direction * Config.dashSpeed;
         }
+
+        playerVelocity.y -= 9.8f; // apply gravity
     }
 
     #region  input functions

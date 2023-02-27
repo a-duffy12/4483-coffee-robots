@@ -15,6 +15,7 @@ TagManager:
   - Armory
   - Fabricator
   - CoffeeMachine
+  - PromptText
   layers:
   - Default
   - TransparentFX

@@ -35,9 +35,6 @@ public class MachineShop : MonoBehaviour, IBuilding
         unbuiltPrefab.SetActive(false);
         builtPrefab.SetActive(false);
         menu.SetActive(false);
-        PlayerInventory.scrap = 200; // TODO
-        PlayerInventory.electronics = 200;
-        PlayerInventory.tech = 200;
     }
 
     void Update()

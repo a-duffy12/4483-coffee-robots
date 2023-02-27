@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class Fabricator : MonoBehaviour, IBuilding
 {
@@ -16,6 +17,12 @@ public class Fabricator : MonoBehaviour, IBuilding
     [SerializeField] private GameObject trapPanel;
     [SerializeField] private Button defenseButton;
     [SerializeField] private Button trapButton;
+    [SerializeField] private TMP_Text turretText;
+    [SerializeField] private TMP_Text spikesText;
+
+    [Header("Defenses")]
+    [SerializeField] private GameObject turretPrefab;
+    [SerializeField] private GameObject spikesPrefab;
 
     GameObject player;
     PlayerInventory inventory;
@@ -111,6 +118,8 @@ public class Fabricator : MonoBehaviour, IBuilding
             trapPanel.SetActive(false);
             defenseButton.gameObject.SetActive(true);
             trapButton.gameObject.SetActive(true);
+
+            UpdateStoreText();
         }
     }
 
@@ -135,6 +144,129 @@ public class Fabricator : MonoBehaviour, IBuilding
         {
             defensePanel.SetActive(false);
             trapPanel.SetActive(true);
+        }
+    }
+
+    public void PurchaseTurret()
+    {
+        if (PlayerInventory.scrap >= Config.unlockTurretScrapCost && PlayerInventory.tech >= Config.unlockTurretTechCost)
+        {
+            if (Config.gameStage == 2 && Config.countTurret < Config.countTurret2)
+            {
+                inventory.defenses.Add(turretPrefab);
+                PlayerInventory.scrap -= Config.unlockTurretScrapCost;
+                PlayerInventory.tech -= Config.unlockTurretTechCost;
+                Config.countTurret++;
+                UpdateStoreText();
+            }
+            else if (Config.gameStage == 3 && Config.countTurret < Config.countTurret3)
+            {
+                inventory.defenses.Add(turretPrefab);
+                PlayerInventory.scrap -= Config.unlockTurretScrapCost;
+                PlayerInventory.tech -= Config.unlockTurretTechCost;
+                Config.countTurret++;
+                UpdateStoreText();
+            }
+            else if (Config.gameStage == 4 && Config.countTurret < Config.countTurret4)
+            {
+                inventory.defenses.Add(turretPrefab);
+                PlayerInventory.scrap -= Config.unlockTurretScrapCost;
+                PlayerInventory.tech -= Config.unlockTurretTechCost;
+                Config.countTurret++;
+                UpdateStoreText();
+            }
+        }
+    }
+
+    public void PurchaseSpikes()
+    {
+        if (PlayerInventory.scrap >= Config.unlockSpikesScrapCost)
+        {
+            if (Config.gameStage == 2 && Config.countSpikes < Config.countSpikes2)
+            {
+                inventory.defenses.Add(spikesPrefab);
+                PlayerInventory.scrap -= Config.unlockSpikesScrapCost;
+                Config.countSpikes++;
+                UpdateStoreText();
+            }
+            else if (Config.gameStage == 3 && Config.countSpikes < Config.countSpikes3)
+            {
+                inventory.defenses.Add(spikesPrefab);
+                PlayerInventory.scrap -= Config.unlockSpikesScrapCost;
+                Config.countSpikes++;
+                UpdateStoreText();
+            }
+            else if (Config.gameStage == 4 && Config.countSpikes < Config.countSpikes4)
+            {
+                inventory.defenses.Add(spikesPrefab);
+                PlayerInventory.scrap -= Config.unlockSpikesScrapCost;
+                Config.countSpikes++;
+                UpdateStoreText();
+            }
+        }
+    }
+
+    void UpdateStoreText()
+    {
+        if (Config.gameStage == 2)
+        {
+            if (Config.countTurret < Config.countTurret2)
+            {
+                turretText.text = $"{Config.unlockTurretScrapCost} <sprite=2> {Config.unlockTurretTechCost} <sprite=0>";
+            }
+            else
+            {
+                turretText.text = $"Max Number Bought";
+            }
+
+            if (Config.countSpikes < Config.countSpikes2)
+            {
+                spikesText.text = $"{Config.unlockSpikesScrapCost} <sprite=2>";
+            }
+            else
+            {
+                spikesText.text = $"Max Number Bought";
+            }
+        }
+        else if (Config.gameStage == 3)
+        {
+            if (Config.countTurret < Config.countTurret3)
+            {
+                turretText.text = $"{Config.unlockTurretScrapCost} <sprite=2> {Config.unlockTurretTechCost} <sprite=0>";
+            }
+            else
+            {
+                turretText.text = $"Max Number Bought";
+            }
+
+            if (Config.countSpikes < Config.countSpikes3)
+            {
+                spikesText.text = $"{Config.unlockSpikesScrapCost} <sprite=2>";
+            }
+            else
+            {
+                spikesText.text = $"Max Number Bought";
+            }
+        }
+        else if (Config.gameStage == 4)
+        {
+            if (Config.countTurret < Config.countTurret4)
+            {
+                turretText.text = $"{Config.unlockTurretScrapCost} <sprite=2> {Config.unlockTurretTechCost} <sprite=0>";
+            }
+            else
+            {
+                turretText.text = $"Max Number Bought";
+            }
+
+            if (Config.countSpikes < Config.countSpikes4)
+            {
+                spikesText.text = $"{Config.unlockSpikesScrapCost} <sprite=2>";
+            }
+            else
+            {
+                spikesText.text = $"Max Number Bought";
+            }
         }
     }
 

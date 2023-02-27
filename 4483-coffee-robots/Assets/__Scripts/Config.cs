@@ -17,14 +17,14 @@ public class Config
     public static float stage2Time;
     public static float stage3Time;
     public static float stage4Time;
-    public static int stage1Duration = 10;
-    public static int stage2Duration = 10;
-    public static int stage3Duration = 10;
-    public static int stage4Duration = 10;
-    public static float stage1SpawnDelay = 10f;
-    public static float stage2SpawnDelay = 3f;
-    public static float stage3SpawnDelay = 0.75f;
-    public static float stage4SpawnDelay = 0.25f;
+    public static int stage1Duration = 30;
+    public static int stage2Duration = 60;
+    public static int stage3Duration = 90;
+    public static int stage4Duration = 120;
+    public static float stage1SpawnDelay = 7.5f;
+    public static float stage2SpawnDelay = 5f;
+    public static float stage3SpawnDelay = 3f;
+    public static float stage4SpawnDelay = 1.5f;
     public static bool coffeeMachineBuilt = false;
 
     [Header("Unlocks")]
@@ -73,6 +73,7 @@ public class Config
     [Header("Buildings")]
     public static float buildingInteractDistance = 3f;
     public static float buildingCanvasDistance = 15f;
+    public static int buildingFixScrapCost = 100;
 
     [Header("Coffee Plant")]
     public static float coffeePlantMaxHp = 10000;
@@ -96,16 +97,20 @@ public class Config
     public static int unlockTurretTechCost = 10;
     public static int countTurret = 0;
     public static int countTurret2 = 2;
-    public static int countTurret3 = 4;
-    public static int countTurret4 = 6;
+    public static int countTurret3 = 3; // 4
+    public static int countTurret4 = 4; // 6
+    public static float damageTurret = 10;
+    public static float attackRateTurret = 2f;
+    public static float rangeTurret = 25f;
 
     [Header("Spikes")]
-    public static int spikesMaxHp = 500;
     public static int unlockSpikesScrapCost = 25;
     public static int countSpikes = 0;
-    public static int countSpikes2 = 4;
-    public static int countSpikes3 = 7;
-    public static int countSpikes4 = 10;
+    public static int countSpikes2 = 2; // 4
+    public static int countSpikes3 = 4; // 7
+    public static int countSpikes4 = 6; // 10
+    public static float damageSpikes = 10;
+    public static float attackRateSpikes = 1f;
 
     [Header("Enemy")]
     public static float loseInterestDistance = 15f;
@@ -118,9 +123,9 @@ public class Config
     public static float sentinelDamage = 15;
     public static float sentinelRange = 1.2f;
     public static float sentinelMovementSpeed = 4.5f;
-    public static int sentinelScrapReward = 15;
-    public static int sentinelElectronicsReward = 15;
-    public static int sentinelTechReward = 15;
+    public static int sentinelScrapReward = 25;
+    public static int sentinelElectronicsReward = 10;
+    public static int sentinelTechReward = 10;
 
     public static void GetSaveData()
     {
@@ -171,8 +176,12 @@ public class Config
         Config.refillTechCostShotgun = 15;
         Config.turretMaxHp = 1000;
         Config.countTurret = 0;
-        Config.spikesMaxHp = 500;
+        Config.damageTurret = 10;
+        Config.attackRateTurret = 2f;
+        Config.rangeTurret = 25f;
         Config.countSpikes = 0;
+        Config.damageSpikes = 10;
+        Config.attackRateSpikes = 1f;
         Config.activeKillMod = 2f;
     }
 }
@@ -186,7 +195,7 @@ public interface IBuilding {
 }
 
 public interface IDefense {
-    void RepairBuilding();
+    void FixBuilding();
 }
 
 public enum BuildStatus {

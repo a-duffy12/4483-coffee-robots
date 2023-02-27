@@ -39,7 +39,7 @@ public class DefenseBuildPoint : MonoBehaviour
                 PlaceDefense();
             }
         }
-        else if (promptText.text.StartsWith("Place "))
+        else if (promptText.text.StartsWith("Place ") && !inventory.defenses.Any())
         {
             promptText.text = ""; // only sets to empty if player just left text radius
         }

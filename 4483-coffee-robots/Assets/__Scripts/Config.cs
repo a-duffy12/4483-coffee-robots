@@ -90,6 +90,23 @@ public class Config
     [Header("Coffee Machine")]
     public static int coffeeMachineScrapCost = 1000;
 
+    [Header("Turret")]
+    public static int turretMaxHp = 1000;
+    public static int unlockTurretScrapCost = 50;
+    public static int unlockTurretTechCost = 10;
+    public static int countTurret = 0;
+    public static int countTurret2 = 2;
+    public static int countTurret3 = 4;
+    public static int countTurret4 = 6;
+
+    [Header("Spikes")]
+    public static int spikesMaxHp = 500;
+    public static int unlockSpikesScrapCost = 25;
+    public static int countSpikes = 0;
+    public static int countSpikes2 = 4;
+    public static int countSpikes3 = 7;
+    public static int countSpikes4 = 10;
+
     [Header("Enemy")]
     public static float loseInterestDistance = 15f;
     public static float activeKillMod = 2f;
@@ -152,16 +169,24 @@ public class Config
         Config.altKnockForceShot = 100;
         Config.altFireRateShot = 0.8f;
         Config.refillTechCostShotgun = 15;
+        Config.turretMaxHp = 1000;
+        Config.countTurret = 0;
+        Config.spikesMaxHp = 500;
+        Config.countSpikes = 0;
         Config.activeKillMod = 2f;
     }
 }
 
-interface IEnemy {
+public interface IEnemy {
     void DamageEnemy(float damage, string source = "");
 }
 
-interface IBuilding {
+public interface IBuilding {
     void DamageBuilding(float damage, string source = "");
+}
+
+public interface IDefense {
+    void RepairBuilding();
 }
 
 public enum BuildStatus {

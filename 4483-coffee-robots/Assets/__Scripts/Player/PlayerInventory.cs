@@ -33,6 +33,7 @@ public class PlayerInventory : MonoBehaviour
     [HideInInspector] public AssaultRifle ar;
     [HideInInspector] public Machete machete;
     [HideInInspector] public Shotgun shotgun;
+    [HideInInspector] public List<GameObject> defenses;
 
     [HideInInspector] public int currentWeaponInt;
     

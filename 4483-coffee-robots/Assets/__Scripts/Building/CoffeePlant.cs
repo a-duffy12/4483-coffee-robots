@@ -56,12 +56,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         input.SwitchCurrentActionMap("Player");
         Config.gameStage = 0;
 
-        // reset unlocks
-        Config.coffeeMachineBuilt = false;
-        Config.shotgunUnlocked = false;
-        Config.alternateARUnlocked = false;
-        Config.alternateMacheteUnlocked = false;
-        Config.alternateShotgunUnlocked = false;
+        Config.ResetConfigValues(); // reset unlocks and upgrades
     }
 
     void Update()
@@ -78,11 +73,6 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         }
 
         StageProgress(); // update game progress bar
-
-        if (Config.gameStage == 4 && Time.time > Config.stage4Time + Config.stage4Duration)
-        {
-            StartCoroutine(WinGame());
-        }
 
         if (distanceToPlayer <= Config.buildingInteractDistance)
         {
@@ -126,15 +116,24 @@ public class CoffeePlant : MonoBehaviour, IBuilding
                     Stage4Start();
                 }
             }
+            else if (Config.gameStage == 4 && Time.time > Config.stage4Time + Config.stage4Duration && Config.coffeeMachineBuilt)
+            {
+                promptText.text = "Drink Coffee [E]";
+
+                if (startStage)
+                {
+                    StartCoroutine(WinGame());
+                }
+            }
             else
             {
-                if (promptText.text.StartsWith("Plant") || promptText.text.StartsWith("Start Stage")  || promptText.text.StartsWith("Requires Coffee Machine"))
+                if (promptText.text.StartsWith("Plant") || promptText.text.StartsWith("Start Stage")  || promptText.text.StartsWith("Requires Coffee Machine") || promptText.text.StartsWith("Drink Coffee"))
                 {
                     promptText.text = ""; // only sets to empty if player just left text radius
                 }
             }
         }
-        else if (promptText.text.StartsWith("Plant") || promptText.text.StartsWith("Start Stage")  || promptText.text.StartsWith("Requires Coffee Machine"))
+        else if (promptText.text.StartsWith("Plant") || promptText.text.StartsWith("Start Stage")  || promptText.text.StartsWith("Requires Coffee Machine") || promptText.text.StartsWith("Drink Coffee"))
         {
             promptText.text = ""; // only sets to empty if player just left text radius
         }

@@ -14,13 +14,14 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private TMP_Text healthText;
     [SerializeField] private Image abilityBar;
     [SerializeField] private TMP_Text abilityText;
+    [SerializeField] private GameObject damageOverlay;
+
     //[Header("Audio")]
     
     [HideInInspector] public float hp { get { return currentHp; } }
     private float currentHp;
     private float abilityEndTime;
     private float nextAbilityTime;
-    private bool abilityActive;
 
     AudioSource playerSource;
 
@@ -44,15 +45,14 @@ public class PlayerSystem : MonoBehaviour
 
     void Update()
     {
-        if (abilityActive && Time.time >= abilityEndTime)
+        if (Time.time < abilityEndTime)
         {
-            abilityActive = false;
-            Debug.Log("ability ended");
+            abilityBar.fillAmount = Mathf.Clamp((abilityEndTime - Time.time)/Config.abilityDuration, 0, Config.abilityDuration);
+            abilityText.text = "";
         }
-
-        abilityBar.fillAmount = 1 - Mathf.Clamp((nextAbilityTime - Time.time)/Config.abilityCooldown, 0, Config.abilityCooldown);
-        if (abilityBar.fillAmount < 1)
+        else if (Time.time >= abilityEndTime && Time.time < nextAbilityTime)
         {
+            abilityBar.fillAmount = 1 - Mathf.Clamp((nextAbilityTime - Time.time)/Config.abilityCooldown, 0, Config.abilityCooldown);
             abilityText.text = (nextAbilityTime - Time.time).ToString("F1");
         }
         else
@@ -65,13 +65,18 @@ public class PlayerSystem : MonoBehaviour
     {
         damage = (float)Mathf.FloorToInt(damage);
         
-        if (!abilityActive)
+        if (Time.time < abilityEndTime)
         {
-            currentHp -= damage;
+            currentHp -= damage * Config.abilityDamageModifier;
         }
         else 
         {
-            currentHp -= damage * Config.abilityDamageModifier;
+            currentHp -= damage;
+        }
+
+        if (damage > 0)
+        {
+            StartCoroutine(DamagePlayerOverlay(0.1f));
         }
 
         if (currentHp > Config.playerMaxHp)
@@ -108,11 +113,11 @@ public class PlayerSystem : MonoBehaviour
 
     IEnumerator DamagePlayerOverlay(float duration)
     {
-        //damageOverlay.SetActive(true);
+        damageOverlay.SetActive(true);
         
         yield return new WaitForSeconds(duration);
 
-        //damageOverlay.SetActive(false);
+        damageOverlay.SetActive(false);
     }
 
     IEnumerator KillPlayer()
@@ -133,10 +138,8 @@ public class PlayerSystem : MonoBehaviour
 	{
 		if (con.performed && Time.time >= nextAbilityTime)
 		{
-            abilityActive = true;
             abilityEndTime = Time.time + Config.abilityDuration;
-            nextAbilityTime = Time.time + Config.abilityCooldown;
-            Debug.Log("ability started");
+            nextAbilityTime = abilityEndTime + Config.abilityCooldown;
 		}
 	}
 

@@ -391,6 +391,7 @@
 "Assets/__Scripts/Config.cs"
 "Assets/__Scripts/Enemy/Sentinel.cs"
 "Assets/__Scripts/Level/EnemySpawner.cs"
+"Assets/__Scripts/Menu/MainMenu.cs"
 "Assets/__Scripts/Menu/Options.cs"
 "Assets/__Scripts/Player/PlayerController.cs"
 "Assets/__Scripts/Player/PlayerInventory.cs"

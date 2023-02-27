@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Options : MonoBehaviour
 {
@@ -55,7 +56,6 @@ public class Options : MonoBehaviour
             pauseMenu.SetActive(true);
             input.SwitchCurrentActionMap("Menu");
             Time.timeScale = 0f;
-            Debug.Log("open");
         }
     }
 
@@ -66,8 +66,13 @@ public class Options : MonoBehaviour
             Time.timeScale = 1f;
             input.SwitchCurrentActionMap("Player");
             pauseMenu.SetActive(false);
-            Debug.Log("close");
-            // save changes
+            SaveLoad.SaveData();
         }
+    }
+
+    public void QuitToMainMenu()
+    {
+        SaveLoad.SaveData();
+        SceneManager.LoadScene("Menu");
     }
 }

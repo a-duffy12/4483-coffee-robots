@@ -9,7 +9,7 @@ public class Config
     public static Difficulty difficultyLevel = Difficulty.Normal;
     public static float difficultyDamageMod = 1f;
     public static float difficultyMovementMod = 1f;
-    public static float fieldOfView = 60f;
+    public static float fieldOfView = 90f;
 
     [Header("Game Progress")]
     public static int gameStage = 0;
@@ -41,7 +41,7 @@ public class Config
     [Header("Player Systems")]
     public static float playerMaxHp = 100;
     public static float abilityDuration = 5f;
-    public static float abilityCooldown = 20f;
+    public static float abilityCooldown = 15f;
     public static float abilityDamageModifier = 0.5f;
 
     [Header("Assault Rifle")]
@@ -116,6 +116,43 @@ public class Config
             Config.difficultyMovementMod = savedData.difficultyMovementMod;
             Config.fieldOfView = savedData.fieldOfView;
         }
+    }
+
+    public static void ResetConfigValues()
+    {
+        Config.gameStage = 0;
+        Config.coffeeMachineBuilt = false;
+        Config.shotgunUnlocked = false;
+        Config.alternateARUnlocked = false;
+        Config.alternateMacheteUnlocked = false;
+        Config.alternateShotgunUnlocked = false;
+        Config.movementSpeed = 10f;
+        Config.dashSpeed = 200f;
+        Config.dashCooldown = 1f;
+        Config.playerMaxHp = 100;
+        Config.abilityDuration = 5f;
+        Config.abilityCooldown = 15f;
+        Config.abilityDamageModifier = 0.5f;
+        Config.damageAR = 10;
+        Config.fireRateAR = 10f;
+        Config.rangeAR = 25;
+        Config.maxAmmoAR = 150;
+        Config.altDamageAR = 15;
+        Config.altFireRateAR = 0.5f;
+        Config.refillTechCostAR = 10;
+        Config.damageMachete = 80;
+        Config.rateMachete = 1.5f;
+        Config.rangeMachete = 2.5f;
+        Config.altRateMachete = 0.6f;
+        Config.damageShot = 16;
+        Config.fireRateShot = 1f;
+        Config.rangeShot = 10;
+        Config.maxAmmoShot = 25;
+        Config.altDamageShot = 30;
+        Config.altKnockForceShot = 100;
+        Config.altFireRateShot = 0.8f;
+        Config.refillTechCostShotgun = 15;
+        Config.activeKillMod = 2f;
     }
 }
 

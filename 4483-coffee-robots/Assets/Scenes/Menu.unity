@@ -1382,6 +1382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ef65fd4140bb349b1ef523b7ef783b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursor: {fileID: 2800000, guid: 165a0fa841f568642a9b23717a923eb3, type: 3}
   pauseMenu: {fileID: 1619948932}
   titleMenu: {fileID: 856040945}
   difficultyText: {fileID: 1548594939}

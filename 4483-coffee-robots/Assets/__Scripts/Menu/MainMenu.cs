@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public Texture2D cursor;
+
     [Header("GameObjects")]
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject titleMenu;
@@ -29,6 +31,7 @@ public class MainMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         titleMenu.SetActive(true);
         difficultyText.text = $"Current Difficulty: {Config.difficultyLevel.ToString()}";
+        Cursor.SetCursor(cursor, new Vector2(650, 650), CursorMode.Auto);
     }
 
     public void Easy()

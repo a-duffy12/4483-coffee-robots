@@ -74,6 +74,7 @@ public class Config
     public static float buildingInteractDistance = 3f;
     public static float buildingCanvasDistance = 15f;
     public static int buildingFixScrapCost = 100;
+    public static float buildingRetargetDelay = 1f;
 
     [Header("Coffee Plant")]
     public static float coffeePlantMaxHp = 10000;

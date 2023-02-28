@@ -27,6 +27,7 @@ public class Turret : MonoBehaviour, IBuilding, IDefense
     TMP_Text promptText;
 
     private float lastAttackTime;
+    private float retargetStartTime;
     private GameObject target;
     private bool quickInteract;
     
@@ -66,7 +67,7 @@ public class Turret : MonoBehaviour, IBuilding, IDefense
 
         if (buildStatus == BuildStatus.Built)
         {
-            if (target == null) // not currently targetting any enemy
+            if (target == null && Time.time > retargetStartTime + Config.buildingRetargetDelay) // not currently targetting any enemy
             {
                 GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
                 float distanceToEnemy = Config.rangeTurret;
@@ -80,10 +81,14 @@ public class Turret : MonoBehaviour, IBuilding, IDefense
                     }
                 }
 
+                retargetStartTime = Time.time;
+
                 Attack();
             }
-            else // already have a target
+            else if (target != null) // already have a target
             {
+                retargetStartTime = Time.time;
+                
                 Attack();
             }
 

@@ -118,7 +118,7 @@ public class Turret : MonoBehaviour, IBuilding, IDefense
     void Attack()
     {
         float distanceToEnemy = Vector3.Distance(target.transform.position, transform.position);
-        transform.LookAt(target.transform.position);
+        transform.LookAt(new Vector3(target.transform.position.x, 0.6f, target.transform.position.z));
         
         if (Time.time > lastAttackTime + (1/Config.attackRateTurret) && distanceToEnemy <= Config.rangeTurret)
         {

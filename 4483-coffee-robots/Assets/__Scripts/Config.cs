@@ -128,6 +128,15 @@ public class Config
     public static int sentinelElectronicsReward = 10;
     public static int sentinelTechReward = 10;
 
+    [Header("Payload")]
+    public static float payloadMaxHp = 1000;
+    public static float payloadDamage = 500;
+    public static float payloadRange = 1.5f;
+    public static float payloadMovementSpeed = 1f;
+    public static int payloadScrapReward = 100;
+    public static int payloadElectronicsReward = 15;
+    public static int payloadTechReward = 50;
+
     public static void GetSaveData()
     {
         GameData savedData = SaveLoad.LoadData(); // load save file

@@ -1,514 +1,511 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1677546860521692, "dur":2282, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546860523981, "dur":72, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
-,{ "pid":12345, "tid":0, "ts":1677546860524078, "dur":22, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
-,{ "pid":12345, "tid":0, "ts":1677546860524102, "dur":603, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
-,{ "pid":12345, "tid":0, "ts":1677546860524753, "dur":959, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546860525712, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862890744, "dur":204, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862890948, "dur":24, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862890972, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862890976, "dur":12, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862890988, "dur":5, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862890993, "dur":13, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891006, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891010, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891020, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891024, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891034, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891038, "dur":12, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891050, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891054, "dur":15, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891069, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891073, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891084, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891097, "dur":4, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862891103, "dur":3891, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1677546860525559, "dur":268, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860525827, "dur":7304, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860533131, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":1, "ts":1677546860533324, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860541588, "dur":2006, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":1, "ts":1677546860543673, "dur":190, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":1, "ts":1677546860543870, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860544709, "dur":3230, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":1, "ts":1677546860548064, "dur":255, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":1, "ts":1677546860548324, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860548337, "dur":1934, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":1, "ts":1677546860550370, "dur":189, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860550566, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860550827, "dur":85907, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860636815, "dur":237, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":1, "ts":1677546860637056, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860637415, "dur":22484, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":1, "ts":1677546860659986, "dur":221, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860660212, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860660226, "dur":94384, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860754689, "dur":166, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860754859, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860754871, "dur":86220, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860841166, "dur":150, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860841321, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860841332, "dur":51317, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860892721, "dur":173, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860892901, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860892926, "dur":32037, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860925027, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860925158, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860925169, "dur":63761, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860989027, "dur":149, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546860989180, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546860989192, "dur":40138, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861029431, "dur":265, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861029702, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546861029716, "dur":49577, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861079427, "dur":239, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861079672, "dur":17, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546861079723, "dur":42631, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861122431, "dur":227, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861122663, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546861122673, "dur":65290, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861188063, "dur":143, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861188210, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546861188225, "dur":214084, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861402375, "dur":35851, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861438234, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546861438248, "dur":2079, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861440406, "dur":58611, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861499026, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546861499041, "dur":2320, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861501436, "dur":160, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861501600, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546861501654, "dur":399976, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861901702, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546861901896, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546861901909, "dur":223695, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546862125694, "dur":171, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546862125871, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1677546862125885, "dur":361781, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":1, "ts":1677546862487732, "dur":403022, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546860525384, "dur":426, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546860525810, "dur":7266, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546860533096, "dur":237, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":2, "ts":1677546860533337, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546860634915, "dur":2667, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":2, "ts":1677546860637698, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546860637833, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546860639090, "dur":128879, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546860768059, "dur":157, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546860768220, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546860768231, "dur":100148, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546860868444, "dur":154, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546860868602, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546860868613, "dur":64468, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546860933155, "dur":157, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546860933317, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546860933329, "dur":39163, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546860972563, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546860972715, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546860972727, "dur":36620, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861009422, "dur":184, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861009610, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546861009624, "dur":37950, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861047650, "dur":301, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861047956, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546861047968, "dur":64017, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861112097, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861112288, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546861112301, "dur":75170, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861187550, "dur":276, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861187832, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546861187848, "dur":54746, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861242731, "dur":143, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861242879, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546861242890, "dur":99845, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861342810, "dur":167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861342982, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546861342999, "dur":104035, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861447103, "dur":1688, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861448800, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546861448813, "dur":1725, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861450622, "dur":84176, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861534805, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546861534818, "dur":1611, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861537227, "dur":165, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861537398, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546861537411, "dur":182049, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861719534, "dur":196, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861719735, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546861719750, "dur":61299, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861781121, "dur":156, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546861781286, "dur":11, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546861781327, "dur":318582, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546862100007, "dur":210, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546862100222, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1677546862100237, "dur":790409, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":2, "ts":1677546862890698, "dur":3, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
-,{ "pid":12345, "tid":2, "ts":1677546862890701, "dur":1, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860525314, "dur":474, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860525790, "dur":7274, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860533094, "dur":7, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
-,{ "pid":12345, "tid":3, "ts":1677546860533105, "dur":196, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860533309, "dur":3, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/app.info" }}
-,{ "pid":12345, "tid":3, "ts":1677546860533325, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860542471, "dur":1383, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/app.info" }}
-,{ "pid":12345, "tid":3, "ts":1677546860543856, "dur":193, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":3, "ts":1677546860544053, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860544199, "dur":3273, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":3, "ts":1677546860547578, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1677546860547770, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860547904, "dur":1921, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1677546860549918, "dur":150, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":3, "ts":1677546860550072, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860550082, "dur":85176, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":3, "ts":1677546860635375, "dur":184, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":3, "ts":1677546860635566, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860635577, "dur":15766, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":3, "ts":1677546860651479, "dur":118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546860651654, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860651674, "dur":82284, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546860734028, "dur":159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546860734191, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860734201, "dur":56914, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546860791190, "dur":144, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546860791339, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860791351, "dur":64396, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546860855819, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546860855970, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860855981, "dur":59936, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546860915984, "dur":345, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546860916333, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860916344, "dur":67332, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546860983753, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546860983910, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546860983922, "dur":95466, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861079460, "dur":399, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861079872, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546861079883, "dur":89941, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861169904, "dur":139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861170050, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546861170059, "dur":61507, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861231635, "dur":168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861231807, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546861231819, "dur":66792, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861298693, "dur":168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861298866, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546861298884, "dur":50151, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861349127, "dur":123782, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861472913, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546861472922, "dur":12821, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861485814, "dur":2236, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861488055, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546861488065, "dur":3485, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861491647, "dur":47926, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861539579, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546861539591, "dur":1555, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861541214, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861541350, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546861541389, "dur":216458, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861757925, "dur":179, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546861758108, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1677546861758120, "dur":561856, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":3, "ts":1677546862320047, "dur":570724, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546860525484, "dur":335, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546860525819, "dur":7373, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546860533193, "dur":156, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":4, "ts":1677546860533379, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546860637195, "dur":11660, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":4, "ts":1677546860649031, "dur":2943, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546860651984, "dur":11, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546860652034, "dur":95186, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546860747337, "dur":146, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546860747488, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546860747499, "dur":39097, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546860786675, "dur":181, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546860786860, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546860786872, "dur":52150, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546860839114, "dur":198706, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861037828, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546861037844, "dur":2012, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861039926, "dur":177, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861040108, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546861040120, "dur":42953, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861083150, "dur":159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861083315, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546861083372, "dur":219902, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861303351, "dur":78314, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861381672, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546861381692, "dur":4745, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861386523, "dur":10433, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861396968, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546861396980, "dur":1654, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861398706, "dur":73405, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861472118, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546861472133, "dur":2293, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861474499, "dur":1830, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861476336, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546861476351, "dur":2138, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861478576, "dur":46917, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861525499, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546861525511, "dur":1811, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861527416, "dur":154, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861527574, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546861527585, "dur":89664, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861617318, "dur":140, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861617462, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546861617473, "dur":155045, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861772582, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546861772714, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1677546861772724, "dur":516326, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":4, "ts":1677546862289120, "dur":601658, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546860525848, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546860525849, "dur":7232, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546860533094, "dur":209, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":5, "ts":1677546860533310, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546860536159, "dur":3548, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":5, "ts":1677546860539766, "dur":225, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":5, "ts":1677546860539995, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546860540892, "dur":2072, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":5, "ts":1677546860543046, "dur":181, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":5, "ts":1677546860543231, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546860543780, "dur":4575, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":5, "ts":1677546860548466, "dur":736, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":5, "ts":1677546860549207, "dur":210, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546860549431, "dur":84993, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":5, "ts":1677546860634552, "dur":224, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546860634783, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546860634793, "dur":79783, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546860714658, "dur":205, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546860714867, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546860714878, "dur":50904, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546860765859, "dur":146, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546860766009, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546860766021, "dur":61517, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546860827598, "dur":385, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546860828022, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546860828036, "dur":205374, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861033503, "dur":217, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861033725, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546861033737, "dur":88660, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861122463, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861122587, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546861122599, "dur":118094, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861240761, "dur":152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861240917, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546861240929, "dur":97765, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861338789, "dur":151203, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861489998, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546861490010, "dur":4249, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861494345, "dur":160279, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.InputSystem.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861654633, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546861654655, "dur":3990, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.InputSystem.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861658716, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861658871, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546861658882, "dur":57098, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861716065, "dur":184, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546861716261, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546861716276, "dur":319683, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546862036094, "dur":244, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546862036344, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546862036359, "dur":142802, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":5, "ts":1677546862179254, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":5, "ts":1677546862179485, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546862179508, "dur":3432, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":5, "ts":1677546862183059, "dur":297, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":5, "ts":1677546862183361, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546862183373, "dur":1989, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":5, "ts":1677546862185433, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":5, "ts":1677546862185532, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546862185551, "dur":1926, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":5, "ts":1677546862187542, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/level1.resS" }}
-,{ "pid":12345, "tid":5, "ts":1677546862187628, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546862187637, "dur":1931, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/level1.resS" }}
-,{ "pid":12345, "tid":5, "ts":1677546862189647, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/level0" }}
-,{ "pid":12345, "tid":5, "ts":1677546862189738, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546862189748, "dur":1767, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/level0" }}
-,{ "pid":12345, "tid":5, "ts":1677546862191599, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":5, "ts":1677546862191671, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1677546862191683, "dur":2749, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":5, "ts":1677546862194587, "dur":696153, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546860525669, "dur":166, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546860525836, "dur":7285, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546860533122, "dur":272, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":6, "ts":1677546860533400, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546860636308, "dur":4903, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":6, "ts":1677546860641303, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546860641401, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546860641417, "dur":81245, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546860722733, "dur":139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546860722876, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546860722917, "dur":167564, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546860890550, "dur":162, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546860890746, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546860890758, "dur":77629, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546860968488, "dur":146, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546860968638, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546860968649, "dur":53831, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861022542, "dur":150, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861022696, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546861022708, "dur":89733, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861112510, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861112646, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546861112656, "dur":75427, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861188157, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861188290, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546861188338, "dur":50302, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861238709, "dur":154, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861238867, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546861238880, "dur":96578, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861335549, "dur":136998, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861472552, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546861472562, "dur":2649, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861475277, "dur":12532, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861487834, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546861487891, "dur":4278, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861492260, "dur":3731, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861496000, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546861496018, "dur":3210, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861499313, "dur":174, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861499492, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546861499503, "dur":141540, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861641107, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861641240, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546861641251, "dur":145939, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861787260, "dur":165, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861787431, "dur":8, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546861787452, "dur":144994, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861932546, "dur":216, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546861932768, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546861932784, "dur":219611, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546862152516, "dur":212016, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546862364542, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1677546862364556, "dur":1190, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":6, "ts":1677546862365795, "dur":524949, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546860525872, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546860525873, "dur":7256, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546860533130, "dur":193, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":7, "ts":1677546860533326, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546860551470, "dur":83917, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":7, "ts":1677546860635492, "dur":1092, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash.exe" }}
-,{ "pid":12345, "tid":7, "ts":1677546860636591, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546860636602, "dur":2858, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash.exe" }}
-,{ "pid":12345, "tid":7, "ts":1677546860639544, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546860639661, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546860639783, "dur":70060, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546860709919, "dur":222, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546860710146, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546860710157, "dur":72756, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546860782988, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UNETModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546860783130, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546860783140, "dur":125419, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UNETModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546860908641, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546860908801, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546860908811, "dur":88321, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546860997218, "dur":212, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546860997436, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546860997451, "dur":36335, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861033852, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861034005, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546861034016, "dur":56773, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861090859, "dur":234, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861091103, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546861091119, "dur":79936, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861171133, "dur":412, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861171551, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546861171563, "dur":70451, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861242089, "dur":144, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861242237, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546861242250, "dur":51697, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861294047, "dur":551, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861294603, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546861294614, "dur":73692, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861368372, "dur":571146, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861939526, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546861939543, "dur":2548, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861942187, "dur":173, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546861942365, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546861942380, "dur":211561, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":7, "ts":1677546862154065, "dur":297, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
-,{ "pid":12345, "tid":7, "ts":1677546862154371, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546862155073, "dur":2312, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
-,{ "pid":12345, "tid":7, "ts":1677546862157481, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":7, "ts":1677546862157574, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546862157666, "dur":2309, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":7, "ts":1677546862160761, "dur":166, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":7, "ts":1677546862160941, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546862160963, "dur":4255, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":7, "ts":1677546862165340, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":7, "ts":1677546862165436, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546862165451, "dur":18097, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":7, "ts":1677546862183623, "dur":2235, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":7, "ts":1677546862185863, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546862185873, "dur":1622, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":7, "ts":1677546862187562, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/level1" }}
-,{ "pid":12345, "tid":7, "ts":1677546862187674, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546862187681, "dur":2112, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/level1" }}
-,{ "pid":12345, "tid":7, "ts":1677546862189861, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":7, "ts":1677546862189937, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1677546862189945, "dur":9872, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":7, "ts":1677546862199973, "dur":690790, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546860525905, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546860525905, "dur":7210, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546860533121, "dur":191, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":8, "ts":1677546860533315, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546860535800, "dur":3913, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":8, "ts":1677546860539772, "dur":371, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":8, "ts":1677546860540146, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546860540904, "dur":1843, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":8, "ts":1677546860543034, "dur":189, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":8, "ts":1677546860543231, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546860543825, "dur":5355, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":8, "ts":1677546860549259, "dur":381, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":8, "ts":1677546860549644, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546860549657, "dur":2067, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":8, "ts":1677546860634218, "dur":325, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546860634547, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546860634749, "dur":32951, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546860667778, "dur":219, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546860668002, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546860668015, "dur":65176, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546860733354, "dur":712, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546860734071, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546860734082, "dur":60263, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546860794440, "dur":416, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546860794862, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546860794875, "dur":81415, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546860876358, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546860876509, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546860876521, "dur":150107, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546861026749, "dur":170, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546861026923, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546861026933, "dur":142523, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546861169534, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546861169674, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546861169686, "dur":66364, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546861236125, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546861236271, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546861236283, "dur":57302, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546861293679, "dur":556, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546861294243, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546861294259, "dur":246284, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546861540623, "dur":140, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546861540767, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546861540779, "dur":358177, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546861899035, "dur":168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546861899208, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546861899223, "dur":258225, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":8, "ts":1677546862157534, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/sharedassets1.assets.resS" }}
-,{ "pid":12345, "tid":8, "ts":1677546862157624, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546862157634, "dur":29469, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/sharedassets1.assets.resS" }}
-,{ "pid":12345, "tid":8, "ts":1677546862187201, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/resources.assets" }}
-,{ "pid":12345, "tid":8, "ts":1677546862187274, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546862187340, "dur":1812, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/resources.assets" }}
-,{ "pid":12345, "tid":8, "ts":1677546862189231, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/level0.resS" }}
-,{ "pid":12345, "tid":8, "ts":1677546862189347, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546862189360, "dur":1920, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/level0.resS" }}
-,{ "pid":12345, "tid":8, "ts":1677546862191354, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":8, "ts":1677546862191441, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546862191455, "dur":2603, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":8, "ts":1677546862194147, "dur":226, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/boot.config" }}
-,{ "pid":12345, "tid":8, "ts":1677546862194732, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1677546862194746, "dur":1868, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/CS4483 Individual Game Prototype/Build/CoffeeClash_Data/boot.config" }}
-,{ "pid":12345, "tid":8, "ts":1677546862196714, "dur":694025, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1677546862898365, "dur":3555, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid":12345, "tid":0, "ts":1678331010573957, "dur":2427, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331010576391, "dur":93, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1678331010576537, "dur":23, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1678331010576563, "dur":524, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1678331010577138, "dur":965, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331010578103, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012976723, "dur":435, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977159, "dur":15, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977195, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977199, "dur":23, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977222, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977224, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977232, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977234, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977242, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977244, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977250, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977253, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977260, "dur":20, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977280, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977287, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977289, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977297, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977324, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012977391, "dur":16905, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1678331010577746, "dur":368, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331010578117, "dur":6229, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331010584363, "dur":8, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1678331010584371, "dur":579, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331010584959, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1678331010584964, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331010594151, "dur":14999, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1678331010609155, "dur":296, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1678331010609456, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331010610782, "dur":106561, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1678331010717433, "dur":252, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":1, "ts":1678331010717702, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331010717719, "dur":13201, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":1, "ts":1678331010731012, "dur":5399, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":1, "ts":1678331010736415, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331010736424, "dur":4150, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":1, "ts":1678331010740667, "dur":106077, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331010846754, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331010846769, "dur":3338, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331010850190, "dur":53950, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331010904147, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331010904158, "dur":13220, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331010917457, "dur":40783, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331010958248, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331010958261, "dur":1921, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331010960259, "dur":27560, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331010987847, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331010987859, "dur":1377, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331010989308, "dur":221603, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331011210918, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331011210930, "dur":8834, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331011219836, "dur":31500, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331011251350, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331011251363, "dur":3094, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331011254555, "dur":132860, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331011387424, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331011387436, "dur":4976, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331011392495, "dur":39853, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331011432355, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331011432367, "dur":16325, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331011448764, "dur":246057, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331011694829, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331011694844, "dur":2019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331011696958, "dur":187547, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331011884512, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331011884523, "dur":57646, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331011942247, "dur":67086, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331012009340, "dur":11, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331012009362, "dur":7616, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331012017056, "dur":411778, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331012428857, "dur":8, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1678331012428889, "dur":4530, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":1, "ts":1678331012433484, "dur":543224, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331010577794, "dur":327, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331010578121, "dur":6234, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331010584363, "dur":199, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1678331010584565, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331010587347, "dur":14806, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1678331010602227, "dur":438, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1678331010602670, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331010602770, "dur":116572, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1678331010719424, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":2, "ts":1678331010719662, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331010719671, "dur":3369, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":2, "ts":1678331010723118, "dur":30136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331010753385, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331010753587, "dur":11288, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331010764960, "dur":41088, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331010806056, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331010806200, "dur":2351, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331010808624, "dur":57689, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331010866345, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331010866360, "dur":1924, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331010868361, "dur":175748, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011044114, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011044131, "dur":1655, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011045858, "dur":51506, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011097371, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011097382, "dur":2676, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011100140, "dur":87660, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011187805, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011187822, "dur":2471, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011190374, "dur":46792, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011237173, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011237185, "dur":18464, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011255722, "dur":43635, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011299364, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011299376, "dur":18125, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011317599, "dur":41068, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011358674, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011358684, "dur":1468, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011360231, "dur":32158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011392396, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011392409, "dur":1507, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011393992, "dur":33107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011427107, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011427121, "dur":2306, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011429569, "dur":54082, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011483658, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011483669, "dur":1498, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011485241, "dur":189288, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011674537, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011674552, "dur":2745, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011677385, "dur":2050, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011679444, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011679508, "dur":2356, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011681964, "dur":48234, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011730207, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011730349, "dur":3253, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011733699, "dur":133246, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011866957, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331011866968, "dur":1329, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331011868365, "dur":153749, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331012022121, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331012022134, "dur":4964, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331012027172, "dur":66721, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331012093904, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331012094931, "dur":1787, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331012096790, "dur":182175, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331012278971, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331012278982, "dur":1787, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331012280857, "dur":198645, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331012479507, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1678331012479517, "dur":1486, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":2, "ts":1678331012481055, "dur":495670, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331010577824, "dur":304, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331010578129, "dur":6225, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331010584363, "dur":40906, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1678331010625274, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331010716218, "dur":2303, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1678331010718610, "dur":184, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1678331010718798, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331010718813, "dur":460871, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1678331011179780, "dur":29616, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011209412, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331011209426, "dur":6488, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011216012, "dur":39358, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011255376, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331011255387, "dur":1820, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011257278, "dur":42898, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011300185, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331011300196, "dur":1991, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011302295, "dur":49636, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011351938, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331011351950, "dur":4274, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011356295, "dur":43162, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011399464, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331011399474, "dur":3663, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011403204, "dur":31667, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011434877, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331011434890, "dur":12709, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011447677, "dur":79178, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011526861, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331011526872, "dur":3202, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011530135, "dur":428964, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011959106, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331011959118, "dur":2907, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331011962128, "dur":141932, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331012104067, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331012104081, "dur":4069, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331012108219, "dur":171310, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331012279534, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331012279544, "dur":11983, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":3, "ts":1678331012291598, "dur":277, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":3, "ts":1678331012291881, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331012292659, "dur":1673, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":3, "ts":1678331012294424, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":3, "ts":1678331012294514, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331012294602, "dur":3068, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":3, "ts":1678331012297746, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":3, "ts":1678331012297828, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1678331012297837, "dur":63942, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":3, "ts":1678331012361862, "dur":614847, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331010577932, "dur":205, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331010578137, "dur":6243, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331010584380, "dur":12778, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1678331010597166, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331010597197, "dur":5068, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1678331010602348, "dur":11303, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1678331010613655, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331010613665, "dur":105341, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1678331010719116, "dur":374, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":4, "ts":1678331010719493, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331010719503, "dur":16849, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":4, "ts":1678331010736460, "dur":207, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":4, "ts":1678331010736677, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331010738548, "dur":35767, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":4, "ts":1678331010774471, "dur":56700, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331010831178, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331010831190, "dur":3546, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331010834808, "dur":35260, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331010870075, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331010870087, "dur":2384, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331010872560, "dur":30986, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331010903551, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331010903562, "dur":1894, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331010905534, "dur":29288, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331010934830, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331010934843, "dur":2196, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331010937128, "dur":34391, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331010971528, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331010971540, "dur":3472, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331010975095, "dur":221895, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011196998, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331011197012, "dur":13160, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011210244, "dur":42643, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011252895, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331011252907, "dur":3288, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011256266, "dur":68452, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011324725, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331011324737, "dur":1791, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011326598, "dur":26152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011352759, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331011352773, "dur":2946, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011355791, "dur":107914, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011463715, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331011463730, "dur":2085, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011465904, "dur":44788, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011510699, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331011510709, "dur":3651, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011514429, "dur":136816, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011651253, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331011651269, "dur":5947, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011657440, "dur":179476, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011836923, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331011836934, "dur":1714, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331011838719, "dur":227695, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331012066422, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331012066436, "dur":2897, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331012069405, "dur":307010, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331012376429, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1678331012376443, "dur":6921, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1678331012383443, "dur":593264, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331010578023, "dur":121, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331010578144, "dur":6288, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331010584433, "dur":195, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1678331010584689, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331010592463, "dur":379758, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1678331010972298, "dur":47473, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011019810, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331011019822, "dur":8067, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011028011, "dur":71151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011099168, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331011099180, "dur":3703, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011102970, "dur":23804, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011126781, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331011126793, "dur":7271, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011134149, "dur":54998, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011189157, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331011189171, "dur":14076, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011203326, "dur":49561, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011252895, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331011252907, "dur":4133, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011257120, "dur":65004, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011322131, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331011322145, "dur":6020, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011328287, "dur":32511, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011360804, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331011365285, "dur":10879, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011376235, "dur":32588, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011408831, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331011408845, "dur":3215, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011412180, "dur":67452, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011479639, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331011479651, "dur":2124, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011481861, "dur":312985, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011794855, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331011794869, "dur":2235, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331011797202, "dur":302042, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331012099250, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331012099262, "dur":3656, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331012102993, "dur":150560, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331012253562, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331012253577, "dur":2248, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331012255899, "dur":279247, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331012535150, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1678331012535157, "dur":1337, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":5, "ts":1678331012536545, "dur":440163, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331010578138, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331010578139, "dur":6294, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331010584433, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1678331010584589, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331010587396, "dur":14675, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1678331010602163, "dur":11373, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":6, "ts":1678331010613543, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331010613557, "dur":106131, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":6, "ts":1678331010720901, "dur":5305, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331010726214, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331010726722, "dur":2758, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331010729561, "dur":142832, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331010874395, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331010874408, "dur":63496, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331010937979, "dur":120607, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011058594, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331011058763, "dur":1485, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011060317, "dur":292433, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011352758, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331011352773, "dur":3210, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011356058, "dur":30062, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011386130, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331011386142, "dur":4682, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011390893, "dur":189612, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011580514, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331011580529, "dur":3518, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011584149, "dur":58538, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011642696, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331011642754, "dur":2111, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011644963, "dur":21864, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011666884, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331011666906, "dur":2268, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011669273, "dur":1937, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011671218, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331011671233, "dur":1920, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011673247, "dur":2031, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011675290, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331011675308, "dur":1854, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011677247, "dur":49296, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011726551, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331011726565, "dur":4767, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331011731438, "dur":397724, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331012129169, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331012129179, "dur":3799, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331012133050, "dur":57430, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331012190487, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331012190498, "dur":1463, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331012192030, "dur":780968, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331012973003, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1678331012973013, "dur":3587, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":6, "ts":1678331012976662, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":6, "ts":1678331012976664, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331010578193, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331010578193, "dur":6169, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331010584362, "dur":16648, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":7, "ts":1678331010601018, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331010601046, "dur":1651, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":7, "ts":1678331010602833, "dur":148, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1678331010602984, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331010602993, "dur":369347, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1678331010972420, "dur":69442, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011041869, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331011041881, "dur":1623, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011043569, "dur":84656, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011128242, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331011137904, "dur":30121, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011168103, "dur":87747, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011255854, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331011255863, "dur":9077, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011265013, "dur":35240, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011300290, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331011300302, "dur":1946, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011302315, "dur":140510, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011442831, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331011442848, "dur":6052, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011448968, "dur":61010, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011509987, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331011509999, "dur":3508, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011513587, "dur":92659, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011606254, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331011606270, "dur":2042, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011608412, "dur":75644, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011684064, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331011684081, "dur":2021, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011686204, "dur":2693, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011688939, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331011688956, "dur":2231, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011691284, "dur":172695, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011863985, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331011863996, "dur":2435, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011866503, "dur":123306, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011989816, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331011989829, "dur":1888, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331011991790, "dur":299034, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331012290840, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331012290855, "dur":7765, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":7, "ts":1678331012298689, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":7, "ts":1678331012298758, "dur":8, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331012298773, "dur":19810, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":7, "ts":1678331012318769, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/level1.resS" }}
+,{ "pid":12345, "tid":7, "ts":1678331012318867, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331012318880, "dur":2682, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/level1.resS" }}
+,{ "pid":12345, "tid":7, "ts":1678331012321657, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/level0.resS" }}
+,{ "pid":12345, "tid":7, "ts":1678331012321758, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331012321771, "dur":2298, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/level0.resS" }}
+,{ "pid":12345, "tid":7, "ts":1678331012324139, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":7, "ts":1678331012324212, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331012324221, "dur":10323, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":7, "ts":1678331012334624, "dur":207, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/boot.config" }}
+,{ "pid":12345, "tid":7, "ts":1678331012334835, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1678331012334845, "dur":26559, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/boot.config" }}
+,{ "pid":12345, "tid":7, "ts":1678331012361489, "dur":615237, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331010578255, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331010578255, "dur":6124, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331010584380, "dur":353, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1678331010584737, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331010592903, "dur":18196, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1678331010611188, "dur":9048, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1678331010620241, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331010715882, "dur":2458, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1678331010718428, "dur":11800, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":8, "ts":1678331010730234, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331010730248, "dur":1855, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":8, "ts":1678331010732191, "dur":3370, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash.exe" }}
+,{ "pid":12345, "tid":8, "ts":1678331010735578, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331010735590, "dur":5906, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash.exe" }}
+,{ "pid":12345, "tid":8, "ts":1678331010741569, "dur":42614, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331010784189, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331010784765, "dur":2600, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331010787448, "dur":66284, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331010853740, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331010853754, "dur":3802, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331010857633, "dur":36361, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331010894131, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331010894156, "dur":8858, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331010903087, "dur":35312, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331010938406, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331010938423, "dur":1957, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331010940454, "dur":160219, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011100680, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331011100691, "dur":4103, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011104871, "dur":82485, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011187364, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331011187377, "dur":2979, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011190449, "dur":28646, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011219106, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331011219125, "dur":1537, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011220732, "dur":67407, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011288146, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331011288159, "dur":9365, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011297599, "dur":31981, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011329608, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331011329621, "dur":25081, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011354796, "dur":54912, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011409718, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331011409735, "dur":29038, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011438851, "dur":36337, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011475195, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331011475207, "dur":1966, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011477405, "dur":76481, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011553892, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331011553903, "dur":1657, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011555669, "dur":18984, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011574661, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331011574676, "dur":1840, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011576613, "dur":181214, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011757835, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331011757850, "dur":2123, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011760091, "dur":184852, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011944952, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331011944966, "dur":17932, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331011963017, "dur":54399, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331012017421, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331012017437, "dur":7364, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331012024879, "dur":267142, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331012292024, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331012292032, "dur":5791, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":8, "ts":1678331012297890, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":8, "ts":1678331012297966, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331012297973, "dur":3197, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":8, "ts":1678331012301266, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":8, "ts":1678331012301337, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331012301349, "dur":3400, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":8, "ts":1678331012304842, "dur":231, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":8, "ts":1678331012305077, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331012305090, "dur":1928, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":8, "ts":1678331012307101, "dur":3043, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":8, "ts":1678331012310156, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331012310177, "dur":3166, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":8, "ts":1678331012313484, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1678331012313570, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331012313583, "dur":3516, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1678331012317178, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/resources.assets" }}
+,{ "pid":12345, "tid":8, "ts":1678331012317252, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331012317264, "dur":1914, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/resources.assets" }}
+,{ "pid":12345, "tid":8, "ts":1678331012319282, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/level1" }}
+,{ "pid":12345, "tid":8, "ts":1678331012319349, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331012319358, "dur":2723, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/level1" }}
+,{ "pid":12345, "tid":8, "ts":1678331012322155, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/level0" }}
+,{ "pid":12345, "tid":8, "ts":1678331012322230, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331012322237, "dur":2190, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/level0" }}
+,{ "pid":12345, "tid":8, "ts":1678331012324893, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":8, "ts":1678331012324978, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1678331012324986, "dur":42670, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Aiden/Desktop/build_cursor_test/CoffeeClash_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":8, "ts":1678331012367737, "dur":608973, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1678331012996601, "dur":2250, "ph":"X", "name": "ProfilerWriteOutput" }
 ,

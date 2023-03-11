@@ -131,11 +131,23 @@ public class Config
     [Header("Payload")]
     public static float payloadMaxHp = 1000;
     public static float payloadDamage = 500;
-    public static float payloadRange = 1.5f;
+    public static float payloadRange = 1f;
     public static float payloadMovementSpeed = 1f;
     public static int payloadScrapReward = 100;
     public static int payloadElectronicsReward = 15;
     public static int payloadTechReward = 50;
+
+    [Header("Assassin")]
+    public static float assassinMaxHp = 150;
+    public static float assassinAttackRate = 0.25f;
+    public static float assassinDamage = 25;
+    public static float assassinMinRange = 5f;
+    public static float assassinMaxRange = 25f;
+    public static float assassinMovementSpeed = 6f;
+    public static float assassinProjectileSpeed = 500;
+    public static int assassinScrapReward = 75;
+    public static int assassinElectronicsReward = 25;
+    public static int assassinTechReward = 25;
 
     public static void GetSaveData()
     {

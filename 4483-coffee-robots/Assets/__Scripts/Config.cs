@@ -54,12 +54,14 @@ public class Config
     public static float altRadiusAR = 4f;
     public static float altLaunchForceAR = 400f;
     public static int refillTechCostAR = 10;
+    public static int unlockAltTechCostAR = 400;
 
     [Header("Machete")]
     public static float damageMachete = 80;
     public static float rateMachete = 1.5f;
     public static float rangeMachete = 4f;
     public static float altRateMachete = 0.6f;
+    public static int unlockAltTechCostMachete = 200;
 
     [Header("Shotgun")]
     public static float damageShot = 16; // shoots 9 pellets
@@ -71,6 +73,7 @@ public class Config
     public static float altFireRateShot = 1f;
     public static int refillTechCostShotgun = 15;
     public static int unlockTechCostShotgun = 250;
+    public static int unlockAltTechCostShotgun = 1000;
 
     [Header("Buildings")]
     public static float buildingInteractDistance = 3f;

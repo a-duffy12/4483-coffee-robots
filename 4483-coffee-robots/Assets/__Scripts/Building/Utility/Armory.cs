@@ -16,6 +16,12 @@ public class Armory : MonoBehaviour, IBuilding
     [SerializeField] private GameObject machetePanel;
     [SerializeField] private GameObject shotgunPanel;
     [SerializeField] private Button shotgunButton;
+    [SerializeField] private GameObject arAltDesc;
+    [SerializeField] private Button arAltButton;
+    [SerializeField] private GameObject macheteAltDesc;
+    [SerializeField] private Button macheteAltButton;
+    [SerializeField] private GameObject shotgunAltDesc;
+    [SerializeField] private Button shotgunAltButton;
 
     GameObject player;
     PlayerInventory inventory;
@@ -128,14 +134,48 @@ public class Armory : MonoBehaviour, IBuilding
         machetePanel.SetActive(false);
         shotgunPanel.SetActive(false);
 
-        if (Config.gameStage < 2)
+        if (Config.gameStage <= 1)
         {
             shotgunButton.gameObject.SetActive(false);
+            arAltDesc.SetActive(false);
+            arAltButton.gameObject.SetActive(false);
+            macheteAltDesc.SetActive(false);
+            macheteAltButton.gameObject.SetActive(false);
+            shotgunAltDesc.SetActive(false);
+            shotgunAltButton.gameObject.SetActive(false);
         }
-        else
+        else if (Config.gameStage == 2)
         {
             shotgunButton.gameObject.SetActive(true);
+            arAltDesc.SetActive(true);
+            arAltButton.gameObject.SetActive(true);
+            macheteAltDesc.SetActive(true);
+            macheteAltButton.gameObject.SetActive(true);
+            shotgunAltDesc.SetActive(false);
+            shotgunAltButton.gameObject.SetActive(false);
         }
+        else if (Config.gameStage == 3)
+        {
+            shotgunButton.gameObject.SetActive(true);
+            arAltDesc.SetActive(true);
+            arAltButton.gameObject.SetActive(true);
+            macheteAltDesc.SetActive(true);
+            macheteAltButton.gameObject.SetActive(true);
+            shotgunAltDesc.SetActive(true);
+            shotgunAltButton.gameObject.SetActive(true);
+        }
+        else if (Config.gameStage >= 4)
+        {
+            shotgunButton.gameObject.SetActive(true);
+            arAltDesc.SetActive(true);
+            arAltButton.gameObject.SetActive(true);
+            macheteAltDesc.SetActive(true);
+            macheteAltButton.gameObject.SetActive(true);
+            shotgunAltDesc.SetActive(true);
+            shotgunAltButton.gameObject.SetActive(true);
+        }
+
+        SetButtonTextValues();
     }
 
     public void CloseMenu()
@@ -182,6 +222,72 @@ public class Armory : MonoBehaviour, IBuilding
 
             TMP_Text text = shotgunButton.GetComponentInChildren<TMP_Text>();
             text.text = "Shotgun";
+        }
+    }
+
+    public void ARAlternate()
+    {
+        if (! Config.alternateARUnlocked && PlayerInventory.tech >= Config.unlockAltTechCostAR)
+        {
+            PlayerInventory.tech -= Config.unlockAltTechCostAR;
+            Config.alternateARUnlocked = true;
+            SetButtonTextValues();
+        }
+    }
+
+    public void MacheteAlternate()
+    {
+        if (! Config.alternateMacheteUnlocked && PlayerInventory.tech >= Config.unlockAltTechCostMachete)
+        {
+            PlayerInventory.tech -= Config.unlockAltTechCostMachete;
+            Config.alternateMacheteUnlocked = true;
+            SetButtonTextValues();
+        }
+    }
+
+    public void ShotgunAlternate()
+    {
+        if (! Config.alternateShotgunUnlocked && PlayerInventory.tech >= Config.unlockAltTechCostShotgun)
+        {
+            PlayerInventory.tech -= Config.unlockAltTechCostShotgun;
+            Config.alternateShotgunUnlocked = true;
+            SetButtonTextValues();
+        }
+    }
+
+    void SetButtonTextValues()
+    {
+        if (Config.alternateARUnlocked)
+        {
+            TMP_Text text = arAltButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Unlocked";
+        }
+        else
+        {
+            TMP_Text text = arAltButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Unlock {Config.unlockAltTechCostAR} <sprite=0>";;
+        }
+
+        if (Config.alternateMacheteUnlocked)
+        {
+            TMP_Text text = macheteAltButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Unlocked";
+        }
+        else
+        {
+            TMP_Text text = macheteAltButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Unlock {Config.unlockAltTechCostMachete} <sprite=0>";;
+        }
+
+        if (Config.alternateShotgunUnlocked)
+        {
+            TMP_Text text = shotgunAltButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Unlocked";
+        }
+        else
+        {
+            TMP_Text text = shotgunAltButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Unlock {Config.unlockAltTechCostShotgun} <sprite=0>";;
         }
     }
 

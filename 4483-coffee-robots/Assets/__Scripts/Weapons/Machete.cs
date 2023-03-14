@@ -54,7 +54,6 @@ public class Machete : MonoBehaviour
     {
         if (Config.alternateMacheteUnlocked && Time.time > (lastAttackTime + (1/Config.altRateMachete)))
         {
-            Debug.Log("h");
             Collider[] colliders = Physics.OverlapSphere(firePoint.position, Config.rangeMachete);
 
             foreach (Collider col in colliders)

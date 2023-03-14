@@ -50,7 +50,16 @@ public class Armory : MonoBehaviour, IBuilding
     [SerializeField] private Button mc4cButton;
 
     [Header("Shotgun Upgrades")]
-    [SerializeField] private Button shotgAltButton;
+    [SerializeField] private Button sh2aButton;
+    [SerializeField] private Button sh2bButton;
+    [SerializeField] private Button sh3aButton;
+    [SerializeField] private Button sh3bButton;
+    [SerializeField] private Button sh3cButton;
+    [SerializeField] private Button sh4aButton;
+    [SerializeField] private Button sh4bButton;
+    [SerializeField] private Button sh4cButton;
+    [SerializeField] private Button sh4dButton;
+    [SerializeField] private Button sh4eButton;
 
     GameObject player;
     PlayerInventory inventory;
@@ -194,6 +203,16 @@ public class Armory : MonoBehaviour, IBuilding
             mc4aButton.gameObject.SetActive(false);
             mc4bButton.gameObject.SetActive(false);
             mc4cButton.gameObject.SetActive(false);
+            sh2aButton.gameObject.SetActive(false);
+            sh2bButton.gameObject.SetActive(false);
+            sh3aButton.gameObject.SetActive(false);
+            sh3bButton.gameObject.SetActive(false);
+            sh3cButton.gameObject.SetActive(false);
+            sh4aButton.gameObject.SetActive(false);
+            sh4bButton.gameObject.SetActive(false);
+            sh4cButton.gameObject.SetActive(false);
+            sh4dButton.gameObject.SetActive(false);
+            sh4eButton.gameObject.SetActive(false);
         }
         else if (Config.gameStage == 2)
         {
@@ -226,6 +245,16 @@ public class Armory : MonoBehaviour, IBuilding
             mc4aButton.gameObject.SetActive(false);
             mc4bButton.gameObject.SetActive(false);
             mc4cButton.gameObject.SetActive(false);
+            sh2aButton.gameObject.SetActive(true);
+            sh2bButton.gameObject.SetActive(true);
+            sh3aButton.gameObject.SetActive(false);
+            sh3bButton.gameObject.SetActive(false);
+            sh3cButton.gameObject.SetActive(false);
+            sh4aButton.gameObject.SetActive(false);
+            sh4bButton.gameObject.SetActive(false);
+            sh4cButton.gameObject.SetActive(false);
+            sh4dButton.gameObject.SetActive(false);
+            sh4eButton.gameObject.SetActive(false);
         }
         else if (Config.gameStage == 3)
         {
@@ -258,6 +287,16 @@ public class Armory : MonoBehaviour, IBuilding
             mc4aButton.gameObject.SetActive(false);
             mc4bButton.gameObject.SetActive(false);
             mc4cButton.gameObject.SetActive(false);
+            sh2aButton.gameObject.SetActive(true);
+            sh2bButton.gameObject.SetActive(true);
+            sh3aButton.gameObject.SetActive(true);
+            sh3bButton.gameObject.SetActive(true);
+            sh3cButton.gameObject.SetActive(true);
+            sh4aButton.gameObject.SetActive(false);
+            sh4bButton.gameObject.SetActive(false);
+            sh4cButton.gameObject.SetActive(false);
+            sh4dButton.gameObject.SetActive(false);
+            sh4eButton.gameObject.SetActive(false);
         }
         else if (Config.gameStage >= 4)
         {
@@ -290,6 +329,16 @@ public class Armory : MonoBehaviour, IBuilding
             mc4aButton.gameObject.SetActive(true);
             mc4bButton.gameObject.SetActive(true);
             mc4cButton.gameObject.SetActive(true);
+            sh2aButton.gameObject.SetActive(true);
+            sh2bButton.gameObject.SetActive(true);
+            sh3aButton.gameObject.SetActive(true);
+            sh3bButton.gameObject.SetActive(true);
+            sh3cButton.gameObject.SetActive(true);
+            sh4aButton.gameObject.SetActive(true);
+            sh4bButton.gameObject.SetActive(true);
+            sh4cButton.gameObject.SetActive(true);
+            sh4dButton.gameObject.SetActive(true);
+            sh4eButton.gameObject.SetActive(true);
         }
 
         SetButtonTextValues();
@@ -622,6 +671,120 @@ public class Armory : MonoBehaviour, IBuilding
 
     #endregion MC upgrades
     
+    #region SH upgrades
+    
+    public void SH2A()
+    {
+        if (Config.shotgunUnlocked && !Config.sh2a && PlayerInventory.tech >= Config.stage2WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage2WeaponUpgradeTechCost;
+            Config.sh2a = true;
+            Config.maxAmmoShot = 28;
+            SetButtonTextValues();
+        }
+    }
+
+    public void SH2B()
+    {
+        if (Config.shotgunUnlocked && !Config.sh2b && PlayerInventory.tech >= Config.stage2WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage2WeaponUpgradeTechCost;
+            Config.sh2b = true;
+            Config.damageShot = 17;
+            SetButtonTextValues();
+        }
+    }
+
+    public void SH3A()
+    {
+        if (Config.shotgunUnlocked && !Config.sh3a && PlayerInventory.tech >= Config.stage3WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage3WeaponUpgradeTechCost;
+            Config.sh3a = true;
+            Config.maxAmmoShot = 32;
+            SetButtonTextValues();
+        }
+    }
+
+    public void SH3B()
+    {
+        if (Config.shotgunUnlocked && !Config.sh3b && PlayerInventory.tech >= Config.stage3WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage3WeaponUpgradeTechCost;
+            Config.sh3b = true;
+            Config.damageShot = 18;
+            SetButtonTextValues();
+        }
+    }
+
+    public void SH3C()
+    {
+        if (Config.shotgunUnlocked && !Config.sh3c && PlayerInventory.tech >= Config.stage3WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage3WeaponUpgradeTechCost;
+            Config.sh3c = true;
+            Config.fireRateShot = 1.1f;
+            SetButtonTextValues();
+        }
+    }
+
+    public void SH4A()
+    {
+        if (Config.shotgunUnlocked && !Config.sh4a && PlayerInventory.tech >= Config.stage4WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage4WeaponUpgradeTechCost;
+            Config.sh4a = true;
+            Config.maxAmmoShot = 36;
+            SetButtonTextValues();
+        }
+    }
+
+    public void SH4B()
+    {
+        if (Config.shotgunUnlocked && !Config.sh4b && PlayerInventory.tech >= Config.stage4WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage4WeaponUpgradeTechCost;
+            Config.sh4b = true;
+            Config.damageShot = 20;
+            SetButtonTextValues();
+        }
+    }
+
+    public void SH4C()
+    {
+        if (Config.shotgunUnlocked && !Config.sh4c && PlayerInventory.tech >= Config.stage4WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage4WeaponUpgradeTechCost;
+            Config.sh4c = true;
+            Config.fireRateShot = 1.2f;
+            SetButtonTextValues();
+        }
+    }
+
+    public void SH4D()
+    {
+        if (Config.shotgunUnlocked && !Config.sh4d && PlayerInventory.tech >= Config.stage4WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage4WeaponUpgradeTechCost;
+            Config.sh4d = true;
+            Config.rangeShot = 15;
+            SetButtonTextValues();
+        }
+    }
+
+    public void SH4E()
+    {
+        if (Config.shotgunUnlocked && !Config.sh4e && PlayerInventory.tech >= Config.stage4WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage4WeaponUpgradeTechCost;
+            Config.sh4e = true;
+            Config.altKnockDistanceShot = 1.1f;
+            SetButtonTextValues();
+        }
+    }
+    
+    #endregion SH upgrades
+    
     void SetButtonTextValues()
     {
         if (Config.alternateARUnlocked)
@@ -657,15 +820,17 @@ public class Armory : MonoBehaviour, IBuilding
             text.text = $"Unlock {Config.unlockAltTechCostShotgun} <sprite=0>";
         }
 
+        // Assault Rifle
+
         if (Config.ar1a)
         {
             TMP_Text text = ar1aButton.GetComponentInChildren<TMP_Text>();
-            text.text = $"Ammo Count I\nUnlocked";
+            text.text = $"Max Ammo I\nUnlocked";
         }
         else
         {
             TMP_Text text = ar1aButton.GetComponentInChildren<TMP_Text>();
-            text.text = $"Ammo Count I\nUnlock {Config.stage1WeaponUpgradeTechCost} <sprite=0>";
+            text.text = $"Max Ammo I\nUnlock {Config.stage1WeaponUpgradeTechCost} <sprite=0>";
         }
 
         if (Config.ar1b)
@@ -683,13 +848,13 @@ public class Armory : MonoBehaviour, IBuilding
         {
             ar2aButton.interactable = true;
             TMP_Text text = ar2aButton.GetComponentInChildren<TMP_Text>();
-            text.text = $"Ammo Count II\nUnlocked";
+            text.text = $"Max Ammo II\nUnlocked";
         }
         else if (!Config.ar2a && Config.ar1a)
         {
             ar2aButton.interactable = true;
             TMP_Text text = ar2aButton.GetComponentInChildren<TMP_Text>();
-            text.text = $"Ammo Count II\nUnlock {Config.stage2WeaponUpgradeTechCost} <sprite=0>";
+            text.text = $"Max Ammo II\nUnlock {Config.stage2WeaponUpgradeTechCost} <sprite=0>";
         }
         else
         {
@@ -740,13 +905,13 @@ public class Armory : MonoBehaviour, IBuilding
         {
             ar3aButton.interactable = true;
             TMP_Text text = ar3aButton.GetComponentInChildren<TMP_Text>();
-            text.text = $"Ammo Count III\nUnlocked";
+            text.text = $"Max Ammo III\nUnlocked";
         }
         else if (!Config.ar3a && Config.ar2a)
         {
             ar3aButton.interactable = true;
             TMP_Text text = ar3aButton.GetComponentInChildren<TMP_Text>();
-            text.text = $"Ammo Count III\nUnlock {Config.stage3WeaponUpgradeTechCost} <sprite=0>";
+            text.text = $"Max Ammo III\nUnlock {Config.stage3WeaponUpgradeTechCost} <sprite=0>";
         }
         else
         {   
@@ -816,13 +981,13 @@ public class Armory : MonoBehaviour, IBuilding
         {
             ar4aButton.interactable = true;
             TMP_Text text = ar4aButton.GetComponentInChildren<TMP_Text>();
-            text.text = $"Ammo Count IV\nUnlocked";
+            text.text = $"Max Ammo IV\nUnlocked";
         }
         else if (!Config.ar4a && Config.ar3a)
         {
             ar4aButton.interactable = true;
             TMP_Text text = ar4aButton.GetComponentInChildren<TMP_Text>();
-            text.text = $"Ammo Count IV\nUnlock {Config.stage4WeaponUpgradeTechCost} <sprite=0>";
+            text.text = $"Max Ammo IV\nUnlock {Config.stage4WeaponUpgradeTechCost} <sprite=0>";
         }
         else
         {
@@ -887,6 +1052,8 @@ public class Armory : MonoBehaviour, IBuilding
             TMP_Text text = ar4dButton.GetComponentInChildren<TMP_Text>();
             text.text = $"Locked";
         }
+
+        // Machete
 
         if (Config.mc1a)
         {
@@ -1041,6 +1208,174 @@ public class Armory : MonoBehaviour, IBuilding
             mc4cButton.interactable = false;
             TMP_Text text = mc4cButton.GetComponentInChildren<TMP_Text>();
             text.text = $"Locked";
+        }
+
+        // Shotgun
+
+        if (Config.sh2a)
+        {
+            sh2aButton.interactable = true;
+            TMP_Text text = sh2aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Max Ammo I\nUnlocked";
+        }
+        else
+        {
+            sh2aButton.interactable = true;
+            TMP_Text text = sh2aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Max Ammo I\nUnlock {Config.stage2WeaponUpgradeTechCost} <sprite=0>";
+        }
+
+        if (Config.sh2b)
+        {
+            sh2bButton.interactable = true;
+            TMP_Text text = sh2bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage I\nUnlocked";
+        }
+        else
+        {
+            sh2bButton.interactable = true;
+            TMP_Text text = sh2bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage I\nUnlock {Config.stage2WeaponUpgradeTechCost} <sprite=0>";
+        }
+
+        if (Config.sh3a)
+        {
+            sh3aButton.interactable = true;
+            TMP_Text text = sh3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Max Ammo II\nUnlocked";
+        }
+        else if (!Config.sh3a && Config.sh2a)
+        {
+            sh3aButton.interactable = true;
+            TMP_Text text = sh3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Max Ammo II\nUnlock {Config.stage3WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            sh3aButton.interactable = false;
+            TMP_Text text = sh3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.sh3b)
+        {
+            sh3bButton.interactable = true;
+            TMP_Text text = sh3bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage II\nUnlocked";
+        }
+        else if (!Config.sh3b && Config.sh2b)
+        {
+            sh3bButton.interactable = true;
+            TMP_Text text = sh3bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage II\nUnlock {Config.stage3WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            sh3bButton.interactable = false;
+            TMP_Text text = sh3bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.sh3c)
+        {
+            sh3cButton.interactable = true;
+            TMP_Text text = sh3cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Fire Rate I\nUnlocked";
+        }
+        else
+        {
+            sh3cButton.interactable = true;
+            TMP_Text text = sh3cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Fire Rate I\nUnlock {Config.stage3WeaponUpgradeTechCost} <sprite=0>";
+        }
+
+        if (Config.sh4a)
+        {
+            sh4aButton.interactable = true;
+            TMP_Text text = sh4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Max Ammo III\nUnlocked";
+        }
+        else if (!Config.sh4a && Config.sh3a)
+        {
+            sh4aButton.interactable = true;
+            TMP_Text text = sh4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Max Ammo III\nUnlock {Config.stage4WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            sh4aButton.interactable = false;
+            TMP_Text text = sh4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.sh4b)
+        {
+            sh4bButton.interactable = true;
+            TMP_Text text = sh4bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage III\nUnlocked";
+        }
+        else if (!Config.sh4b && Config.sh3b)
+        {
+            sh4bButton.interactable = true;
+            TMP_Text text = sh4bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage III\nUnlock {Config.stage4WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            sh4bButton.interactable = false;
+            TMP_Text text = sh4bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.sh4c)
+        {
+            sh4cButton.interactable = true;
+            TMP_Text text = sh4cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Fire Rate II\nUnlocked";
+        }
+        else if (!Config.sh4c && Config.sh3c)
+        {
+            sh4cButton.interactable = true;
+            TMP_Text text = sh4cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Fire Rate II\nUnlock {Config.stage4WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            sh4cButton.interactable = false;
+            TMP_Text text = sh4cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.sh4d)
+        {
+            sh4dButton.interactable = true;
+            TMP_Text text = sh4dButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Range I\nUnlocked";
+        }
+        else
+        {
+            sh4dButton.interactable = true;
+            TMP_Text text = sh4dButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Range I\nUnlock {Config.stage4WeaponUpgradeTechCost} <sprite=0>";
+        }
+
+        if (Config.sh4e && Config.alternateShotgunUnlocked)
+        {
+            sh4eButton.interactable = true;
+            TMP_Text text = sh4eButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Knockback I\nUnlocked";
+        }
+        else if (Config.alternateShotgunUnlocked)
+        {
+            sh4eButton.interactable = true;
+            TMP_Text text = sh4eButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Knockback I\nUnlock {Config.stage4WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            sh4eButton.interactable = false;
+            TMP_Text text = sh4eButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";   
         }
     }
 

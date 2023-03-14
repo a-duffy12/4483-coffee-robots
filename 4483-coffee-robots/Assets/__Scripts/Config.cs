@@ -54,6 +54,16 @@ public class Config
     public static bool mc4a = false;
     public static bool mc4b = false;
     public static bool mc4c = false;
+    public static bool sh2a = false;
+    public static bool sh2b = false;
+    public static bool sh3a = false;
+    public static bool sh3b = false;
+    public static bool sh3c = false;
+    public static bool sh4a = false;
+    public static bool sh4b = false;
+    public static bool sh4c = false;
+    public static bool sh4d = false;
+    public static bool sh4e = false;
 
     [Header("Player Movement")]
     public static float movementSpeed = 10f;
@@ -224,6 +234,16 @@ public class Config
         Config.mc4a = false;
         Config.mc4b = false;
         Config.mc4c = false;
+        Config.sh2a = false;
+        Config.sh2b = false;
+        Config.sh3a = false;
+        Config.sh3b = false;
+        Config.sh3c = false;
+        Config.sh4a = false;
+        Config.sh4b = false;
+        Config.sh4c = false;
+        Config.sh4d = false;
+        Config.sh4e = false;
 
         Config.movementSpeed = 10f;
         Config.dashSpeed = 200f;

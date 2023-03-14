@@ -295,7 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 74389381}
   - component: {fileID: 74389382}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawnpoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 88605034}
   - component: {fileID: 88605033}
   - component: {fileID: 88605032}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 90748840}
   - component: {fileID: 90748839}
   - component: {fileID: 90748838}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1310,7 +1310,7 @@ GameObject:
   - component: {fileID: 130530581}
   - component: {fileID: 130530580}
   - component: {fileID: 130530579}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1808,6 +1808,10 @@ PrefabInstance:
     - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_Name
       value: DefenseBuildPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_RootOrder
@@ -2326,6 +2330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefenseBuildPoint (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2400,7 +2408,7 @@ GameObject:
   - component: {fileID: 273907188}
   - component: {fileID: 273907187}
   - component: {fileID: 273907186}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2498,7 +2506,7 @@ GameObject:
   - component: {fileID: 294771327}
   - component: {fileID: 294771326}
   - component: {fileID: 294771325}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4931,6 +4939,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefenseBuildPoint (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -5695,6 +5707,10 @@ PrefabInstance:
     - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_Name
       value: DefenseBuildPoint (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_RootOrder
@@ -6479,7 +6495,7 @@ GameObject:
   - component: {fileID: 781789668}
   - component: {fileID: 781789667}
   - component: {fileID: 781789666}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6579,6 +6595,10 @@ PrefabInstance:
     - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_Name
       value: DefenseBuildPoint (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_RootOrder
@@ -8656,6 +8676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefenseBuildPoint (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -9256,7 +9280,7 @@ GameObject:
   - component: {fileID: 1063062701}
   - component: {fileID: 1063062700}
   - component: {fileID: 1063062699}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9723,7 +9747,7 @@ GameObject:
   - component: {fileID: 1092626606}
   - component: {fileID: 1092626605}
   - component: {fileID: 1092626604}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10150,7 +10174,7 @@ GameObject:
   - component: {fileID: 1130866900}
   - component: {fileID: 1130866899}
   - component: {fileID: 1130866898}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11077,7 +11101,7 @@ GameObject:
   - component: {fileID: 1232174993}
   - component: {fileID: 1232174992}
   - component: {fileID: 1232174991}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11626,7 +11650,7 @@ GameObject:
   - component: {fileID: 1346774479}
   - component: {fileID: 1346774478}
   - component: {fileID: 1346774477}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14042,7 +14066,7 @@ GameObject:
   - component: {fileID: 1525048891}
   - component: {fileID: 1525048890}
   - component: {fileID: 1525048889}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14351,7 +14375,7 @@ GameObject:
   - component: {fileID: 1585275131}
   - component: {fileID: 1585275130}
   - component: {fileID: 1585275129}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14586,6 +14610,10 @@ PrefabInstance:
     - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_Name
       value: DefenseBuildPoint (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_RootOrder
@@ -14889,7 +14917,7 @@ GameObject:
   - component: {fileID: 1630543419}
   - component: {fileID: 1630543418}
   - component: {fileID: 1630543417}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15816,6 +15844,10 @@ PrefabInstance:
     - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_Name
       value: DefenseBuildPoint (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_RootOrder
@@ -16920,7 +16952,7 @@ GameObject:
   - component: {fileID: 1826008804}
   - component: {fileID: 1826008803}
   - component: {fileID: 1826008802}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawn (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17452,6 +17484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefenseBuildPoint (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -17605,6 +17641,10 @@ PrefabInstance:
     - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_Name
       value: DefenseBuildPoint (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_RootOrder
@@ -18565,7 +18605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2024234925}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Buildpoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19034,6 +19074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefenseBuildPoint (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -19344,6 +19388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefenseBuildPoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: d0dac1e39b7e9024da4ce3c8f948f389, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -19492,6 +19540,10 @@ PrefabInstance:
     - target: {fileID: 1741373002454946796, guid: 2c4a763a262bc274184445b83870a3e1, type: 3}
       propertyPath: m_Name
       value: Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741373002454946796, guid: 2c4a763a262bc274184445b83870a3e1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1741373002454946797, guid: 2c4a763a262bc274184445b83870a3e1, type: 3}
       propertyPath: m_RootOrder

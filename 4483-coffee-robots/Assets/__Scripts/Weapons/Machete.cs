@@ -10,6 +10,8 @@ public class Machete : MonoBehaviour
     public int weaponInt = 1;
 
     //[Header("Audio")]
+    //public AudioClip fireAudio;
+    //public AudioClip altAudio;
 
     private float lastAttackTime;
     
@@ -50,9 +52,25 @@ public class Machete : MonoBehaviour
 
     public void AlternateFire(Transform firePoint)
     {
-        if (Config.alternateMacheteUnlocked)
+        if (Config.alternateMacheteUnlocked && Time.time > (lastAttackTime + (1/Config.altRateMachete)))
         {
-            
+            Debug.Log("h");
+            Collider[] colliders = Physics.OverlapSphere(firePoint.position, Config.rangeMachete);
+
+            foreach (Collider col in colliders)
+            {
+                IEnemy enemy = col.gameObject.GetComponent<IEnemy>();
+
+                if (enemy != null)
+                {
+                    enemy.DamageEnemy(Config.damageMachete, weaponName);
+                }
+            }
+
+            lastAttackTime = Time.time;
+
+            //audioSource.clip = altAudio;
+            //audioSource.Play();
         }
     }
 

@@ -1,25 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class AssaultRifle : MonoBehaviour
 {
     [Header("Stats")]
     [SerializeField] private LayerMask hitMask;
     [SerializeField] private ParticleSystem muzzleFlash;
+    [SerializeField] private GameObject altPrefab;
     public string weaponName = "assault_rifle";
     public int weaponInt = 0;
 
     //[Header("Audio")]
+    //public AudioClip fireAudio;
+    //public AudioClip emptyAudio;
+    //public AudioClip altAudio;
 
     [HideInInspector] public int currentAmmo;
     private float lastFireTime;
     
     AudioSource audioSource;
+    Camera mainCamera;
 
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
     
     void Start()
@@ -74,9 +81,28 @@ public class AssaultRifle : MonoBehaviour
 
     public void AlternateFire(Transform firePoint)
     {
-        if (Config.alternateARUnlocked)
+        if (Config.alternateARUnlocked && Time.time > (lastFireTime + (1/Config.altFireRateAR)))
         {
-            
+            GameObject altObject = Instantiate(altPrefab, firePoint.position + (firePoint.forward * 1f), firePoint.rotation);
+            Cluster cluster = altObject.GetComponent<Cluster>();
+            cluster.Launch((firePoint.transform.forward + firePoint.transform.up), Config.altLaunchForceAR);
+
+            currentAmmo--;
+            lastFireTime = Time.time;
+
+            //audioSource.clip = altAudio;
+            //audioSource.Play();
+
+            if (muzzleFlash.isPlaying)
+            {
+                muzzleFlash.Stop();
+            }
+            muzzleFlash.Play();
+        }
+        else if (Config.alternateARUnlocked && Time.time > (lastFireTime + (1/Config.altFireRateAR))) // no ammo and can fire
+        {
+            //audioSource.clip = emptyAudio;
+            //audioSource.Play();
         }
     }
 

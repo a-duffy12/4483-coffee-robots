@@ -23,6 +23,11 @@ public class Dart : MonoBehaviour
     void Start()
     {
         shootTime = Time.time;
+
+        source.playOnAwake = false;
+        source.spatialBlend = 1f;
+        source.volume = 1f;
+        source.priority = 130;
     }
 
     void Update()

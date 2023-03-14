@@ -414,6 +414,7 @@
 "Assets/__Scripts/Serialized/GameData.cs"
 "Assets/__Scripts/Serialized/SaveLoad.cs"
 "Assets/__Scripts/Weapons/AssaultRifle.cs"
+"Assets/__Scripts/Weapons/Cluster.cs"
 "Assets/__Scripts/Weapons/Machete.cs"
 "Assets/__Scripts/Weapons/Shotgun.cs"
 -langversion:9.0

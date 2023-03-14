@@ -49,14 +49,16 @@ public class Config
     public static float fireRateAR = 10f;
     public static float rangeAR = 25;
     public static int maxAmmoAR = 150;
-    public static float altDamageAR = 15;
+    public static float altDamageAR = 60;
     public static float altFireRateAR = 0.5f;
+    public static float altRadiusAR = 4f;
+    public static float altLaunchForceAR = 400f;
     public static int refillTechCostAR = 10;
 
     [Header("Machete")]
     public static float damageMachete = 80;
     public static float rateMachete = 1.5f;
-    public static float rangeMachete = 2.5f;
+    public static float rangeMachete = 4f;
     public static float altRateMachete = 0.6f;
 
     [Header("Shotgun")]
@@ -64,9 +66,9 @@ public class Config
     public static float fireRateShot = 1f;
     public static float rangeShot = 10;
     public static int maxAmmoShot = 25;
-    public static float altDamageShot = 30;
-    public static float altKnockForceShot = 100;
-    public static float altFireRateShot = 0.8f;
+    public static float altDamageShot = 4; // shoots 9 pellets in a 40 degree arc
+    public static float altKnockDistanceShot = 1f;
+    public static float altFireRateShot = 1f;
     public static int refillTechCostShotgun = 15;
     public static int unlockTechCostShotgun = 250;
 
@@ -181,20 +183,22 @@ public class Config
         Config.fireRateAR = 10f;
         Config.rangeAR = 25;
         Config.maxAmmoAR = 150;
-        Config.altDamageAR = 15;
+        Config.altDamageAR = 60;
         Config.altFireRateAR = 0.5f;
+        Config.altRadiusAR = 4f;
+        Config.altLaunchForceAR = 400f;
         Config.refillTechCostAR = 10;
         Config.damageMachete = 80;
         Config.rateMachete = 1.5f;
-        Config.rangeMachete = 2.5f;
+        Config.rangeMachete = 4f;
         Config.altRateMachete = 0.6f;
         Config.damageShot = 16;
         Config.fireRateShot = 1f;
         Config.rangeShot = 10;
         Config.maxAmmoShot = 25;
-        Config.altDamageShot = 30;
-        Config.altKnockForceShot = 100;
-        Config.altFireRateShot = 0.8f;
+        Config.altDamageShot = 4;
+        Config.altKnockDistanceShot = 1f;
+        Config.altFireRateShot = 1f;
         Config.refillTechCostShotgun = 15;
         Config.turretMaxHp = 1000;
         Config.countTurret = 0;

@@ -334,6 +334,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   muzzleFlash: {fileID: 6002405611799423730}
+  altPrefab: {fileID: 4496795142756872822, guid: cdb3fc8f6fc66e64991519c929b40b1f, type: 3}
   weaponName: assault_rifle
   weaponInt: 0
   currentAmmo: 0

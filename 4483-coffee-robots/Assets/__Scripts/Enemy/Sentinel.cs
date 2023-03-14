@@ -8,6 +8,7 @@ public class Sentinel : MonoBehaviour, IEnemy
     [Header("GameObjects")]
     public Image healthBar;
     public GameObject canvas;
+    public ParticleSystem attackFlash;
 
     //[Header("Audio")]
     //public AudioClip attackAudio;
@@ -137,6 +138,12 @@ public class Sentinel : MonoBehaviour, IEnemy
 
             //source.clip = attackAudio;
             //source.Play();
+
+            if (attackFlash.isPlaying)
+            {
+                attackFlash.Stop();
+            }
+            attackFlash.Play();
 
             if (!targetingPlayer)
             {

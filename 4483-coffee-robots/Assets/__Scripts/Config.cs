@@ -32,6 +32,19 @@ public class Config
     public static bool alternateARUnlocked = false;
     public static bool alternateMacheteUnlocked = false;
     public static bool alternateShotgunUnlocked = false;
+    public static bool ar1a = false;
+    public static bool ar1b = false;
+    public static bool ar2a = false;
+    public static bool ar2b = false;
+    public static bool ar2c = false;
+    public static bool ar3a = false;
+    public static bool ar3b = false;
+    public static bool ar3c = false;
+    public static bool ar3d = false;
+    public static bool ar4a = false;
+    public static bool ar4b = false;
+    public static bool ar4c = false;
+    public static bool ar4d = false;
 
     [Header("Player Movement")]
     public static float movementSpeed = 10f;
@@ -43,6 +56,12 @@ public class Config
     public static float abilityDuration = 5f;
     public static float abilityCooldown = 15f;
     public static float abilityDamageModifier = 0.5f;
+
+    [Header("Weapons")]
+    public static int stage1WeaponUpgradeTechCost = 25;
+    public static int stage2WeaponUpgradeTechCost = 100;
+    public static int stage3WeaponUpgradeTechCost = 300;
+    public static int stage4WeaponUpgradeTechCost = 750;
 
     [Header("Assault Rifle")]
     public static float damageAR = 10;
@@ -175,6 +194,20 @@ public class Config
         Config.alternateARUnlocked = false;
         Config.alternateMacheteUnlocked = false;
         Config.alternateShotgunUnlocked = false;
+        Config.ar1a = false;
+        Config.ar1b = false;
+        Config.ar2a = false;
+        Config.ar2b = false;
+        Config.ar2c = false;
+        Config.ar3a = false;
+        Config.ar3b = false;
+        Config.ar3c = false;
+        Config.ar3d = false;
+        Config.ar4a = false;
+        Config.ar4b = false;
+        Config.ar4c = false;
+        Config.ar4d = false;
+
         Config.movementSpeed = 10f;
         Config.dashSpeed = 200f;
         Config.dashCooldown = 1f;

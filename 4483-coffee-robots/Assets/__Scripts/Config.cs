@@ -45,6 +45,15 @@ public class Config
     public static bool ar4b = false;
     public static bool ar4c = false;
     public static bool ar4d = false;
+    public static bool mc1a = false;
+    public static bool mc2a = false;
+    public static bool mc2b = false;
+    public static bool mc3a = false;
+    public static bool mc3b = false;
+    public static bool mc3c = false;
+    public static bool mc4a = false;
+    public static bool mc4b = false;
+    public static bool mc4c = false;
 
     [Header("Player Movement")]
     public static float movementSpeed = 10f;
@@ -89,7 +98,6 @@ public class Config
     public static int maxAmmoShot = 25;
     public static float altDamageShot = 4; // shoots 9 pellets in a 40 degree arc
     public static float altKnockDistanceShot = 1f;
-    public static float altFireRateShot = 1f;
     public static int refillTechCostShotgun = 15;
     public static int unlockTechCostShotgun = 250;
     public static int unlockAltTechCostShotgun = 1000;
@@ -207,6 +215,15 @@ public class Config
         Config.ar4b = false;
         Config.ar4c = false;
         Config.ar4d = false;
+        Config.mc1a = false;
+        Config.mc2a = false;
+        Config.mc2b = false;
+        Config.mc3a = false;
+        Config.mc3b = false;
+        Config.mc3c = false;
+        Config.mc4a = false;
+        Config.mc4b = false;
+        Config.mc4c = false;
 
         Config.movementSpeed = 10f;
         Config.dashSpeed = 200f;
@@ -234,7 +251,6 @@ public class Config
         Config.maxAmmoShot = 25;
         Config.altDamageShot = 4;
         Config.altKnockDistanceShot = 1f;
-        Config.altFireRateShot = 1f;
         Config.refillTechCostShotgun = 15;
         Config.turretMaxHp = 1000;
         Config.countTurret = 0;

@@ -39,7 +39,15 @@ public class Armory : MonoBehaviour, IBuilding
     [SerializeField] private Button ar4dButton;
 
     [Header("Machete Upgrades")]
-    [SerializeField] private Button stgunAltButton;
+    [SerializeField] private Button mc1aButton;
+    [SerializeField] private Button mc2aButton;
+    [SerializeField] private Button mc2bButton;
+    [SerializeField] private Button mc3aButton;
+    [SerializeField] private Button mc3bButton;
+    [SerializeField] private Button mc3cButton;
+    [SerializeField] private Button mc4aButton;
+    [SerializeField] private Button mc4bButton;
+    [SerializeField] private Button mc4cButton;
 
     [Header("Shotgun Upgrades")]
     [SerializeField] private Button shotgAltButton;
@@ -177,6 +185,15 @@ public class Armory : MonoBehaviour, IBuilding
             ar4bButton.gameObject.SetActive(false);
             ar4cButton.gameObject.SetActive(false);
             ar4dButton.gameObject.SetActive(false);
+            mc1aButton.gameObject.SetActive(true);
+            mc2aButton.gameObject.SetActive(false);
+            mc2bButton.gameObject.SetActive(false);
+            mc3aButton.gameObject.SetActive(false);
+            mc3bButton.gameObject.SetActive(false);
+            mc3cButton.gameObject.SetActive(false);
+            mc4aButton.gameObject.SetActive(false);
+            mc4bButton.gameObject.SetActive(false);
+            mc4cButton.gameObject.SetActive(false);
         }
         else if (Config.gameStage == 2)
         {
@@ -200,6 +217,15 @@ public class Armory : MonoBehaviour, IBuilding
             ar4bButton.gameObject.SetActive(false);
             ar4cButton.gameObject.SetActive(false);
             ar4dButton.gameObject.SetActive(false);
+            mc1aButton.gameObject.SetActive(true);
+            mc2aButton.gameObject.SetActive(true);
+            mc2bButton.gameObject.SetActive(true);
+            mc3aButton.gameObject.SetActive(false);
+            mc3bButton.gameObject.SetActive(false);
+            mc3cButton.gameObject.SetActive(false);
+            mc4aButton.gameObject.SetActive(false);
+            mc4bButton.gameObject.SetActive(false);
+            mc4cButton.gameObject.SetActive(false);
         }
         else if (Config.gameStage == 3)
         {
@@ -223,6 +249,15 @@ public class Armory : MonoBehaviour, IBuilding
             ar4bButton.gameObject.SetActive(false);
             ar4cButton.gameObject.SetActive(false);
             ar4dButton.gameObject.SetActive(false);
+            mc1aButton.gameObject.SetActive(true);
+            mc2aButton.gameObject.SetActive(true);
+            mc2bButton.gameObject.SetActive(true);
+            mc3aButton.gameObject.SetActive(true);
+            mc3bButton.gameObject.SetActive(true);
+            mc3cButton.gameObject.SetActive(true);
+            mc4aButton.gameObject.SetActive(false);
+            mc4bButton.gameObject.SetActive(false);
+            mc4cButton.gameObject.SetActive(false);
         }
         else if (Config.gameStage >= 4)
         {
@@ -246,6 +281,15 @@ public class Armory : MonoBehaviour, IBuilding
             ar4bButton.gameObject.SetActive(true);
             ar4cButton.gameObject.SetActive(true);
             ar4dButton.gameObject.SetActive(true);
+            mc1aButton.gameObject.SetActive(true);
+            mc2aButton.gameObject.SetActive(true);
+            mc2bButton.gameObject.SetActive(true);
+            mc3aButton.gameObject.SetActive(true);
+            mc3bButton.gameObject.SetActive(true);
+            mc3cButton.gameObject.SetActive(true);
+            mc4aButton.gameObject.SetActive(true);
+            mc4bButton.gameObject.SetActive(true);
+            mc4cButton.gameObject.SetActive(true);
         }
 
         SetButtonTextValues();
@@ -475,6 +519,109 @@ public class Armory : MonoBehaviour, IBuilding
 
     #endregion AR upgrades
 
+    #region MC upgrades
+
+    public void MC1A()
+    {
+        if (!Config.mc1a && PlayerInventory.tech >= Config.stage1WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage1WeaponUpgradeTechCost;
+            Config.mc1a = true;
+            Config.damageMachete = 90;
+            SetButtonTextValues();
+        }
+    }
+
+    public void MC2A()
+    {
+        if (!Config.mc2a && PlayerInventory.tech >= Config.stage2WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage2WeaponUpgradeTechCost;
+            Config.mc2a = true;
+            Config.damageMachete = 100;
+            SetButtonTextValues();
+        }
+    }
+
+    public void MC2B()
+    {
+        if (!Config.mc2b && PlayerInventory.tech >= Config.stage2WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage2WeaponUpgradeTechCost;
+            Config.mc2b = true;
+            Config.rateMachete = 1.7f;
+            SetButtonTextValues();
+        }
+    }
+
+    public void MC3A()
+    {
+        if (!Config.mc3a && PlayerInventory.tech >= Config.stage3WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage3WeaponUpgradeTechCost;
+            Config.mc3a = true;
+            Config.damageMachete = 110;
+            SetButtonTextValues();
+        }
+    }
+
+    public void MC3B()
+    {
+        if (!Config.mc3b && PlayerInventory.tech >= Config.stage3WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage3WeaponUpgradeTechCost;
+            Config.mc3b = true;
+            Config.rateMachete = 1.9f;
+            SetButtonTextValues();
+        }
+    }
+
+    public void MC3C()
+    {
+        if (!Config.mc3c && PlayerInventory.tech >= Config.stage3WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage3WeaponUpgradeTechCost;
+            Config.mc3c = true;
+            Config.altRateMachete = 0.7f;
+            SetButtonTextValues();
+        }
+    }
+
+    public void MC4A()
+    {
+        if (!Config.mc4a && PlayerInventory.tech >= Config.stage4WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage4WeaponUpgradeTechCost;
+            Config.mc4a = true;
+            Config.damageMachete = 125;
+            SetButtonTextValues();
+        }
+    }
+
+    public void MC4B()
+    {
+        if (!Config.mc4b && PlayerInventory.tech >= Config.stage4WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage4WeaponUpgradeTechCost;
+            Config.mc4b = true;
+            Config.rateMachete = 2.1f;
+            SetButtonTextValues();
+        }
+    }
+
+    public void MC4C()
+    {
+        if (!Config.mc4c && PlayerInventory.tech >= Config.stage4WeaponUpgradeTechCost)
+        {
+            PlayerInventory.tech -= Config.stage4WeaponUpgradeTechCost;
+            Config.mc4c = true;
+            Config.altRateMachete = 0.8f;
+            SetButtonTextValues();
+        }
+    }
+
+    #endregion MC upgrades
+    
     void SetButtonTextValues()
     {
         if (Config.alternateARUnlocked)
@@ -738,6 +885,161 @@ public class Armory : MonoBehaviour, IBuilding
         {
             ar4dButton.interactable = false;
             TMP_Text text = ar4dButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.mc1a)
+        {
+            TMP_Text text = mc1aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage I\nUnlocked";
+        }
+        else
+        {
+            TMP_Text text = mc1aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage I\nUnlock {Config.stage1WeaponUpgradeTechCost} <sprite=0>";
+        }
+
+        if (Config.mc2a)
+        {
+            mc2aButton.interactable = true;
+            TMP_Text text = mc2aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage II\nUnlocked";
+        }
+        else if (!Config.mc2a && Config.mc1a)
+        {
+            mc2aButton.interactable = true;
+            TMP_Text text = mc2aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage II\nUnlock {Config.stage2WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            mc2aButton.interactable = false;
+            TMP_Text text = mc2aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.mc2b)
+        {
+            TMP_Text text = mc2bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Attack Rate I\nUnlocked";
+        }
+        else
+        {
+            TMP_Text text = mc2bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Attack Rate I\nUnlock {Config.stage2WeaponUpgradeTechCost} <sprite=0>";
+        }
+
+        if (Config.mc3a)
+        {
+            mc3aButton.interactable = true;
+            TMP_Text text = mc3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage III\nUnlocked";
+        }
+        else if (!Config.mc3a && Config.mc2a)
+        {
+            mc3aButton.interactable = true;
+            TMP_Text text = mc3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage III\nUnlock {Config.stage3WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            mc3aButton.interactable = false;
+            TMP_Text text = mc3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.mc3b)
+        {
+            mc3bButton.interactable = true;
+            TMP_Text text = mc3bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Attack Rate II\nUnlocked";
+        }
+        else if (!Config.mc3b && Config.mc2b)
+        {
+            mc3bButton.interactable = true;
+            TMP_Text text = mc3bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Attack Rate II\nUnlock {Config.stage3WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            mc3bButton.interactable = false;
+            TMP_Text text = mc3bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.mc3c && Config.alternateMacheteUnlocked)
+        {
+            mc3cButton.interactable = true;
+            TMP_Text text = mc3cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Alt Rate I\nUnlocked";
+        }
+        else if (Config.alternateMacheteUnlocked)
+        {
+            mc3cButton.interactable = true;
+            TMP_Text text = mc3cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Alt Rate I\nUnlock {Config.stage3WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            mc3cButton.interactable = false;
+            TMP_Text text = mc3cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.mc4a)
+        {
+            mc4aButton.interactable = true;
+            TMP_Text text = mc4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage IV\nUnlocked";
+        }
+        else if (!Config.mc4a && Config.mc3a)
+        {
+            mc4aButton.interactable = true;
+            TMP_Text text = mc4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage IV\nUnlock {Config.stage4WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            mc4aButton.interactable = false;
+            TMP_Text text = mc4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.mc4b)
+        {
+            mc4bButton.interactable = true;
+            TMP_Text text = mc4bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Attack Rate III\nUnlocked";
+        }
+        else if (!Config.mc4b && Config.mc3b)
+        {
+            mc4bButton.interactable = true;
+            TMP_Text text = mc4bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Attack Rate III\nUnlock {Config.stage4WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            mc4bButton.interactable = false;
+            TMP_Text text = mc4bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.mc4c && Config.alternateMacheteUnlocked)
+        {
+            mc4cButton.interactable = true;
+            TMP_Text text = mc4cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Alt Rate II\nUnlocked";
+        }
+        else if (!Config.mc4c && Config.mc3c && Config.alternateMacheteUnlocked)
+        {
+            mc4cButton.interactable = true;
+            TMP_Text text = mc4cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Alt Rate II\nUnlock {Config.stage4WeaponUpgradeTechCost} <sprite=0>";
+        }
+        else
+        {
+            mc4cButton.interactable = false;
+            TMP_Text text = mc4cButton.GetComponentInChildren<TMP_Text>();
             text.text = $"Locked";
         }
     }

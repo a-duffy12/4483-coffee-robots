@@ -164,7 +164,7 @@ public class Shotgun : MonoBehaviour
 
     public void AlternateFire(Transform firePoint)
     {
-        if (Config.alternateShotgunUnlocked && Time.time > (lastFireTime + (1/Config.altFireRateShot)))
+        if (Config.alternateShotgunUnlocked && Time.time > (lastFireTime + (1/Config.fireRateShot)))
         {
             Vector3 p5 = Quaternion.Euler(0, 5f, 0) * firePoint.transform.forward;
             Vector3 pn5 = Quaternion.Euler(0, -5f, 0) * firePoint.transform.forward;
@@ -291,7 +291,7 @@ public class Shotgun : MonoBehaviour
             muzzleFlash1.Play();
             muzzleFlash2.Play();
         }
-        else if (Config.alternateShotgunUnlocked && Time.time > (lastFireTime + (1/Config.altFireRateShot))) // no ammo and can fire
+        else if (Config.alternateShotgunUnlocked && Time.time > (lastFireTime + (1/Config.fireRateShot))) // no ammo and can fire
         {
             //audioSource.clip = emptyAudio;
             //audioSource.Play();

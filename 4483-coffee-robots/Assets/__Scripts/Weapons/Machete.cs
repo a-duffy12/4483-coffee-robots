@@ -75,6 +75,13 @@ public class Machete : MonoBehaviour
 
     public void OverrideLastFireTime() // allows weapon to fire as soon as it is swapped to
     {
-        lastAttackTime = Time.time - (1/Config.rateMachete);
+        if (!Config.alternateMacheteUnlocked)
+        {
+            lastAttackTime = Time.time - (1/Config.rateMachete);
+        }
+        else
+        {
+            lastAttackTime = Time.time - (1/Config.altRateMachete);
+        }
     }
 }

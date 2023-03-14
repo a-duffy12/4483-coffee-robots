@@ -191,6 +191,14 @@ public class Config
     public static int assassinElectronicsReward = 25;
     public static int assassinTechReward = 25;
 
+    [Header("Whale")]
+    public static float whaleMaxHp = 5000;
+    public static float whaleMovementSpeed = 2.0f;
+    public static float whaleRange = 5f;
+    public static int whaleScrapReward = 200;
+    public static int whaleElectronicsReward = 50;
+    public static int whaleTechReward = 0;
+
     public static void GetSaveData()
     {
         GameData savedData = SaveLoad.LoadData(); // load save file

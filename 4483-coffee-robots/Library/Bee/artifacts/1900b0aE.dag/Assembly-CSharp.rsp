@@ -404,6 +404,7 @@
 "Assets/__Scripts/Enemy/Dart.cs"
 "Assets/__Scripts/Enemy/Payload.cs"
 "Assets/__Scripts/Enemy/Sentinel.cs"
+"Assets/__Scripts/Enemy/Whale.cs"
 "Assets/__Scripts/Level/DefenseBuildPoint.cs"
 "Assets/__Scripts/Level/EnemySpawner.cs"
 "Assets/__Scripts/Menu/MainMenu.cs"

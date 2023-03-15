@@ -16,7 +16,6 @@ public class Assassin : MonoBehaviour, IEnemy
     //public AudioClip deathAudio;
 
     [HideInInspector] public float hp { get { return currentHp; } }
-    [HideInInspector] public bool targetingPlayer = false;
 
     private float currentHp;
     

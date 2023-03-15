@@ -67,6 +67,7 @@ public class Config
 
     [Header("Player Movement")]
     public static float movementSpeed = 10f;
+    public static float movementMod = 1f;
     public static float dashSpeed = 200f;
     public static float dashCooldown = 1f;
 
@@ -198,6 +199,18 @@ public class Config
     public static int whaleScrapReward = 200;
     public static int whaleElectronicsReward = 50;
     public static int whaleTechReward = 0;
+
+    [Header("Brawler")]
+    public static float brawlerMaxHp = 400;
+    public static float brawlerAttackRate = 0.5f;
+    public static float brawlerDamage = 40;
+    public static float brawlerRange = 1.5f;
+    public static float brawlerMovementSpeed = 8.0f;
+    public static float brawlerSlowFactor = 0.75f;
+    public static float brawlerSlowDuration = 4f;
+    public static int brawlerScrapReward = 100;
+    public static int brawlerElectronicsReward = 50;
+    public static int brawlerTechReward = 35;
 
     public static void GetSaveData()
     {

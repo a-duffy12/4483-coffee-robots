@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform inventory;
 
     [Header("GameObjects")]
-    [Header("Audio")]
+    //[Header("Audio")]
+    //public AudioClip slowAudio;
 
     #endregion public properties
 
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     Camera mainCamera;
 
     private Vector3 playerVelocity;
+    private float unSlowTime;
 
     #endregion private properties
 
@@ -56,6 +58,11 @@ public class PlayerController : MonoBehaviour
         {
             defaultTransform.LookAt(new Vector3(hit.point.x, defaultTransform.position.y, hit.point.z));
         }
+
+        if (Time.time >= unSlowTime)
+        {
+            Config.movementMod = 1f;
+        }
     }
 
     void FixedUpdate()
@@ -69,15 +76,24 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 direction = Vector3.Normalize(new Vector3(adMove, 0, wsMove));
 
-        playerVelocity = direction * Config.movementSpeed;
+        playerVelocity = direction * Config.movementSpeed * Config.movementMod;
 
         if (dashing)
         {
             dash = false;
-            playerVelocity += direction * Config.dashSpeed;
+            playerVelocity += direction * Config.dashSpeed * Config.movementMod;
         }
 
         playerVelocity.y -= 9.8f; // apply gravity
+    }
+
+    public void SlowPlayer(float speedMultiplier, float duration)
+    {
+        unSlowTime = Time.time + duration;
+        Config.movementMod = speedMultiplier;
+
+        //source.clip = slowAudio;
+        //source.Play();
     }
 
     #region  input functions

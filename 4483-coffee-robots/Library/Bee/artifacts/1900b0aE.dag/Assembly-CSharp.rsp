@@ -401,6 +401,7 @@
 "Assets/__Scripts/Building/Utility/MachineShop.cs"
 "Assets/__Scripts/Config.cs"
 "Assets/__Scripts/Enemy/Assassin.cs"
+"Assets/__Scripts/Enemy/Brawler.cs"
 "Assets/__Scripts/Enemy/Dart.cs"
 "Assets/__Scripts/Enemy/Payload.cs"
 "Assets/__Scripts/Enemy/Sentinel.cs"

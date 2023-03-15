@@ -66,6 +66,8 @@ public class Whale : MonoBehaviour, IEnemy
         {
             AcquireTarget();
         }
+
+        canvas.transform.rotation = Quaternion.Euler(45 - transform.rotation.x, 0 - transform.rotation.y, 0 - transform.rotation.z);
     }
 
     public void DamageEnemy(float damage, string source = "")

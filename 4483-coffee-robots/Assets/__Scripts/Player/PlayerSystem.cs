@@ -18,16 +18,19 @@ public class PlayerSystem : MonoBehaviour
 
     //[Header("Audio")]
     
+    public static bool sleepProtected = false;
     [HideInInspector] public float hp { get { return currentHp; } }
     private float currentHp;
     private float abilityEndTime;
     private float nextAbilityTime;
 
     AudioSource playerSource;
+    CoffeePlant plant;
 
     void Awake()
     {
         playerSource = GetComponent<AudioSource>();
+        plant = GameObject.FindGameObjectWithTag("CoffeePlant").GetComponent<CoffeePlant>();
     }
     
     void Start()
@@ -59,55 +62,66 @@ public class PlayerSystem : MonoBehaviour
         {
             abilityText.text = "";
         }
+
+        healthBar.fillAmount = Mathf.Clamp(currentHp/Config.playerMaxHp, 0, Config.playerMaxHp);
+        healthText.text = currentHp.ToString("F0");
     }
 
     public void DamagePlayer(float damage, string source = "")
     {
-        damage = (float)Mathf.FloorToInt(damage);
+        if (!PlayerSystem.sleepProtected) // cannot take damage in menus
+        {
+            damage = (float)Mathf.FloorToInt(damage);
         
-        if (Time.time < abilityEndTime)
-        {
-            currentHp -= damage * Config.abilityDamageModifier;
-        }
-        else 
-        {
-            currentHp -= damage;
-        }
+            if (Time.time < abilityEndTime) // ability is active
+            {
+                currentHp -= damage * Config.abilityDamageModifier;
 
-        if (damage > 0)
-        {
-            StartCoroutine(DamagePlayerOverlay(0.1f));
-        }
+                if (Config.aAbilityUnlocked) // return health to plant
+                {
+                    plant.DamageBuilding(-1 * damage * (1 - Config.abilityDamageModifier) * Config.diversionModifier, "player");
+                }
+            }
+            else 
+            {
+                currentHp -= damage;
+            }
 
-        if (currentHp > Config.playerMaxHp)
-        {
-            currentHp = Config.playerMaxHp;
-        }
+            if (damage > 0)
+            {
+                StartCoroutine(DamagePlayerOverlay(0.1f));
+            }
 
-        if (currentHp > 0 && currentHp < 1)
-        {
-            currentHp = 1;
-        }
+            if (currentHp > Config.playerMaxHp)
+            {
+                currentHp = Config.playerMaxHp;
+            }
 
-        healthBar.fillAmount = Mathf.Clamp(currentHp/Config.playerMaxHp, 0, Config.playerMaxHp);
-        if (currentHp > 0)
-        {
-            healthText.text = currentHp.ToString("F0");
-        }
-        else
-        {
-            healthText.text = "DEAD";
-        }
-        
-        if (damage > 0)
-        {
-            StartCoroutine(DamagePlayerOverlay(0.1f)); // flash screen
-        }
+            if (currentHp > 0 && currentHp < 1)
+            {
+                currentHp = 1;
+            }
 
-        if (currentHp <= 0)
-        {
-            Time.timeScale = 0.0001f;
-            StartCoroutine(KillPlayer());
+            healthBar.fillAmount = Mathf.Clamp(currentHp/Config.playerMaxHp, 0, Config.playerMaxHp);
+            if (currentHp > 0)
+            {
+                healthText.text = currentHp.ToString("F0");
+            }
+            else
+            {
+                healthText.text = "DEAD";
+            }
+            
+            if (damage > 0)
+            {
+                StartCoroutine(DamagePlayerOverlay(0.1f)); // flash screen
+            }
+
+            if (currentHp <= 0)
+            {
+                Time.timeScale = 0.0001f;
+                StartCoroutine(KillPlayer());
+            }
         }
     }
 

@@ -166,6 +166,11 @@ public class Armory : MonoBehaviour, IBuilding
 
     void OpenMenu()
     {
+        if (Config.aChasisUnlocked)
+        {
+            PlayerSystem.sleepProtected = true;
+        }
+        
         input.SwitchCurrentActionMap("Menu");
         menu.SetActive(true);
         arPanel.SetActive(true);
@@ -346,6 +351,7 @@ public class Armory : MonoBehaviour, IBuilding
 
     public void CloseMenu()
     {
+        PlayerSystem.sleepProtected = false;
         input.SwitchCurrentActionMap("Player");
         menu.SetActive(false);
     }

@@ -32,6 +32,8 @@ public class Config
     public static bool alternateARUnlocked = false;
     public static bool alternateMacheteUnlocked = false;
     public static bool alternateShotgunUnlocked = false;
+    public static bool aChasisUnlocked = false;
+    public static bool aAbilityUnlocked = false;
     public static bool ar1a = false;
     public static bool ar1b = false;
     public static bool ar2a = false;
@@ -64,18 +66,48 @@ public class Config
     public static bool sh4c = false;
     public static bool sh4d = false;
     public static bool sh4e = false;
+    public static bool ch1a = false;
+    public static bool ch1b = false;
+    public static bool ch2a = false;
+    public static bool ch2b = false;
+    public static bool ch3a = false;
+    public static bool ch3b = false;
+    public static bool ch3c = false;
+    public static bool ch4a = false;
+    public static bool ch4b = false;
+    public static bool ch4c = false;
+    public static bool ab1a = false;
+    public static bool ab2a = false;
+    public static bool ab2b = false;
+    public static bool ab2c = false;
+    public static bool ab3a = false;
+    public static bool ab3b = false;
+    public static bool ab3d = false;
+    public static bool ab4a = false;
+    public static bool ab4b = false;
+    public static bool ab4c = false;
+    public static bool ab4d = false;
 
     [Header("Player Movement")]
     public static float movementSpeed = 10f;
     public static float movementMod = 1f;
     public static float dashSpeed = 200f;
     public static float dashCooldown = 1f;
+    public static int unlockAChasisElectronicsCost = 500;
 
     [Header("Player Systems")]
     public static float playerMaxHp = 100;
     public static float abilityDuration = 5f;
     public static float abilityCooldown = 15f;
     public static float abilityDamageModifier = 0.5f;
+    public static int unlockAAbilityElectronicsCost = 2000;
+    public static float diversionModifier = 0.5f;
+
+    [Header("Player Ugrades")]
+    public static int stage1UpgradeElectronicsCost = 25;
+    public static int stage2UpgradeElectronicsCost = 100;
+    public static int stage3UpgradeElectronicsCost = 300;
+    public static int stage4UpgradeElectronicsCost = 750;
 
     [Header("Weapons")]
     public static int stage1WeaponUpgradeTechCost = 25;
@@ -179,7 +211,7 @@ public class Config
     public static float enragedPayloadDamage = 750;
     public static float enragedPayloadMovementSpeed = 1.5f;
     public static int payloadScrapReward = 100;
-    public static int payloadElectronicsReward = 15;
+    public static int payloadElectronicsReward = 50;
     public static int payloadTechReward = 75;
 
     [Header("Assassin")]
@@ -194,7 +226,7 @@ public class Config
     public static float enragedAssassinDamage = 38;
     public static float enragedAssassinMovementSpeed = 9f;
     public static int assassinScrapReward = 75;
-    public static int assassinElectronicsReward = 25;
+    public static int assassinElectronicsReward = 35;
     public static int assassinTechReward = 50;
 
     [Header("Whale")]
@@ -248,6 +280,8 @@ public class Config
         Config.alternateARUnlocked = false;
         Config.alternateMacheteUnlocked = false;
         Config.alternateShotgunUnlocked = false;
+        Config.aChasisUnlocked = false;
+        Config.aAbilityUnlocked = false;
         Config.ar1a = false;
         Config.ar1b = false;
         Config.ar2a = false;
@@ -280,6 +314,27 @@ public class Config
         Config.sh4c = false;
         Config.sh4d = false;
         Config.sh4e = false;
+        Config.ch1a = false;
+        Config.ch1b = false;
+        Config.ch2a = false;
+        Config.ch2b = false;
+        Config.ch3a = false;
+        Config.ch3b = false;
+        Config.ch3c = false;
+        Config.ch4a = false;
+        Config.ch4b = false;
+        Config.ch4c = false;
+        Config.ab1a = false;
+        Config.ab2a = false;
+        Config.ab2b = false;
+        Config.ab2c = false;
+        Config.ab3a = false;
+        Config.ab3b = false;
+        Config.ab3d = false;
+        Config.ab4a = false;
+        Config.ab4b = false;
+        Config.ab4c = false;
+        Config.ab4d = false;
 
         Config.movementSpeed = 10f;
         Config.movementMod = 1f;
@@ -289,6 +344,7 @@ public class Config
         Config.abilityDuration = 5f;
         Config.abilityCooldown = 15f;
         Config.abilityDamageModifier = 0.5f;
+        Config.diversionModifier = 0.5f;
         Config.damageAR = 10;
         Config.fireRateAR = 10f;
         Config.rangeAR = 25;

@@ -35,7 +35,6 @@ public class Cluster : MonoBehaviour
     {
         if (!exploded && transform.position.y < 0)
         {
-            exploded = true;
             Explode();
         }
     }
@@ -47,45 +46,16 @@ public class Cluster : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            //source.clip = explodeAudio;
-            //source.Play();
-
-            Instantiate(explosionParticle, transform.position, transform.rotation);
-
-            Collider[] colliders = Physics.OverlapSphere(transform.position, Config.altRadiusAR);
-
-            foreach (Collider col in colliders)
-            {
-                IEnemy enemy = col.gameObject.GetComponent<Collider>().GetComponent<IEnemy>();
-                CoffeePlant plant = col.gameObject.GetComponent<Collider>().GetComponent<CoffeePlant>();
-                PlayerSystem system = col.gameObject.GetComponent<Collider>().GetComponent<PlayerSystem>();
-
-                if (enemy != null)
-                {
-                    enemy.DamageEnemy(Config.altDamageAR, "assault_rifle");
-                }
-
-                if (plant != null)
-                {
-                    plant.DamageBuilding(Config.altDamageAR, "assault_rifle");
-                }
-
-                if (system != null)
-                {
-                    system.DamagePlayer(Config.altDamageAR, "assault_rifle");
-                }
-            }
-        
-            //Destroy(gameObject, source.clip.length);
-            Destroy(gameObject);
+            Explode();
         }
     }
 
     void Explode()
     {
+        exploded = true;
+
         //source.clip = explodeAudio;
         //source.Play();
 

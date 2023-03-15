@@ -102,6 +102,11 @@ public class Fabricator : MonoBehaviour, IBuilding
 
     void OpenMenu()
     {
+        if (Config.aChasisUnlocked)
+        {
+            PlayerSystem.sleepProtected = true;
+        }
+        
         input.SwitchCurrentActionMap("Menu");
         menu.SetActive(true);
 
@@ -125,6 +130,7 @@ public class Fabricator : MonoBehaviour, IBuilding
 
     public void CloseMenu()
     {
+        PlayerSystem.sleepProtected = false;
         input.SwitchCurrentActionMap("Player");
         menu.SetActive(false);
     }

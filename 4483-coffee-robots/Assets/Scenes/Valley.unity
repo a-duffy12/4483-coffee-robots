@@ -363,7 +363,7 @@ MonoBehaviour:
   - {fileID: 1232174990}
   - {fileID: 1525048888}
   stage1Enemies:
-  - {fileID: 8699143055446318323, guid: 275d13bdb1f12f24aab6264bfa3dc437, type: 3}
+  - {fileID: 1159058814580376891, guid: 876259e9f9e361745b70360434818280, type: 3}
   stage2Enemies:
   - {fileID: 8699143055446318323, guid: 275d13bdb1f12f24aab6264bfa3dc437, type: 3}
   - {fileID: 3297666289815982009, guid: 66037422decfd184db17939f630076a1, type: 3}
@@ -388,6 +388,8 @@ MonoBehaviour:
   - {fileID: 1646564407397544073, guid: e6285fd0b068e6444999bf8d5386105a, type: 3}
   - {fileID: 1341649843964299519, guid: 8f854a3c7f7006c4da06f92a9a08b700, type: 3}
   - {fileID: 3297666289815982009, guid: 66037422decfd184db17939f630076a1, type: 3}
+  - {fileID: 1159058814580376891, guid: 876259e9f9e361745b70360434818280, type: 3}
+  - {fileID: 1646564407397544073, guid: e6285fd0b068e6444999bf8d5386105a, type: 3}
 --- !u!1 &75809093
 GameObject:
   m_ObjectHideFlags: 0

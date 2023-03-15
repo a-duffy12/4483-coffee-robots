@@ -14,7 +14,7 @@ public class Spikes : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (Time.time > lastAttackTime + (1/Config.attackRateSpikes) && other.CompareTag("Enemy") && buildStatus == BuildStatus.Built)
+        if (Time.time > lastAttackTime + (1/Config.attackRateSpikes) && (other.CompareTag("Enemy") || other.CompareTag("InvisibleEnemy")) && buildStatus == BuildStatus.Built)
         {
             IEnemy enemy = other.gameObject.GetComponent<IEnemy>();
             if (enemy != null)

@@ -16,6 +16,7 @@ TagManager:
   - Fabricator
   - CoffeeMachine
   - PromptText
+  - InvisibleEnemy
   layers:
   - Default
   - TransparentFX

@@ -168,8 +168,8 @@ public class Config
     public static float sentinelRange = 1.2f;
     public static float sentinelMovementSpeed = 4.5f;
     public static int sentinelScrapReward = 25;
-    public static int sentinelElectronicsReward = 10;
-    public static int sentinelTechReward = 10;
+    public static int sentinelElectronicsReward = 15;
+    public static int sentinelTechReward = 15;
 
     [Header("Payload")]
     public static float payloadMaxHp = 1000;
@@ -178,7 +178,7 @@ public class Config
     public static float payloadMovementSpeed = 1f;
     public static int payloadScrapReward = 100;
     public static int payloadElectronicsReward = 15;
-    public static int payloadTechReward = 50;
+    public static int payloadTechReward = 75;
 
     [Header("Assassin")]
     public static float assassinMaxHp = 150;
@@ -190,15 +190,15 @@ public class Config
     public static float assassinProjectileSpeed = 500;
     public static int assassinScrapReward = 75;
     public static int assassinElectronicsReward = 25;
-    public static int assassinTechReward = 25;
+    public static int assassinTechReward = 50;
 
     [Header("Whale")]
     public static float whaleMaxHp = 5000;
     public static float whaleMovementSpeed = 2.0f;
     public static float whaleRange = 5f;
     public static int whaleScrapReward = 200;
-    public static int whaleElectronicsReward = 50;
-    public static int whaleTechReward = 0;
+    public static int whaleElectronicsReward = 100;
+    public static int whaleTechReward = 100;
 
     [Header("Brawler")]
     public static float brawlerMaxHp = 400;
@@ -210,7 +210,17 @@ public class Config
     public static float brawlerSlowDuration = 4f;
     public static int brawlerScrapReward = 100;
     public static int brawlerElectronicsReward = 50;
-    public static int brawlerTechReward = 35;
+    public static int brawlerTechReward = 50;
+
+    [Header("Phantom")]
+    public static float phantomMaxHp = 50;
+    public static float phantomAttackRate = 1f;
+    public static float phantomDamage = 20;
+    public static float phantomRange = 1.2f;
+    public static float phantomMovementSpeed = 5.5f;
+    public static int phantomScrapReward = 35;
+    public static int phantomElectronicsReward = 35;
+    public static int phantomTechReward = 20;
 
     public static void GetSaveData()
     {
@@ -267,6 +277,7 @@ public class Config
         Config.sh4e = false;
 
         Config.movementSpeed = 10f;
+        Config.movementMod = 1f;
         Config.dashSpeed = 200f;
         Config.dashCooldown = 1f;
         Config.playerMaxHp = 100;

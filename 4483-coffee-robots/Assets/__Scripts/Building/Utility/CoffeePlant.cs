@@ -273,6 +273,12 @@ public class CoffeePlant : MonoBehaviour, IBuilding
             Destroy(enemy);
         }
 
+        GameObject[] ienemies = GameObject.FindGameObjectsWithTag("InvisibleEnemy");
+        foreach (GameObject ienemy in ienemies) // destroy all remaining invisible enemies
+        {
+            Destroy(ienemy);
+        }
+
         // win audio
 
         yield return new WaitForSeconds(0.0005f);

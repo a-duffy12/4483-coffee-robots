@@ -13,6 +13,7 @@ public class Dart : MonoBehaviour
     AudioSource source;
 
     private float shootTime;
+    private bool enragedSource = false;
 
     void Awake()
     {
@@ -38,9 +39,10 @@ public class Dart : MonoBehaviour
         }
     }
 
-    public void Shoot(Vector3 direction, float force)
+    public void Shoot(Vector3 direction, float force, bool enraged = false)
     {
         rb.AddForce(direction * force);
+        enragedSource = enraged;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -51,7 +53,14 @@ public class Dart : MonoBehaviour
 
         if (enemy != null)
         {
-            enemy.DamageEnemy(Config.assassinDamage * Config.difficultyDamageMod, "assassin");
+            if (!enragedSource)
+            {
+                enemy.DamageEnemy(Config.assassinDamage * Config.difficultyDamageMod, "assassin");
+            }
+            else
+            {
+                enemy.DamageEnemy(Config.enragedAssassinDamage * Config.difficultyDamageMod, "assassin");
+            }
 
             //source.clip = hitAudio;
             //source.Play();
@@ -59,7 +68,14 @@ public class Dart : MonoBehaviour
 
         if (system != null)
         {
-            system.DamagePlayer(Config.assassinDamage * Config.difficultyDamageMod, "assassin");
+            if (!enragedSource)
+            {
+                system.DamagePlayer(Config.assassinDamage * Config.difficultyDamageMod, "assassin");
+            }
+            else
+            {
+                system.DamagePlayer(Config.enragedAssassinDamage * Config.difficultyDamageMod, "assassin");
+            }
 
             //source.clip = hitAudio;
             //source.Play();

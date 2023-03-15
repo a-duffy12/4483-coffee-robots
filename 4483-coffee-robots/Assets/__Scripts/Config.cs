@@ -176,6 +176,8 @@ public class Config
     public static float payloadDamage = 500;
     public static float payloadRange = 1f;
     public static float payloadMovementSpeed = 1f;
+    public static float enragedPayloadDamage = 750;
+    public static float enragedPayloadMovementSpeed = 1.5f;
     public static int payloadScrapReward = 100;
     public static int payloadElectronicsReward = 15;
     public static int payloadTechReward = 75;
@@ -188,6 +190,9 @@ public class Config
     public static float assassinMaxRange = 25f;
     public static float assassinMovementSpeed = 6f;
     public static float assassinProjectileSpeed = 500;
+    public static float enragedAssassinAttackRate = 0.375f;
+    public static float enragedAssassinDamage = 38;
+    public static float enragedAssassinMovementSpeed = 9f;
     public static int assassinScrapReward = 75;
     public static int assassinElectronicsReward = 25;
     public static int assassinTechReward = 50;

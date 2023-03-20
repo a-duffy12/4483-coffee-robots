@@ -479,7 +479,7 @@ public class Armory : MonoBehaviour, IBuilding
         {
             PlayerInventory.tech -= Config.stage2WeaponUpgradeTechCost;
             Config.ar2c = true;
-            Config.altDamageAR = 80;
+            Config.altDamageAR = 100;
             SetButtonTextValues();
         }
     }
@@ -512,7 +512,7 @@ public class Armory : MonoBehaviour, IBuilding
         {
             PlayerInventory.tech -= Config.stage3WeaponUpgradeTechCost;
             Config.ar3c = true;
-            Config.altDamageAR = 100;
+            Config.altDamageAR = 125;
             SetButtonTextValues();
         }
     }
@@ -556,7 +556,7 @@ public class Armory : MonoBehaviour, IBuilding
         {
             PlayerInventory.tech -= Config.stage4WeaponUpgradeTechCost;
             Config.ar4c = true;
-            Config.altDamageAR = 125;
+            Config.altDamageAR = 150;
             SetButtonTextValues();
         }
     }

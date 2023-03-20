@@ -100,7 +100,7 @@ public class Config
     public static float abilityDuration = 5f;
     public static float abilityCooldown = 15f;
     public static float abilityDamageModifier = 0.5f;
-    public static int unlockAAbilityElectronicsCost = 2000;
+    public static int unlockAAbilityElectronicsCost = 1250;
     public static float diversionModifier = 0.5f;
 
     [Header("Player Ugrades")]
@@ -120,7 +120,7 @@ public class Config
     public static float fireRateAR = 10f;
     public static float rangeAR = 25;
     public static int maxAmmoAR = 150;
-    public static float altDamageAR = 60;
+    public static float altDamageAR = 80;
     public static float altFireRateAR = 0.5f;
     public static float altRadiusAR = 4f;
     public static float altLaunchForceAR = 400f;
@@ -349,7 +349,7 @@ public class Config
         Config.fireRateAR = 10f;
         Config.rangeAR = 25;
         Config.maxAmmoAR = 150;
-        Config.altDamageAR = 60;
+        Config.altDamageAR = 80;
         Config.altFireRateAR = 0.5f;
         Config.altRadiusAR = 4f;
         Config.altLaunchForceAR = 400f;

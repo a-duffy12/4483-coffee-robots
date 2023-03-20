@@ -63,8 +63,11 @@ public class PlayerSystem : MonoBehaviour
             abilityText.text = "";
         }
 
-        healthBar.fillAmount = Mathf.Clamp(currentHp/Config.playerMaxHp, 0, Config.playerMaxHp);
-        healthText.text = currentHp.ToString("F0");
+        if (currentHp > 0)
+        {
+            healthBar.fillAmount = Mathf.Clamp(currentHp/Config.playerMaxHp, 0, Config.playerMaxHp);
+            healthText.text = currentHp.ToString("F0");
+        }
     }
 
     public void DamagePlayer(float damage, string source = "")

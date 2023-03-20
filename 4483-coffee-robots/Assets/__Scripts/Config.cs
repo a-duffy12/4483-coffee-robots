@@ -99,6 +99,10 @@ public class Config
     public static bool sp2a = false;
     public static bool sp3a = false;
     public static bool sp4a = false;
+    public static bool gg3a = false;
+    public static bool gg3b = false;
+    public static bool gg4a = false;
+    public static bool gg4b = false;
 
     [Header("Player Movement")]
     public static float movementSpeed = 10f;
@@ -202,6 +206,17 @@ public class Config
     public static int countSpikes4 = 6; // 10
     public static float damageSpikes = 10;
     public static float attackRateSpikes = 1f;
+
+    [Header("Gamma Generator")]
+    public static int unlockGGScrapCost = 500;
+    public static int unlockGGElectronicsCost = 50;
+    public static int countGG = 0;
+    public static int countGG3 = 1;
+    public static int countGG4 = 2;
+    public static float damageGG = 7;
+    public static float attackRateGG = 1f;
+    public static float rangeGG = 15;
+    public static int targetCountGG = 7;
 
     [Header("Enemy")]
     public static float loseInterestDistance = 15f;
@@ -363,6 +378,10 @@ public class Config
         Config.sp2a = false;
         Config.sp3a = false;
         Config.sp4a = false;
+        Config.gg3a = false;
+        Config.gg3b = false;
+        Config.gg4a = false;
+        Config.gg4b = false;
 
         // stats
         Config.movementSpeed = 10f;
@@ -396,13 +415,14 @@ public class Config
         Config.refillTechCostShotgun = 15;
         Config.turretMaxHp = 1000;
         Config.countTurret = 0;
+        Config.countSpikes = 0;
+        Config.countGG = 0;
         Config.damageTurret = 10;
         Config.attackRateTurret = 2f;
         Config.rangeTurret = 25f;
-        Config.countSpikes = 0;
         Config.damageSpikes = 10;
-        Config.attackRateSpikes = 1f;
-        Config.activeKillMod = 2f;
+        Config.damageGG = 7;
+        Config.targetCountGG = 7;
     }
 }
 

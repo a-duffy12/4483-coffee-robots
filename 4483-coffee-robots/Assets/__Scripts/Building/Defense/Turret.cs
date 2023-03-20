@@ -74,7 +74,7 @@ public class Turret : MonoBehaviour, IBuilding, IDefense
                 foreach (GameObject enemy in enemies)
                 {
                     float tempDistance = Vector3.Distance(enemy.transform.position, transform.position);
-                    if (tempDistance < Config.rangeTurret && tempDistance < distanceToEnemy)
+                    if (tempDistance <= Config.rangeTurret && tempDistance < distanceToEnemy)
                     {
                         distanceToEnemy = Vector3.Distance(enemy.transform.position, transform.position);
                         target = enemy;
@@ -120,7 +120,7 @@ public class Turret : MonoBehaviour, IBuilding, IDefense
         float distanceToEnemy = Vector3.Distance(target.transform.position, transform.position);
         transform.LookAt(new Vector3(target.transform.position.x, 0.6f, target.transform.position.z));
         
-        if (Time.time > lastAttackTime + (1/Config.attackRateTurret) && distanceToEnemy <= Config.rangeTurret)
+        if (Time.time >= lastAttackTime + (1/Config.attackRateTurret) && distanceToEnemy <= Config.rangeTurret)
         {
             if (Physics.Raycast(effectsPoint.position, target.transform.position - effectsPoint.position, out RaycastHit hit, Config.rangeTurret, hitMask))
             {

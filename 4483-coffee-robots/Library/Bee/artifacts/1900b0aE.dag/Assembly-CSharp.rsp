@@ -392,6 +392,8 @@
 "Assets/z_PyroParticles/Prefab/Script/FireProjectileScript.cs"
 "Assets/z_PyroParticles/Prefab/Script/MeteorSwarmScript.cs"
 "Assets/z_PyroParticles/Prefab/Script/SingleLineAttribute.cs"
+"Assets/__Scripts/Building/Defense/GammaGenerator.cs"
+"Assets/__Scripts/Building/Defense/RocketTower.cs"
 "Assets/__Scripts/Building/Defense/Spikes.cs"
 "Assets/__Scripts/Building/Defense/Turret.cs"
 "Assets/__Scripts/Building/Utility/Armory.cs"

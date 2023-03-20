@@ -67,7 +67,7 @@ public class Turret : MonoBehaviour, IBuilding, IDefense
 
         if (buildStatus == BuildStatus.Built)
         {
-            if (target == null && Time.time > retargetStartTime + Config.buildingRetargetDelay) // not currently targetting any enemy
+            if (target == null && Time.time > retargetStartTime + Config.retargetDelayTurret) // not currently targetting any enemy
             {
                 GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
                 float distanceToEnemy = Config.rangeTurret;

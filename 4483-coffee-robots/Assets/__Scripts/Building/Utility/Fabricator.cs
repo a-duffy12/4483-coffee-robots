@@ -13,12 +13,32 @@ public class Fabricator : MonoBehaviour, IBuilding
     [SerializeField] private GameObject builtPrefab;
     [SerializeField] private TMP_Text promptText;
     [SerializeField] private GameObject menu;
-    [SerializeField] private GameObject defensePanel;
-    [SerializeField] private GameObject trapPanel;
-    [SerializeField] private Button defenseButton;
-    [SerializeField] private Button trapButton;
+    [SerializeField] private Button turretPanelButton;
+    [SerializeField] private Button spikesPanelButton;
+    [SerializeField] private GameObject turretPanel;
+    [SerializeField] private GameObject spikesPanel;
+
+    [Header("Turret")]
+    [SerializeField] private Button turretButton;
+    [SerializeField] private TMP_Text turretCount;
     [SerializeField] private TMP_Text turretText;
+    [SerializeField] private Button tu2aButton;
+    [SerializeField] private Button tu2bButton;
+    [SerializeField] private Button tu2cButton;
+    [SerializeField] private Button tu3aButton;
+    [SerializeField] private Button tu3bButton;
+    [SerializeField] private Button tu3cButton;
+    [SerializeField] private Button tu4aButton;
+    [SerializeField] private Button tu4bButton;
+    [SerializeField] private Button tu4cButton;
+
+    [Header("Spikes")]
+    [SerializeField] private Button spikesButton;
+    [SerializeField] private TMP_Text spikesCount;
     [SerializeField] private TMP_Text spikesText;
+    [SerializeField] private Button sp2aButton;
+    [SerializeField] private Button sp3aButton;
+    [SerializeField] private Button sp4aButton;
 
     [Header("Defenses")]
     [SerializeField] private GameObject turretPrefab;
@@ -110,22 +130,101 @@ public class Fabricator : MonoBehaviour, IBuilding
         input.SwitchCurrentActionMap("Menu");
         menu.SetActive(true);
 
-        if (Config.gameStage < 2)
+        if (Config.gameStage <= 1)
         {
-            defensePanel.SetActive(false);
-            trapPanel.SetActive(false);
-            defenseButton.gameObject.SetActive(false);
-            trapButton.gameObject.SetActive(false);
+            turretPanel.SetActive(false);
+            turretPanelButton.gameObject.SetActive(false);
+            spikesPanel.SetActive(false);
+            spikesPanelButton.gameObject.SetActive(false);
+            turretButton.gameObject.SetActive(false);
+            spikesButton.gameObject.SetActive(false);
+            //
+            //
+            tu2aButton.gameObject.SetActive(false);
+            tu2bButton.gameObject.SetActive(false);
+            tu2cButton.gameObject.SetActive(false);
+            tu3aButton.gameObject.SetActive(false);
+            tu3bButton.gameObject.SetActive(false);
+            tu3cButton.gameObject.SetActive(false);
+            tu4aButton.gameObject.SetActive(false);
+            tu4bButton.gameObject.SetActive(false);
+            tu4cButton.gameObject.SetActive(false);
+            sp2aButton.gameObject.SetActive(false);
+            sp3aButton.gameObject.SetActive(false);
+            sp4aButton.gameObject.SetActive(false);
         }
-        else
+        else if (Config.gameStage == 2)
         {
-            defensePanel.SetActive(true);
-            trapPanel.SetActive(false);
-            defenseButton.gameObject.SetActive(true);
-            trapButton.gameObject.SetActive(true);
+            turretPanel.SetActive(true);
+            turretPanelButton.gameObject.SetActive(true);
+            spikesPanel.SetActive(false);
+            spikesPanelButton.gameObject.SetActive(true);
+            turretButton.gameObject.SetActive(true);
+            spikesButton.gameObject.SetActive(true);
+            //
+            //
+            tu2aButton.gameObject.SetActive(true);
+            tu2bButton.gameObject.SetActive(true);
+            tu2cButton.gameObject.SetActive(true);
+            tu3aButton.gameObject.SetActive(false);
+            tu3bButton.gameObject.SetActive(false);
+            tu3cButton.gameObject.SetActive(false);
+            tu4aButton.gameObject.SetActive(false);
+            tu4bButton.gameObject.SetActive(false);
+            tu4cButton.gameObject.SetActive(false);
+            sp2aButton.gameObject.SetActive(true);
+            sp3aButton.gameObject.SetActive(false);
+            sp4aButton.gameObject.SetActive(false);
+        }
+        else if (Config.gameStage == 3)
+        {
+            turretPanel.SetActive(true);
+            turretPanelButton.gameObject.SetActive(true);
+            spikesPanel.SetActive(false);
+            spikesPanelButton.gameObject.SetActive(true);
+            turretButton.gameObject.SetActive(true);
+            spikesButton.gameObject.SetActive(true);
+            //
+            //
+            tu2aButton.gameObject.SetActive(true);
+            tu2bButton.gameObject.SetActive(true);
+            tu2cButton.gameObject.SetActive(true);
+            tu3aButton.gameObject.SetActive(true);
+            tu3bButton.gameObject.SetActive(true);
+            tu3cButton.gameObject.SetActive(true);
+            tu4aButton.gameObject.SetActive(false);
+            tu4bButton.gameObject.SetActive(false);
+            tu4cButton.gameObject.SetActive(false);
+            sp2aButton.gameObject.SetActive(true);
+            sp3aButton.gameObject.SetActive(true);
+            sp4aButton.gameObject.SetActive(false);
+        }
+        else if (Config.gameStage >= 4)
+        {
+            turretPanel.SetActive(true);
+            turretPanelButton.gameObject.SetActive(true);
+            spikesPanel.SetActive(false);
+            spikesPanelButton.gameObject.SetActive(true);
+            turretButton.gameObject.SetActive(true);
+            spikesButton.gameObject.SetActive(true);
+            //
+            //
+            tu2aButton.gameObject.SetActive(true);
+            tu2bButton.gameObject.SetActive(true);
+            tu2cButton.gameObject.SetActive(true);
+            tu3aButton.gameObject.SetActive(true);
+            tu3bButton.gameObject.SetActive(true);
+            tu3cButton.gameObject.SetActive(true);
+            tu4aButton.gameObject.SetActive(true);
+            tu4bButton.gameObject.SetActive(true);
+            tu4cButton.gameObject.SetActive(true);
+            sp2aButton.gameObject.SetActive(true);
+            sp3aButton.gameObject.SetActive(true);
+            sp4aButton.gameObject.SetActive(true);           
+        }
 
-            UpdateStoreText();
-        }
+        UpdateStoreText();
+        SetButtonTextValues();
     }
 
     public void CloseMenu()
@@ -135,23 +234,29 @@ public class Fabricator : MonoBehaviour, IBuilding
         menu.SetActive(false);
     }
 
-    public void DefensePanel()
+    public void TurretPanel()
     {
         if (menu.activeSelf)
         {
-            defensePanel.SetActive(true);
-            trapPanel.SetActive(false);
+            turretPanel.SetActive(true);
+            spikesPanel.SetActive(false);
         }
     }
 
-    public void TrapPanel()
+    public void SpikesPanel()
     {
         if (menu.activeSelf)
         {
-            defensePanel.SetActive(false);
-            trapPanel.SetActive(true);
+            turretPanel.SetActive(false);
+            spikesPanel.SetActive(true);
         }
     }
+
+    /**/
+
+    /**/
+
+    #region purchases
 
     public void PurchaseTurret()
     {
@@ -212,6 +317,148 @@ public class Fabricator : MonoBehaviour, IBuilding
         }
     }
 
+    #endregion purchases
+
+    #region TU upgrades
+
+    public void TU2A()
+    {
+        if (!Config.tu2a && PlayerInventory.scrap >= Config.stage2DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage2DefenseUpgradeScrapCost;
+            Config.tu2a = true;
+            Config.damageTurret = 11;
+            SetButtonTextValues();
+        }
+    }
+
+    public void TU2B()
+    {
+        if (!Config.tu2b && PlayerInventory.scrap >= Config.stage2DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage2DefenseUpgradeScrapCost;
+            Config.tu2b = true;
+            Config.attackRateTurret = 2.3f;
+            SetButtonTextValues();
+        }
+    }
+
+    public void TU2C()
+    {
+        if (!Config.tu2c && PlayerInventory.scrap >= Config.stage2DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage2DefenseUpgradeScrapCost;
+            Config.tu2c = true;
+            Config.rangeTurret = 26;
+            SetButtonTextValues();
+        }
+    }
+
+    public void TU3A()
+    {
+        if (!Config.tu3a && PlayerInventory.scrap >= Config.stage3DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage3DefenseUpgradeScrapCost;
+            Config.tu3a = true;
+            Config.damageTurret = 13;
+            SetButtonTextValues();
+        }
+    }
+
+    public void TU3B()
+    {
+        if (!Config.tu3b && PlayerInventory.scrap >= Config.stage3DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage3DefenseUpgradeScrapCost;
+            Config.tu3b = true;
+            Config.attackRateTurret = 2.6f;
+            SetButtonTextValues();
+        }
+    }
+
+    public void TU3C()
+    {
+        if (!Config.tu3c && PlayerInventory.scrap >= Config.stage3DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage3DefenseUpgradeScrapCost;
+            Config.tu3c = true;
+            Config.rangeTurret = 28;
+            SetButtonTextValues();
+        }
+    }
+
+    public void TU4A()
+    {
+        if (!Config.tu4a && PlayerInventory.scrap >= Config.stage4DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage4DefenseUpgradeScrapCost;
+            Config.tu4a = true;
+            Config.damageTurret = 15;
+            SetButtonTextValues();
+        }
+    }
+
+    public void TU4B()
+    {
+        if (!Config.tu4b && PlayerInventory.scrap >= Config.stage4DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage4DefenseUpgradeScrapCost;
+            Config.tu4b = true;
+            Config.attackRateTurret = 3f;
+            SetButtonTextValues();
+        }
+    }
+
+    public void TU4C()
+    {
+        if (!Config.tu4c && PlayerInventory.scrap >= Config.stage4DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage4DefenseUpgradeScrapCost;
+            Config.tu4c = true;
+            Config.rangeTurret = 30;
+            SetButtonTextValues();
+        }
+    }
+
+    #endregion TU upgrades
+
+    #region SP upgrades
+
+    public void SP2A()
+    {
+        if (!Config.sp2a && PlayerInventory.scrap >= Config.stage2DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage2DefenseUpgradeScrapCost;
+            Config.sp2a = true;
+            Config.damageSpikes = 12;
+            SetButtonTextValues();
+        }
+    }
+
+    public void SP3A()
+    {
+        if (!Config.sp3a && PlayerInventory.scrap >= Config.stage3DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage3DefenseUpgradeScrapCost;
+            Config.sp3a = true;
+            Config.damageSpikes = 15;
+            SetButtonTextValues();
+        }
+    }
+
+    public void SP4A()
+    {
+        if (!Config.sp4a && PlayerInventory.scrap >= Config.stage4DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage4DefenseUpgradeScrapCost;
+            Config.sp4a = true;
+            Config.damageSpikes = 20;
+            SetButtonTextValues();
+        }
+    }
+
+    #endregion SP upgrades
+
     void UpdateStoreText()
     {
         if (Config.gameStage == 2)
@@ -233,6 +480,9 @@ public class Fabricator : MonoBehaviour, IBuilding
             {
                 spikesText.text = $"Max Number Bought";
             }
+
+            turretCount.text = $"{Config.countTurret}/{Config.countTurret2} Turrets Built";
+            spikesCount.text = $"{Config.countSpikes}/{Config.countSpikes2} Spikes Built";
         }
         else if (Config.gameStage == 3)
         {
@@ -253,6 +503,9 @@ public class Fabricator : MonoBehaviour, IBuilding
             {
                 spikesText.text = $"Max Number Bought";
             }
+
+            turretCount.text = $"{Config.countTurret}/{Config.countTurret3} Turrets Built";
+            spikesCount.text = $"{Config.countSpikes}/{Config.countSpikes3} Spikes Built";
         }
         else if (Config.gameStage == 4)
         {
@@ -273,6 +526,210 @@ public class Fabricator : MonoBehaviour, IBuilding
             {
                 spikesText.text = $"Max Number Bought";
             }
+
+            turretCount.text = $"{Config.countTurret}/{Config.countTurret4} Turrets Built";
+            spikesCount.text = $"{Config.countSpikes}/{Config.countSpikes4} Spikes Built";
+        }
+    }
+
+    void SetButtonTextValues()
+    {
+        // turret
+        if (Config.tu2a)
+        {
+            TMP_Text text = tu2aButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Damage I\nUnlocked";
+        }
+        else
+        {
+            TMP_Text text = tu2aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage I\nUnlock {Config.stage2DefenseUpgradeScrapCost} <sprite=2>";
+        }
+
+        if (Config.tu2b)
+        {
+            TMP_Text text = tu2bButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Fire Rate I\nUnlocked";
+        }
+        else
+        {
+            TMP_Text text = tu2bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Fire Rate I\nUnlock {Config.stage2DefenseUpgradeScrapCost} <sprite=2>";
+        }
+
+        if (Config.tu2c)
+        {
+            TMP_Text text = tu2cButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Range I\nUnlocked";
+        }
+        else
+        {
+            TMP_Text text = tu2cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Range I\nUnlock {Config.stage2DefenseUpgradeScrapCost} <sprite=2>";
+        }
+
+        if (Config.tu3a)
+        {
+            tu3aButton.interactable = true;
+            TMP_Text text = tu3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Damage II\nUnlocked";
+        }
+        else if (!Config.tu3a && Config.tu2a)
+        {
+            tu3aButton.interactable = true;
+            TMP_Text text = tu3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage II\nUnlock {Config.stage3DefenseUpgradeScrapCost} <sprite=2>";
+        }
+        else
+        {
+            tu3aButton.interactable = false;
+            TMP_Text text = tu3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.tu3b)
+        {
+            tu3bButton.interactable = true;
+            TMP_Text text = tu3bButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Fire Rate II\nUnlocked";
+        }
+        else if (!Config.tu3b && Config.tu2b)
+        {
+            tu3bButton.interactable = true;
+            TMP_Text text = tu3bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Fire Rate II\nUnlock {Config.stage3DefenseUpgradeScrapCost} <sprite=2>";
+        }
+        else
+        {
+            tu3bButton.interactable = false;
+            TMP_Text text = tu3bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.tu3c)
+        {
+            tu3cButton.interactable = true;
+            TMP_Text text = tu3cButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Range II\nUnlocked";
+        }
+        else if (!Config.tu3c && Config.tu2c)
+        {
+            tu3cButton.interactable = true;
+            TMP_Text text = tu3cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Range II\nUnlock {Config.stage3DefenseUpgradeScrapCost} <sprite=2>";
+        }
+        else
+        {
+            tu3cButton.interactable = false;
+            TMP_Text text = tu3cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.tu4a)
+        {
+            tu4aButton.interactable = true;
+            TMP_Text text = tu4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Damage III\nUnlocked";
+        }
+        else if (!Config.tu4a && Config.tu3a)
+        {
+            tu4aButton.interactable = true;
+            TMP_Text text = tu4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage III\nUnlock {Config.stage4DefenseUpgradeScrapCost} <sprite=2>";
+        }
+        else
+        {
+            tu4aButton.interactable = false;
+            TMP_Text text = tu4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.tu4b)
+        {
+            tu4bButton.interactable = true;
+            TMP_Text text = tu4bButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Fire Rate III\nUnlocked";
+        }
+        else if (!Config.tu4b && Config.tu3b)
+        {
+            tu4bButton.interactable = true;
+            TMP_Text text = tu4bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Fire Rate III\nUnlock {Config.stage4DefenseUpgradeScrapCost} <sprite=2>";
+        }
+        else
+        {
+            tu4bButton.interactable = false;
+            TMP_Text text = tu4bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.tu4c)
+        {
+            tu4cButton.interactable = true;
+            TMP_Text text = tu4cButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Range III\nUnlocked";
+        }
+        else if (!Config.tu4c && Config.tu3c)
+        {
+            tu4cButton.interactable = true;
+            TMP_Text text = tu4cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Range III\nUnlock {Config.stage4DefenseUpgradeScrapCost} <sprite=2>";
+        }
+        else
+        {
+            tu4cButton.interactable = false;
+            TMP_Text text = tu4cButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        // spikes
+        if (Config.sp2a)
+        {
+            TMP_Text text = sp2aButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Damage I\nUnlocked";
+        }
+        else
+        {
+            TMP_Text text = sp2aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage I\nUnlock {Config.stage2DefenseUpgradeScrapCost} <sprite=2>";
+        }
+
+        if (Config.sp3a)
+        {
+            sp3aButton.interactable = true;
+            TMP_Text text = sp3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Damage II\nUnlocked";
+        }
+        else if (!Config.sp3a && Config.sp2a)
+        {
+            sp3aButton.interactable = true;
+            TMP_Text text = sp3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage II\nUnlock {Config.stage3DefenseUpgradeScrapCost} <sprite=2>";
+        }
+        else
+        {
+            sp3aButton.interactable = false;
+            TMP_Text text = sp3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.sp4a)
+        {
+            sp4aButton.interactable = true;
+            TMP_Text text = sp4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Damage III\nUnlocked";
+        }
+        else if (!Config.sp4a && Config.sp3a)
+        {
+            sp4aButton.interactable = true;
+            TMP_Text text = sp4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage III\nUnlock {Config.stage4DefenseUpgradeScrapCost} <sprite=2>";
+        }
+        else
+        {
+            sp4aButton.interactable = false;
+            TMP_Text text = sp4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
         }
     }
 

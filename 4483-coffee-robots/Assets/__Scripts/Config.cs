@@ -87,6 +87,18 @@ public class Config
     public static bool ab4b = false;
     public static bool ab4c = false;
     public static bool ab4d = false;
+    public static bool tu2a = false;
+    public static bool tu2b = false;
+    public static bool tu2c = false;
+    public static bool tu3a = false;
+    public static bool tu3b = false;
+    public static bool tu3c = false;
+    public static bool tu4a = false;
+    public static bool tu4b = false;
+    public static bool tu4c = false;
+    public static bool sp2a = false;
+    public static bool sp3a = false;
+    public static bool sp4a = false;
 
     [Header("Player Movement")]
     public static float movementSpeed = 10f;
@@ -149,7 +161,9 @@ public class Config
     public static float buildingInteractDistance = 3f;
     public static float buildingCanvasDistance = 15f;
     public static int buildingFixScrapCost = 100;
-    public static float buildingRetargetDelay = 1f;
+    public static int stage2DefenseUpgradeScrapCost = 100;
+    public static int stage3DefenseUpgradeScrapCost = 300;
+    public static int stage4DefenseUpgradeScrapCost = 750;
 
     [Header("Coffee Plant")]
     public static float coffeePlantMaxHp = 10000;
@@ -178,6 +192,7 @@ public class Config
     public static float damageTurret = 10;
     public static float attackRateTurret = 2f;
     public static float rangeTurret = 25f;
+    public static float retargetDelayTurret = 1f;
 
     [Header("Spikes")]
     public static int unlockSpikesScrapCost = 25;
@@ -274,6 +289,7 @@ public class Config
 
     public static void ResetConfigValues()
     {
+        // game progression
         Config.gameStage = 0;
         Config.coffeeMachineBuilt = false;
         Config.shotgunUnlocked = false;
@@ -335,7 +351,20 @@ public class Config
         Config.ab4b = false;
         Config.ab4c = false;
         Config.ab4d = false;
+        Config.tu2a = false;
+        Config.tu2b = false;
+        Config.tu2c = false;
+        Config.tu3a = false;
+        Config.tu3b = false;
+        Config.tu3c = false;
+        Config.tu4a = false;
+        Config.tu4b = false;
+        Config.tu4c = false;
+        Config.sp2a = false;
+        Config.sp3a = false;
+        Config.sp4a = false;
 
+        // stats
         Config.movementSpeed = 10f;
         Config.movementMod = 1f;
         Config.dashSpeed = 200f;

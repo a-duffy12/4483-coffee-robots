@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7542506130001779157}
   m_Layer: 9
   m_Name: Phantom
-  m_TagString: Enemy
+  m_TagString: InvisibleEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

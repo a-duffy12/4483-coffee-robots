@@ -103,6 +103,10 @@ public class Config
     public static bool gg3b = false;
     public static bool gg4a = false;
     public static bool gg4b = false;
+    public static bool rt3a = false;
+    public static bool rt3b = false;
+    public static bool rt4a = false;
+    public static bool rt4b = false;
 
     [Header("Player Movement")]
     public static float movementSpeed = 10f;
@@ -217,6 +221,21 @@ public class Config
     public static float attackRateGG = 1f;
     public static float rangeGG = 15;
     public static int targetCountGG = 7;
+
+    [Header("Rocket Tower")]
+    public static int unlockRocketScrapCost = 500;
+    public static int unlockRocketTechCost = 50;
+    public static int countRocket = 0;
+    public static int countRocket3 = 1;
+    public static int countRocket4 = 2;
+    public static float damageRocket = 200;
+    public static float splashDamageRocket = 20;
+    public static float splashRadiusRocket = 2.5f;
+    public static float attackRateRocket = 0.4f;
+    public static float rangeRocket = 50;
+    public static float retargetDelayRocket = 2.5f;
+    public static float rocketLauchSpeed = 10f;
+    public static float rocketMissileSpeed = 20;
 
     [Header("Enemy")]
     public static float loseInterestDistance = 15f;
@@ -382,6 +401,10 @@ public class Config
         Config.gg3b = false;
         Config.gg4a = false;
         Config.gg4b = false;
+        Config.rt3a = false;
+        Config.rt3b = false;
+        Config.rt4a = false;
+        Config.rt4b = false;
 
         // stats
         Config.movementSpeed = 10f;
@@ -417,12 +440,17 @@ public class Config
         Config.countTurret = 0;
         Config.countSpikes = 0;
         Config.countGG = 0;
+        Config.countRocket = 0;
         Config.damageTurret = 10;
         Config.attackRateTurret = 2f;
         Config.rangeTurret = 25f;
         Config.damageSpikes = 10;
         Config.damageGG = 7;
         Config.targetCountGG = 7;
+        Config.damageRocket = 200;
+        Config.splashDamageRocket = 20;
+        Config.attackRateRocket = 0.4f;
+        Config.retargetDelayRocket = 2.5f;
     }
 }
 

@@ -16,9 +16,11 @@ public class Fabricator : MonoBehaviour, IBuilding
     [SerializeField] private Button turretPanelButton;
     [SerializeField] private Button spikesPanelButton;
     [SerializeField] private Button ggPanelButton;
+    [SerializeField] private Button rocketPanelButton;
     [SerializeField] private GameObject turretPanel;
     [SerializeField] private GameObject spikesPanel;
     [SerializeField] private GameObject ggPanel;
+    [SerializeField] private GameObject rocketPanel;
 
     [Header("Turret")]
     [SerializeField] private Button turretButton;
@@ -51,10 +53,20 @@ public class Fabricator : MonoBehaviour, IBuilding
     [SerializeField] private Button gg4aButton;
     [SerializeField] private Button gg4bButton;
 
+    [Header("Rocket Tower")]
+    [SerializeField] private Button rocketButton;
+    [SerializeField] private TMP_Text rocketCount;
+    [SerializeField] private TMP_Text rocketText;
+    [SerializeField] private Button rt3aButton;
+    [SerializeField] private Button rt3bButton;
+    [SerializeField] private Button rt4aButton;
+    [SerializeField] private Button rt4bButton;
+
     [Header("Defenses")]
     [SerializeField] private GameObject turretPrefab;
     [SerializeField] private GameObject spikesPrefab;
     [SerializeField] private GameObject gammaGeneratorPrefab;
+    [SerializeField] private GameObject rocketTowerPrefab;
 
     GameObject player;
     PlayerInventory inventory;
@@ -153,8 +165,9 @@ public class Fabricator : MonoBehaviour, IBuilding
             ggPanel.SetActive(false);
             ggPanelButton.gameObject.SetActive(false);
             ggButton.gameObject.SetActive(false);
-            //
-            //
+            rocketPanel.SetActive(false);
+            rocketPanelButton.gameObject.SetActive(false);
+            rocketButton.gameObject.SetActive(false);
             tu2aButton.gameObject.SetActive(false);
             tu2bButton.gameObject.SetActive(false);
             tu2cButton.gameObject.SetActive(false);
@@ -171,6 +184,10 @@ public class Fabricator : MonoBehaviour, IBuilding
             gg3bButton.gameObject.SetActive(false);
             gg4aButton.gameObject.SetActive(false);
             gg4bButton.gameObject.SetActive(false);
+            rt3aButton.gameObject.SetActive(false);
+            rt3bButton.gameObject.SetActive(false);
+            rt4aButton.gameObject.SetActive(false);
+            rt4bButton.gameObject.SetActive(false);
         }
         else if (Config.gameStage == 2)
         {
@@ -183,8 +200,9 @@ public class Fabricator : MonoBehaviour, IBuilding
             ggPanel.SetActive(false);
             ggPanelButton.gameObject.SetActive(false);
             ggButton.gameObject.SetActive(false);
-            //
-            //
+            rocketPanel.SetActive(false);
+            rocketPanelButton.gameObject.SetActive(false);
+            rocketButton.gameObject.SetActive(false);
             tu2aButton.gameObject.SetActive(true);
             tu2bButton.gameObject.SetActive(true);
             tu2cButton.gameObject.SetActive(true);
@@ -201,6 +219,10 @@ public class Fabricator : MonoBehaviour, IBuilding
             gg3bButton.gameObject.SetActive(false);
             gg4aButton.gameObject.SetActive(false);
             gg4bButton.gameObject.SetActive(false);
+            rt3aButton.gameObject.SetActive(false);
+            rt3bButton.gameObject.SetActive(false);
+            rt4aButton.gameObject.SetActive(false);
+            rt4bButton.gameObject.SetActive(false);
         }
         else if (Config.gameStage == 3)
         {
@@ -213,8 +235,9 @@ public class Fabricator : MonoBehaviour, IBuilding
             ggPanel.SetActive(false);
             ggPanelButton.gameObject.SetActive(true);
             ggButton.gameObject.SetActive(true);
-            //
-            //
+            rocketPanel.SetActive(false);
+            rocketPanelButton.gameObject.SetActive(true);
+            rocketButton.gameObject.SetActive(true);
             tu2aButton.gameObject.SetActive(true);
             tu2bButton.gameObject.SetActive(true);
             tu2cButton.gameObject.SetActive(true);
@@ -231,6 +254,10 @@ public class Fabricator : MonoBehaviour, IBuilding
             gg3bButton.gameObject.SetActive(true);
             gg4aButton.gameObject.SetActive(false);
             gg4bButton.gameObject.SetActive(false);
+            rt3aButton.gameObject.SetActive(true);
+            rt3bButton.gameObject.SetActive(true);
+            rt4aButton.gameObject.SetActive(false);
+            rt4bButton.gameObject.SetActive(false);
         }
         else if (Config.gameStage >= 4)
         {
@@ -243,8 +270,9 @@ public class Fabricator : MonoBehaviour, IBuilding
             ggPanel.SetActive(false);
             ggPanelButton.gameObject.SetActive(true);
             ggButton.gameObject.SetActive(true);
-            //
-            //
+            rocketPanel.SetActive(false);
+            rocketPanelButton.gameObject.SetActive(true);
+            rocketButton.gameObject.SetActive(true);
             tu2aButton.gameObject.SetActive(true);
             tu2bButton.gameObject.SetActive(true);
             tu2cButton.gameObject.SetActive(true);
@@ -260,7 +288,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             gg3aButton.gameObject.SetActive(true);
             gg3bButton.gameObject.SetActive(true);
             gg4aButton.gameObject.SetActive(true);
-            gg4bButton.gameObject.SetActive(true);          
+            gg4bButton.gameObject.SetActive(true); 
+            rt3aButton.gameObject.SetActive(true);
+            rt3bButton.gameObject.SetActive(true);
+            rt4aButton.gameObject.SetActive(true);
+            rt4bButton.gameObject.SetActive(true);         
         }
 
         UpdateStoreText();
@@ -281,6 +313,7 @@ public class Fabricator : MonoBehaviour, IBuilding
             turretPanel.SetActive(true);
             spikesPanel.SetActive(false);
             ggPanel.SetActive(false);
+            rocketPanel.SetActive(false);
         }
     }
 
@@ -291,6 +324,7 @@ public class Fabricator : MonoBehaviour, IBuilding
             turretPanel.SetActive(false);
             spikesPanel.SetActive(true);
             ggPanel.SetActive(false);
+            rocketPanel.SetActive(false);
         }
     }
 
@@ -301,10 +335,20 @@ public class Fabricator : MonoBehaviour, IBuilding
             turretPanel.SetActive(false);
             spikesPanel.SetActive(false);
             ggPanel.SetActive(true);
+            rocketPanel.SetActive(false);
         }
     }
 
-    /**/
+    public void RocketPanel()
+    {
+        if (menu.activeSelf)
+        {
+            turretPanel.SetActive(false);
+            spikesPanel.SetActive(false);
+            ggPanel.SetActive(false);
+            rocketPanel.SetActive(true);
+        }
+    }
 
     #region purchases
 
@@ -385,6 +429,29 @@ public class Fabricator : MonoBehaviour, IBuilding
                 PlayerInventory.scrap -= Config.unlockGGScrapCost;
                 PlayerInventory.electronics -= Config.unlockGGElectronicsCost;
                 Config.countGG++;
+                UpdateStoreText();
+            }
+        }
+    }
+
+    public void PurchaseRocketTower()
+    {
+        if (PlayerInventory.scrap >= Config.unlockRocketScrapCost && PlayerInventory.tech >= Config.unlockRocketTechCost)
+        {
+            if (Config.gameStage == 3 && Config.countRocket < Config.countRocket3)
+            {
+                inventory.defenses.Add(rocketTowerPrefab);
+                PlayerInventory.scrap -= Config.unlockRocketScrapCost;
+                PlayerInventory.tech -= Config.unlockRocketTechCost;
+                Config.countRocket++;
+                UpdateStoreText();
+            }
+            else if (Config.gameStage == 4 && Config.countRocket < Config.countRocket4)
+            {
+                inventory.defenses.Add(rocketTowerPrefab);
+                PlayerInventory.scrap -= Config.unlockRocketScrapCost;
+                PlayerInventory.tech -= Config.unlockRocketTechCost;
+                Config.countRocket++;
                 UpdateStoreText();
             }
         }
@@ -580,6 +647,58 @@ public class Fabricator : MonoBehaviour, IBuilding
 
     #endregion GG upgrades
 
+    #region RT upgrades
+
+    public void RT3A()
+    {
+        if (!Config.rt3a && PlayerInventory.scrap >= Config.stage3DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage3DefenseUpgradeScrapCost;
+            Config.rt3a = true;
+            Config.damageRocket = 220;
+            Config.splashDamageRocket = 22;
+            SetButtonTextValues();
+        }
+    }
+
+    public void RT3B()
+    {
+        if (!Config.rt3b && PlayerInventory.scrap >= Config.stage3DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage3DefenseUpgradeScrapCost;
+            Config.rt3b = true;
+            Config.attackRateRocket = 0.454545f;
+            Config.retargetDelayRocket = 2.2f;
+            SetButtonTextValues();
+        }
+    }
+
+    public void RT4A()
+    {
+        if (!Config.rt4a && PlayerInventory.scrap >= Config.stage4DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage4DefenseUpgradeScrapCost;
+            Config.rt4a = true;
+            Config.damageRocket = 250;
+            Config.splashDamageRocket = 25;
+            SetButtonTextValues();
+        }
+    }
+
+    public void RT4B()
+    {
+        if (!Config.rt4b && PlayerInventory.scrap >= Config.stage4DefenseUpgradeScrapCost)
+        {
+            PlayerInventory.scrap -= Config.stage4DefenseUpgradeScrapCost;
+            Config.rt4b = true;
+            Config.attackRateRocket = 0.5f;
+            Config.retargetDelayRocket = 2f;
+            SetButtonTextValues();
+        }
+    }
+
+    #endregion RT upgrades
+
     void UpdateStoreText()
     {
         if (Config.gameStage == 2)
@@ -634,9 +753,19 @@ public class Fabricator : MonoBehaviour, IBuilding
                 ggText.text = $"Max Number Bought";
             }
 
+            if (Config.countRocket < Config.countRocket3)
+            {
+                rocketText.text = $"{Config.unlockRocketScrapCost} <sprite=2> {Config.unlockRocketTechCost} <sprite=0>";
+            }
+            else
+            {
+                rocketText.text = $"Max Number Bought";
+            }
+
             turretCount.text = $"{Config.countTurret}/{Config.countTurret3} Turrets Built";
             spikesCount.text = $"{Config.countSpikes}/{Config.countSpikes3} Spikes Built";
             ggCount.text = $"{Config.countGG}/{Config.countGG3} Gamma Generators Built";
+            rocketCount.text = $"{Config.countRocket}/{Config.countRocket3} Rocket Towers Built";
         }
         else if (Config.gameStage == 4)
         {
@@ -667,9 +796,19 @@ public class Fabricator : MonoBehaviour, IBuilding
                 ggText.text = $"Max Number Bought";
             }
 
+            if (Config.countRocket < Config.countRocket4)
+            {
+                rocketText.text = $"{Config.unlockRocketScrapCost} <sprite=2> {Config.unlockRocketTechCost} <sprite=0>";
+            }
+            else
+            {
+                rocketText.text = $"Max Number Bought";
+            }
+
             turretCount.text = $"{Config.countTurret}/{Config.countTurret4} Turrets Built";
             spikesCount.text = $"{Config.countSpikes}/{Config.countSpikes4} Spikes Built";
-            ggCount.text = $"{Config.countGG}/{Config.countGG4} Gamma Built";
+            ggCount.text = $"{Config.countGG}/{Config.countGG4} Gamma Generators Built";
+            rocketCount.text = $"{Config.countRocket}/{Config.countRocket4} Rocket Towers Built";
         }
     }
 
@@ -931,6 +1070,67 @@ public class Fabricator : MonoBehaviour, IBuilding
         {
             gg4bButton.interactable = false;
             TMP_Text text = gg4bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        // rocket tower
+        if (Config.rt3a)
+        {
+            TMP_Text text = rt3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Damage I\nUnlocked";
+        }
+        else
+        {
+            TMP_Text text = rt3aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage I\nUnlock {Config.stage3DefenseUpgradeScrapCost} <sprite=2>";
+        }
+
+        if (Config.rt3b)
+        {
+            TMP_Text text = rt3bButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Fire Rate I\nUnlocked";
+        }
+        else
+        {
+            TMP_Text text = rt3bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Fire Rate I\nUnlock {Config.stage3DefenseUpgradeScrapCost} <sprite=2>";
+        }
+
+        if (Config.rt4a)
+        {
+            rt4aButton.interactable = true;
+            TMP_Text text = rt4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Damage II\nUnlocked";
+        }
+        else if (!Config.rt4a && Config.rt3a)
+        {
+            rt4aButton.interactable = true;
+            TMP_Text text = rt4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Damage II\nUnlock {Config.stage4DefenseUpgradeScrapCost} <sprite=2>";
+        }
+        else
+        {
+            rt4aButton.interactable = false;
+            TMP_Text text = rt4aButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Locked";
+        }
+
+        if (Config.rt4b)
+        {
+            rt4bButton.interactable = true;
+            TMP_Text text = rt4bButton.GetComponentInChildren<TMP_Text>();
+            text.text = "Fire Rate II\nUnlocked";
+        }
+        else if (!Config.rt4b && Config.rt3b)
+        {
+            rt4bButton.interactable = true;
+            TMP_Text text = rt4bButton.GetComponentInChildren<TMP_Text>();
+            text.text = $"Fire Rate II\nUnlock {Config.stage4DefenseUpgradeScrapCost} <sprite=2>";
+        }
+        else
+        {
+            rt4bButton.interactable = false;
+            TMP_Text text = rt4bButton.GetComponentInChildren<TMP_Text>();
             text.text = $"Locked";
         }
     }

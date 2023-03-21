@@ -607,7 +607,7 @@ public class Fabricator : MonoBehaviour, IBuilding
         {
             PlayerInventory.scrap -= Config.stage3DefenseUpgradeScrapCost;
             Config.gg3a = true;
-            Config.damageGG = 10;
+            Config.damageGG = 9;
             SetButtonTextValues();
         }
     }
@@ -618,7 +618,7 @@ public class Fabricator : MonoBehaviour, IBuilding
         {
             PlayerInventory.scrap -= Config.stage3DefenseUpgradeScrapCost;
             Config.gg3b = true;
-            Config.targetCountGG = 10;
+            Config.targetCountGG = 9;
             SetButtonTextValues();
         }
     }
@@ -629,7 +629,7 @@ public class Fabricator : MonoBehaviour, IBuilding
         {
             PlayerInventory.scrap -= Config.stage4DefenseUpgradeScrapCost;
             Config.gg4a = true;
-            Config.damageGG = 13;
+            Config.damageGG = 11;
             SetButtonTextValues();
         }
     }
@@ -640,7 +640,7 @@ public class Fabricator : MonoBehaviour, IBuilding
         {
             PlayerInventory.scrap -= Config.stage4DefenseUpgradeScrapCost;
             Config.gg4b = true;
-            Config.targetCountGG = 13;
+            Config.targetCountGG = 11;
             SetButtonTextValues();
         }
     }

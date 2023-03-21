@@ -113,14 +113,14 @@ public class Config
     public static float movementMod = 1f;
     public static float dashSpeed = 200f;
     public static float dashCooldown = 1f;
-    public static int unlockAChasisElectronicsCost = 500;
+    public static int unlockAChasisElectronicsCost = 400;
 
     [Header("Player Systems")]
     public static float playerMaxHp = 100;
     public static float abilityDuration = 5f;
     public static float abilityCooldown = 15f;
     public static float abilityDamageModifier = 0.5f;
-    public static int unlockAAbilityElectronicsCost = 1250;
+    public static int unlockAAbilityElectronicsCost = 1000;
     public static float diversionModifier = 0.5f;
 
     [Header("Player Ugrades")]
@@ -232,7 +232,7 @@ public class Config
     public static float splashDamageRocket = 20;
     public static float splashRadiusRocket = 2.5f;
     public static float attackRateRocket = 0.4f;
-    public static float rangeRocket = 50;
+    public static float rangeRocket = 45;
     public static float retargetDelayRocket = 2.5f;
     public static float rocketLauchSpeed = 10f;
     public static float rocketMissileSpeed = 20;
@@ -279,7 +279,7 @@ public class Config
     public static int assassinTechReward = 50;
 
     [Header("Whale")]
-    public static float whaleMaxHp = 2000;
+    public static float whaleMaxHp = 2500;
     public static float whaleMovementSpeed = 2.0f;
     public static float whaleRange = 5f;
     public static int whaleScrapReward = 200;
@@ -287,7 +287,7 @@ public class Config
     public static int whaleTechReward = 100;
 
     [Header("Brawler")]
-    public static float brawlerMaxHp = 400;
+    public static float brawlerMaxHp = 550;
     public static float brawlerAttackRate = 0.5f;
     public static float brawlerDamage = 40;
     public static float brawlerRange = 1.5f;
@@ -299,7 +299,7 @@ public class Config
     public static int brawlerTechReward = 50;
 
     [Header("Phantom")]
-    public static float phantomMaxHp = 50;
+    public static float phantomMaxHp = 70;
     public static float phantomAttackRate = 1f;
     public static float phantomDamage = 20;
     public static float phantomRange = 1.2f;

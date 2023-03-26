@@ -655,7 +655,7 @@ public class Fabricator : MonoBehaviour, IBuilding
         {
             PlayerInventory.scrap -= Config.stage3DefenseUpgradeScrapCost;
             Config.rt3a = true;
-            Config.damageRocket = 220;
+            Config.damageRocket = 198;
             Config.splashDamageRocket = 22;
             SetButtonTextValues();
         }
@@ -679,7 +679,7 @@ public class Fabricator : MonoBehaviour, IBuilding
         {
             PlayerInventory.scrap -= Config.stage4DefenseUpgradeScrapCost;
             Config.rt4a = true;
-            Config.damageRocket = 250;
+            Config.damageRocket = 225;
             Config.splashDamageRocket = 25;
             SetButtonTextValues();
         }

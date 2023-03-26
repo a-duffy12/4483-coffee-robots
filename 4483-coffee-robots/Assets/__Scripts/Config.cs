@@ -228,13 +228,12 @@ public class Config
     public static int countRocket = 0;
     public static int countRocket3 = 1;
     public static int countRocket4 = 2;
-    public static float damageRocket = 200;
+    public static float damageRocket = 180;
     public static float splashDamageRocket = 20;
     public static float splashRadiusRocket = 2.5f;
     public static float attackRateRocket = 0.4f;
     public static float rangeRocket = 45;
     public static float retargetDelayRocket = 2.5f;
-    public static float rocketLauchSpeed = 10f;
     public static float rocketMissileSpeed = 20;
 
     [Header("Enemy")]
@@ -307,6 +306,20 @@ public class Config
     public static int phantomScrapReward = 35;
     public static int phantomElectronicsReward = 35;
     public static int phantomTechReward = 20;
+
+    [Header("Meteor")]
+    public static float meteorMaxHp = 750;
+    public static float meteorAttackRate = 0.2f;
+    public static float meteorAttackRateMG = 20f;
+    public static float meteorDamage = 200;
+    public static float meteorDamageMG = 1;
+    public static float meteorRange = 35;
+    public static float meteorRangeMG = 10;
+    public static float meteorMovementSpeed = 3f;
+    public static int meteorScrapReward = 75;
+    public static int meteorElectronicsReward = 75;
+    public static int meteorTechReward = 75;
+    public static float meteorProjectileSpeed = 1500;
 
     public static void GetSaveData()
     {
@@ -447,7 +460,7 @@ public class Config
         Config.damageSpikes = 10;
         Config.damageGG = 7;
         Config.targetCountGG = 7;
-        Config.damageRocket = 200;
+        Config.damageRocket = 180;
         Config.splashDamageRocket = 20;
         Config.attackRateRocket = 0.4f;
         Config.retargetDelayRocket = 2.5f;

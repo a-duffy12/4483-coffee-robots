@@ -41,7 +41,7 @@ public class Missile : MonoBehaviour
         if (Time.time < launchTime + flyTime && Time.time < launchTime + riseTime) 
         {
             transform.LookAt(risePoint.position);
-            transform.position = Vector3.MoveTowards(transform.position, risePoint.position, Config.rocketLauchSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, risePoint.position, Config.rocketMissileSpeed * Time.deltaTime);
         }
         else if (Time.time < launchTime + flyTime && Time.time >= launchTime + riseTime)
         {

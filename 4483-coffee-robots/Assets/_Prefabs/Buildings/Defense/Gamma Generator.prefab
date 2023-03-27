@@ -1045,6 +1045,7 @@ MonoBehaviour:
   - {fileID: 5665699484765926309}
   - {fileID: 4605359641290863702}
   - {fileID: 1276899349539800415}
+  attackAudio: {fileID: 8300000, guid: d7821e20f44ce4241999e3e5c58a02b1, type: 3}
 --- !u!82 &2891950737822918429
 AudioSource:
   m_ObjectHideFlags: 0

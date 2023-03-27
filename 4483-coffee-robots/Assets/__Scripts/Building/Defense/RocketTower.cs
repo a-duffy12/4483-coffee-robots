@@ -10,8 +10,8 @@ public class RocketTower : MonoBehaviour
     [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private GameObject missilePrefab;
 
-    //[Header("Audio")]
-    //public AudioClip attackAudio;
+    [Header("Audio")]
+    public AudioClip attackAudio;
 
     private BuildStatus buildStatus;
 
@@ -30,7 +30,7 @@ public class RocketTower : MonoBehaviour
     {
         source.playOnAwake = false;
         source.spatialBlend = 1f;
-        source.volume = 0.7f;
+        source.volume = 1f;
         source.priority = 150;
 
         buildStatus = BuildStatus.Built;
@@ -81,8 +81,8 @@ public class RocketTower : MonoBehaviour
             
             lastAttackTime = Time.time;
 
-            //audioSource.clip = attackAudio;
-            //audioSource.Play();
+            source.clip = attackAudio;
+            source.Play();
 
             if (muzzleFlash.isPlaying)
             {

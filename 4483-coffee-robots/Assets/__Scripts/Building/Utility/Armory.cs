@@ -410,6 +410,11 @@ public class Armory : MonoBehaviour, IBuilding
 
             TMP_Text text = shotgunButton.GetComponentInChildren<TMP_Text>();
             text.text = "Shotgun";
+            PlayAudio(succeedAudio);
+        }
+        else if (menu.activeSelf && !Config.shotgunUnlocked && PlayerInventory.tech < Config.unlockTechCostShotgun)
+        {
+            PlayAudio(failAudio);
         }
     }
 

@@ -60,7 +60,7 @@ public class PlayerInventory : MonoBehaviour
     {
         inventorySource.playOnAwake = false;
         inventorySource.spatialBlend = 1f;
-        inventorySource.volume = 1f;
+        inventorySource.volume = 0.4f;
         inventorySource.priority = 128;
 
         SwitchWeapons(ar.weaponInt);

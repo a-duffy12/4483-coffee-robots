@@ -212,7 +212,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  risePoint: {fileID: 0}
   explosionParticle: {fileID: 2933643391773466371, guid: 9eb281feded024a46815acf7317760bd, type: 3}
+  explodeAudio: {fileID: 8300000, guid: 606dc63581055ed40a3c5081ed105177, type: 3}
 --- !u!65 &5788121917052651520
 BoxCollider:
   m_ObjectHideFlags: 0

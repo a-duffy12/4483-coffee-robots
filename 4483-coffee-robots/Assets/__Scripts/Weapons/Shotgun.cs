@@ -164,7 +164,7 @@ public class Shotgun : MonoBehaviour
 
     public void AlternateFire(Transform firePoint)
     {
-        if (Config.alternateShotgunUnlocked && Time.time > (lastFireTime + (1/Config.fireRateShot)))
+        if (Config.alternateShotgunUnlocked && Time.time > (lastFireTime + (1/Config.fireRateShot)) && currentAmmo > 0)
         {
             Vector3 p5 = Quaternion.Euler(0, 5f, 0) * firePoint.transform.forward;
             Vector3 pn5 = Quaternion.Euler(0, -5f, 0) * firePoint.transform.forward;

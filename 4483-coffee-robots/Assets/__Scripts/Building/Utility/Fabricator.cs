@@ -483,6 +483,12 @@ public class Fabricator : MonoBehaviour, IBuilding
                 Config.countRocket++;
                 UpdateStoreText();
             }
+
+            PlayAudio(succeedAudio);
+        }
+        else
+        {
+            PlayAudio(failAudio);
         }
     }
 

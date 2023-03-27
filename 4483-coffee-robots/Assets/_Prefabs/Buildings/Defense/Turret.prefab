@@ -563,6 +563,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 3442321490781736893}
   healthBar: {fileID: 3619225565553124590}
   buildingCanvas: {fileID: 3619225565121603249}
+  attackAudio: {fileID: 8300000, guid: 7a3c3af4dc64b1e45803dddeb8744827, type: 3}
 --- !u!82 &8452420941902832950
 AudioSource:
   m_ObjectHideFlags: 0

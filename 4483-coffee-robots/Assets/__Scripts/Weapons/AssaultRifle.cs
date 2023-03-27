@@ -81,7 +81,7 @@ public class AssaultRifle : MonoBehaviour
 
     public void AlternateFire(Transform firePoint)
     {
-        if (Config.alternateARUnlocked && Time.time > (lastFireTime + (1/Config.altFireRateAR)))
+        if (Config.alternateARUnlocked && Time.time > (lastFireTime + (1/Config.altFireRateAR)) && currentAmmo > 0)
         {
             GameObject altObject = Instantiate(altPrefab, firePoint.position + (firePoint.forward * 1f), firePoint.rotation);
             Cluster cluster = altObject.GetComponent<Cluster>();

@@ -11,6 +11,13 @@ public class DefenseBuildPoint : MonoBehaviour
     [Header("GameObjects")]
     [SerializeField] private TMP_Text promptText;
 
+    [Header("Audio")]
+    public AudioClip turretDeployAudio;
+    public AudioClip spikesDeployAudio;
+    public AudioClip gammaGeneratorDeployAudio;
+    public AudioClip rocketTowerDeployAudio;
+    AudioSource source;
+
     GameObject player;
     PlayerInventory inventory;
     private bool quickInteract;
@@ -19,11 +26,15 @@ public class DefenseBuildPoint : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         inventory = player.GetComponent<PlayerInventory>();
+        source = GetComponent<AudioSource>();
     }
     
     void Start()
     {
-        
+        source.playOnAwake = false;
+        source.spatialBlend = 1f;
+        source.volume = 1f;
+        source.priority = 160;
     }
 
     void Update()
@@ -51,8 +62,29 @@ public class DefenseBuildPoint : MonoBehaviour
     {
         Instantiate(inventory.defenses.First(), transform.position, Quaternion.identity);
         Debug.Log($"{inventory.defenses.First().name} placed at ({transform.position.x}, {transform.position.y}, {transform.position.z})");
+        
+        if (inventory.defenses.First().name == "Turret")
+        {
+            source.clip = turretDeployAudio;
+        }
+        else if (inventory.defenses.First().name == "Spikes")
+        {
+            source.clip = spikesDeployAudio;
+        }
+        else if (inventory.defenses.First().name == "Gamma Generator")
+        {
+            source.clip = gammaGeneratorDeployAudio;
+        }
+        else if (inventory.defenses.First().name == "Rocket Tower")
+        {
+            source.clip = rocketTowerDeployAudio;
+        }
+
+        source.Play();
         inventory.defenses.RemoveAt(0);
-        Destroy(gameObject);
+
+        Destroy(gameObject, source.clip.length);
+        //Destroy(gameObject);
     }
 
     #region input functions

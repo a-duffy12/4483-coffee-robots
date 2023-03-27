@@ -14,8 +14,8 @@ public class Turret : MonoBehaviour, IBuilding, IDefense
     public Image healthBar;
     public GameObject buildingCanvas;
     
-    //[Header("Audio")]
-    //public AudioClip attackAudio;
+    [Header("Audio")]
+    public AudioClip attackAudio;
 
     [HideInInspector] public float hp { get { return currentHp; } }
 
@@ -42,7 +42,7 @@ public class Turret : MonoBehaviour, IBuilding, IDefense
     {
         source.playOnAwake = false;
         source.spatialBlend = 1f;
-        source.volume = 0.7f;
+        source.volume = 0.25f;
         source.priority = 150;
 
         currentHp = Config.turretMaxHp;
@@ -133,8 +133,8 @@ public class Turret : MonoBehaviour, IBuilding, IDefense
             
             lastAttackTime = Time.time;
 
-            //audioSource.clip = attackAudio;
-            //audioSource.Play();
+            source.clip = attackAudio;
+            source.Play();
 
             if (muzzleFlash.isPlaying)
             {

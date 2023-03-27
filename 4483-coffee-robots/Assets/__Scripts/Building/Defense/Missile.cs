@@ -12,8 +12,8 @@ public class Missile : MonoBehaviour
     [HideInInspector] public Transform risePoint;
     [SerializeField] private ParticleSystem explosionParticle;
 
-    //[Header("Audio")]
-    //public AudioClip explodeAudio;
+    [Header("Audio")]
+    public AudioClip explodeAudio;
 
     Rigidbody rb;
     AudioSource source;
@@ -76,6 +76,8 @@ public class Missile : MonoBehaviour
 
     void Impact(bool success) // success is if missile hit target enemy
     {
+        impacted = true;
+        
         if (success)
         {
             IEnemy enemy = target.GetComponent<IEnemy>();
@@ -111,10 +113,10 @@ public class Missile : MonoBehaviour
             }
         }
 
-        //audioSource.clip = explodeAudio;
-        //audioSource.Play();
+        source.clip = explodeAudio;
+        source.Play();
     
-        //Destroy(gameObject, source.clip.length);
-        Destroy(gameObject);
+        Destroy(gameObject, source.clip.length);
+        //Destroy(gameObject);
     }
 }

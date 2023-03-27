@@ -11,8 +11,8 @@ public class GammaGenerator : MonoBehaviour
     [SerializeField] private LayerMask hitMask;
     [SerializeField] private List<LineRenderer> lineRenderers;
 
-    //[Header("Audio")]
-    //public AudioClip attackAudio;
+    [Header("Audio")]
+    public AudioClip attackAudio;
 
     private BuildStatus buildStatus;
 
@@ -28,7 +28,7 @@ public class GammaGenerator : MonoBehaviour
     {
         source.playOnAwake = false;
         source.spatialBlend = 1f;
-        source.volume = 0.7f;
+        source.volume = 1f;
         source.priority = 150;
 
         buildStatus = BuildStatus.Built;
@@ -88,8 +88,8 @@ public class GammaGenerator : MonoBehaviour
 
         if (distanceEnemies.Any())
         {
-            //audioSource.clip = attackAudio;
-            //audioSource.Play();
+            source.clip = attackAudio;
+            source.Play();
         }
     }
 }

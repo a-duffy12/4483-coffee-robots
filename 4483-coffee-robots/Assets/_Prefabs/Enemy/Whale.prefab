@@ -259,6 +259,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 5374555779310818776}
   canvas: {fileID: 5374555779277108771}
+  threatAudio: {fileID: 8300000, guid: 588894eb6957264459d800d94b64b925, type: 3}
+  deathAudio: {fileID: 8300000, guid: 3200f25e07cae8147a79f77744820174, type: 3}
 --- !u!1 &5374555778380921468
 GameObject:
   m_ObjectHideFlags: 0

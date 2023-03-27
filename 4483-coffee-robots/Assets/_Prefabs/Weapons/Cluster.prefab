@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionParticle: {fileID: 2933643391773466371, guid: 9eb281feded024a46815acf7317760bd, type: 3}
+  explodeAudio: {fileID: 8300000, guid: c3bb392733c169e4c9fceb8a9550d9ac, type: 3}
 --- !u!82 &4496795142756775124
 AudioSource:
   m_ObjectHideFlags: 0

@@ -10,15 +10,15 @@ public class EnragedPayload : MonoBehaviour, IEnemy
     public GameObject canvas;
     [SerializeField] private ParticleSystem explosionParticle;
 
-    //[Header("Audio")]
-    //public AudioClip attackAudio;
-    //public AudioClip deathAudio;
+    [Header("Audio")]
+    public AudioClip attackAudio;
+    public AudioClip deathAudio;
 
     [HideInInspector] public float hp { get { return currentHp; } }
 
     private float currentHp;
 
-    AudioSource source;
+    AudioSource enemySource;
     Rigidbody rb;
     GameObject player;
     GameObject coffeePlant;
@@ -31,7 +31,7 @@ public class EnragedPayload : MonoBehaviour, IEnemy
     {
         player = GameObject.FindGameObjectWithTag("Player");
         coffeePlant = GameObject.FindGameObjectWithTag("CoffeePlant");
-        source = GetComponent<AudioSource>();
+        enemySource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         system = player.GetComponent<PlayerSystem>();
         plant = coffeePlant.GetComponent<CoffeePlant>();
@@ -39,10 +39,10 @@ public class EnragedPayload : MonoBehaviour, IEnemy
     
     void Start()
     {
-        source.playOnAwake = false;
-        source.spatialBlend = 1f;
-        source.volume = 1f;
-        source.priority = 140;
+        enemySource.playOnAwake = false;
+        enemySource.spatialBlend = 1f;
+        enemySource.volume = 1f;
+        enemySource.priority = 140;
 
         currentHp = Config.payloadMaxHp;
 
@@ -91,8 +91,8 @@ public class EnragedPayload : MonoBehaviour, IEnemy
             }
             
 
-            //source.clip = deathAudio;
-            //source.Play();
+            enemySource.clip = deathAudio;
+            enemySource.Play();
 
             Destroy(gameObject);
         }
@@ -107,8 +107,8 @@ public class EnragedPayload : MonoBehaviour, IEnemy
     {
         delivered = true;
 
-        //source.clip = attackAudio;
-        //source.Play();
+        enemySource.clip = attackAudio;
+        enemySource.Play();
 
         Instantiate(explosionParticle, transform.position, transform.rotation);
         
@@ -120,7 +120,7 @@ public class EnragedPayload : MonoBehaviour, IEnemy
         }
 
         plant.DamageBuilding(Config.enragedPayloadDamage * Config.difficultyDamageMod, "payload");
-        //Destroy(gameObject, source.clip.length);
-        Destroy(gameObject);
+        Destroy(gameObject, enemySource.clip.length);
+        //Destroy(gameObject);
     }
 }

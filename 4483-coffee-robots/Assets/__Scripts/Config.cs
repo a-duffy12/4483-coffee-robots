@@ -234,6 +234,7 @@ public class Config
     public static float attackRateRocket = 0.4f;
     public static float rangeRocket = 45;
     public static float retargetDelayRocket = 2.5f;
+    public static float rocketRiseSpeed = 7;
     public static float rocketMissileSpeed = 20;
 
     [Header("Enemy")]

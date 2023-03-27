@@ -10,16 +10,16 @@ public class Brawler : MonoBehaviour, IEnemy
     public Image healthBar;
     public GameObject canvas;
 
-    //[Header("Audio")]
-    //public AudioClip attackAudio;
-    //public AudioClip deathAudio;
+    [Header("Audio")]
+    public AudioClip attackAudio;
+    public AudioClip deathAudio;
 
     [HideInInspector] public float hp { get { return currentHp; } }
     [HideInInspector] public bool targetingPlayer = false;
 
     private float currentHp;
     
-    AudioSource source;
+    AudioSource enemySource;
     Rigidbody rb;
     GameObject player;
     PlayerSystem system;
@@ -31,7 +31,7 @@ public class Brawler : MonoBehaviour, IEnemy
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        source = GetComponent<AudioSource>();
+        enemySource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         system = player.GetComponent<PlayerSystem>();
         controller = player.GetComponent<PlayerController>();
@@ -39,10 +39,10 @@ public class Brawler : MonoBehaviour, IEnemy
     
     void Start()
     {
-        source.playOnAwake = false;
-        source.spatialBlend = 1f;
-        source.volume = 1f;
-        source.priority = 140;
+        enemySource.playOnAwake = false;
+        enemySource.spatialBlend = 1f;
+        enemySource.volume = 1f;
+        enemySource.priority = 140;
 
         currentHp = Config.brawlerMaxHp;
 
@@ -98,8 +98,8 @@ public class Brawler : MonoBehaviour, IEnemy
                 PlayerInventory.tech += Config.brawlerTechReward;
             }
             
-            //source.clip = deathAudio;
-            //source.Play();
+            enemySource.clip = deathAudio;
+            enemySource.Play();
 
             Destroy(gameObject);
         }
@@ -116,8 +116,8 @@ public class Brawler : MonoBehaviour, IEnemy
         {
             lastAttackTime = Time.time;
 
-            //source.clip = attackAudio;
-            //source.Play();
+            enemySource.clip = attackAudio;
+            enemySource.Play();
 
             system.DamagePlayer(Config.brawlerDamage * Config.difficultyDamageMod, "brawler");
             controller.SlowPlayer(Config.brawlerSlowFactor, Config.brawlerSlowDuration);

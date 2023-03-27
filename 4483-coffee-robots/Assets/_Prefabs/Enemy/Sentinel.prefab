@@ -624,6 +624,7 @@ MonoBehaviour:
   healthBar: {fileID: 8392732049575657507}
   canvas: {fileID: 8392732049470607011}
   attackFlash: {fileID: 1868537431320401285}
+  attackAudio: {fileID: 8300000, guid: 427c242e69cb74141b58d8252d9ab1e3, type: 3}
   targetingPlayer: 0
 --- !u!1001 &293270215716020509
 PrefabInstance:

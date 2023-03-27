@@ -179,7 +179,8 @@ MonoBehaviour:
   canvas: {fileID: 1880442284514764904}
   dartPrefab: {fileID: 1735216328384553933, guid: 3f206de71fe85b643a476bf41e221634, type: 3}
   firePoint: {fileID: 1880442283860910980}
-  targetingPlayer: 0
+  attackAudio: {fileID: 8300000, guid: cc7f51e29aca25a4b9b7f08e0aeb7e7d, type: 3}
+  deathAudio: {fileID: 8300000, guid: ca4c821999001bf48ada761ea56ed8b3, type: 3}
 --- !u!1 &1880442283647979116
 GameObject:
   m_ObjectHideFlags: 0

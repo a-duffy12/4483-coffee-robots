@@ -7,8 +7,8 @@ public class Cluster : MonoBehaviour
     [Header("GameObjects")]
     [SerializeField] private ParticleSystem explosionParticle;
 
-    //[Header("Audio")]
-    //public AudioClip explodeAudio;
+    [Header("Audio")]
+    public AudioClip explodeAudio;
 
     Rigidbody rb;
     AudioSource source;
@@ -56,8 +56,8 @@ public class Cluster : MonoBehaviour
     {
         exploded = true;
 
-        //source.clip = explodeAudio;
-        //source.Play();
+        source.clip = explodeAudio;
+        source.Play();
 
         Instantiate(explosionParticle, transform.position, transform.rotation);
 
@@ -85,7 +85,7 @@ public class Cluster : MonoBehaviour
             }
         }
     
-        //Destroy(gameObject, source.clip.length);
-        Destroy(gameObject);
+        Destroy(gameObject, source.clip.length);
+        //Destroy(gameObject);
     }
 }

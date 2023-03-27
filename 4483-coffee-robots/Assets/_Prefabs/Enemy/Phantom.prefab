@@ -177,6 +177,7 @@ MonoBehaviour:
   healthBar: {fileID: 2077465682911959531}
   canvas: {fileID: 2077465682748708715}
   attackFlash: {fileID: 8161153343044570189}
+  attackAudio: {fileID: 8300000, guid: 427c242e69cb74141b58d8252d9ab1e3, type: 3}
   targetingPlayer: 0
 --- !u!1 &2077465682748708715
 GameObject:

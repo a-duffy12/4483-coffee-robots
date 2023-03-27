@@ -10,16 +10,15 @@ public class Phantom : MonoBehaviour, IEnemy
     public GameObject canvas;
     public ParticleSystem attackFlash;
 
-    //[Header("Audio")]
-    //public AudioClip attackAudio;
-    //public AudioClip deathAudio;
+    [Header("Audio")]
+    public AudioClip attackAudio;
 
     [HideInInspector] public float hp { get { return currentHp; } }
     [HideInInspector] public bool targetingPlayer = false;
 
     private float currentHp;
     
-    AudioSource source;
+    AudioSource enemySource;
     Rigidbody rb;
     GameObject player;
     GameObject coffeePlant;
@@ -32,7 +31,7 @@ public class Phantom : MonoBehaviour, IEnemy
     {
         player = GameObject.FindGameObjectWithTag("Player");
         coffeePlant = GameObject.FindGameObjectWithTag("CoffeePlant");
-        source = GetComponent<AudioSource>();
+        enemySource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         system = player.GetComponent<PlayerSystem>();
         plant = coffeePlant.GetComponent<CoffeePlant>();
@@ -40,10 +39,10 @@ public class Phantom : MonoBehaviour, IEnemy
 
     void Start()
     {
-        source.playOnAwake = false;
-        source.spatialBlend = 1f;
-        source.volume = 1f;
-        source.priority = 140;
+        enemySource.playOnAwake = false;
+        enemySource.spatialBlend = 1f;
+        enemySource.volume = 1f;
+        enemySource.priority = 140;
 
         currentHp = Config.phantomMaxHp;
 
@@ -117,10 +116,6 @@ public class Phantom : MonoBehaviour, IEnemy
                 PlayerInventory.tech += Config.phantomTechReward;
             }
             
-
-            //source.clip = deathAudio;
-            //source.Play();
-
             Destroy(gameObject);
         }
     }
@@ -136,8 +131,8 @@ public class Phantom : MonoBehaviour, IEnemy
         {
             lastAttackTime = Time.time;
 
-            //source.clip = attackAudio;
-            //source.Play();
+            enemySource.clip = attackAudio;
+            enemySource.Play();
 
             if (attackFlash.isPlaying)
             {

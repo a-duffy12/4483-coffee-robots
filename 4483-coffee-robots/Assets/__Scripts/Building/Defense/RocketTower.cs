@@ -64,7 +64,6 @@ public class RocketTower : MonoBehaviour
                 
                 Attack();
             }
-
         }
     }
 
@@ -78,6 +77,7 @@ public class RocketTower : MonoBehaviour
             missileObject.transform.rotation = Quaternion.Euler(90, 0, 0);
             Missile missile = missileObject.GetComponent<Missile>();
             missile.target = target;
+            missile.risePoint = risePoint;
             
             lastAttackTime = Time.time;
 

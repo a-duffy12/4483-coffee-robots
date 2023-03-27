@@ -508,6 +508,8 @@ MonoBehaviour:
   healthBar: {fileID: 2378678874641451446}
   canvas: {fileID: 2378678873159748767}
   explosionParticle: {fileID: 2933643391773466371, guid: 9eb281feded024a46815acf7317760bd, type: 3}
+  attackAudio: {fileID: 8300000, guid: e69f78a94fe1b8745be6b032e5808c68, type: 3}
+  deathAudio: {fileID: 8300000, guid: 428d3cc5d93cbe64d9e59d9df5c4ea25, type: 3}
 --- !u!1 &5786670205675534176
 GameObject:
   m_ObjectHideFlags: 0

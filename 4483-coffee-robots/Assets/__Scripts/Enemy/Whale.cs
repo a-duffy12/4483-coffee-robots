@@ -9,15 +9,15 @@ public class Whale : MonoBehaviour, IEnemy
     public Image healthBar;
     public GameObject canvas;
 
-    //[Header("Audio")]
-    //public AudioClip threatAudio;
-    //public AudioClip deathAudio;
+    [Header("Audio")]
+    public AudioClip threatAudio;
+    public AudioClip deathAudio;
 
     [HideInInspector] public float hp { get { return currentHp; } }
 
     private float currentHp;
 
-    AudioSource source;
+    AudioSource enemySource;
     Rigidbody rb;
 
     private GameObject target;
@@ -25,16 +25,16 @@ public class Whale : MonoBehaviour, IEnemy
 
     void Awake()
     {
-        source = GetComponent<AudioSource>();
+        enemySource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
     }
 
     void Start()
     {
-        source.playOnAwake = false;
-        source.spatialBlend = 1f;
-        source.volume = 1f;
-        source.priority = 140;
+        enemySource.playOnAwake = false;
+        enemySource.spatialBlend = 1f;
+        enemySource.volume = 1f;
+        enemySource.priority = 140;
 
         currentHp = Config.whaleMaxHp;
 
@@ -56,10 +56,10 @@ public class Whale : MonoBehaviour, IEnemy
                 Move(target.transform);
             }
 
-            if (Time.time % 10 == 0)
+            if (Time.time % 20 == 0)
             {
-                //source.clip = threatAudio;
-                //source.Play();
+                enemySource.clip = threatAudio;
+                enemySource.Play();
             }
         }
         else if (target == null && Time.time >= checkDefenseTime)
@@ -99,8 +99,8 @@ public class Whale : MonoBehaviour, IEnemy
             }
             
 
-            //source.clip = deathAudio;
-            //source.Play();
+            enemySource.clip = deathAudio;
+            enemySource.Play();
 
             Destroy(gameObject);
         }

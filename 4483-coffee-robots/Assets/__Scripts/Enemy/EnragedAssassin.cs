@@ -11,15 +11,15 @@ public class EnragedAssassin : MonoBehaviour, IEnemy
     public GameObject dartPrefab;
     public Transform firePoint;
 
-    //[Header("Audio")]
-    //public AudioClip attackAudio;
-    //public AudioClip deathAudio;
+    [Header("Audio")]
+    public AudioClip attackAudio;
+    public AudioClip deathAudio;
 
     [HideInInspector] public float hp { get { return currentHp; } }
 
     private float currentHp;
     
-    AudioSource source;
+    AudioSource enemySource;
     Rigidbody rb;
     GameObject player;
     PlayerSystem system;
@@ -29,17 +29,17 @@ public class EnragedAssassin : MonoBehaviour, IEnemy
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        source = GetComponent<AudioSource>();
+        enemySource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         system = player.GetComponent<PlayerSystem>();
     }
     
     void Start()
     {
-        source.playOnAwake = false;
-        source.spatialBlend = 1f;
-        source.volume = 1f;
-        source.priority = 140;
+        enemySource.playOnAwake = false;
+        enemySource.spatialBlend = 1f;
+        enemySource.volume = 1f;
+        enemySource.priority = 140;
 
         currentHp = Config.assassinMaxHp;
 
@@ -87,8 +87,8 @@ public class EnragedAssassin : MonoBehaviour, IEnemy
                 PlayerInventory.tech += Config.assassinTechReward;
             }
             
-            //source.clip = deathAudio;
-            //source.Play();
+            enemySource.clip = deathAudio;
+            enemySource.Play();
 
             Destroy(gameObject);
         }
@@ -112,8 +112,8 @@ public class EnragedAssassin : MonoBehaviour, IEnemy
         {
             lastAttackTime = Time.time;
 
-            //source.clip = attackAudio;
-            //source.Play();
+            enemySource.clip = attackAudio;
+            enemySource.Play();
 
             GameObject dartObject = Instantiate(dartPrefab, firePoint.position, firePoint.rotation);
 

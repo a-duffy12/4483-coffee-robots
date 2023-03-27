@@ -74,23 +74,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 103b0d517e23fc94e87a4b9d6f813f8d, type: 3}
   m_PrefabInstance: {fileID: 6429591637842206953}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1060662443344601422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6195570273625120184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33bc51ddfd7ec094ea4cab576f1d6633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitMask:
-    serializedVersion: 2
-    m_Bits: 512
-  weaponName: machete
-  weaponInt: 1
 --- !u!82 &2711617044062086811
 AudioSource:
   m_ObjectHideFlags: 0
@@ -187,3 +170,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1060662443344601422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6195570273625120184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bc51ddfd7ec094ea4cab576f1d6633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 512
+  weaponName: machete
+  weaponInt: 1
+  fireAudio: {fileID: 8300000, guid: 3b90c083362ca7c4d813814b4520a7c6, type: 3}
+  altAudio: {fileID: 8300000, guid: 77b125f4770c4ad44b0882130df0550a, type: 3}

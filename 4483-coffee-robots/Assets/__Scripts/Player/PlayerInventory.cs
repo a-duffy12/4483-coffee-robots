@@ -28,6 +28,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private TMP_Text techText;
 
     [Header("Audio")]
+    public AudioClip switchAudio;
 
     AudioSource inventorySource;
     [HideInInspector] public AssaultRifle ar;
@@ -111,7 +112,8 @@ public class PlayerInventory : MonoBehaviour
         if (weaponInt != currentWeaponInt)
         {
             currentWeaponInt = weaponInt;
-            // play swap audio
+            inventorySource.clip = switchAudio;
+            inventorySource.Play();
         }
         else
         {

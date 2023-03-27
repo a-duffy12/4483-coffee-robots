@@ -425,6 +425,9 @@ MonoBehaviour:
   muzzleFlash2: {fileID: 5301502679127895223}
   weaponName: shotgun
   weaponInt: 2
+  fireAudio: {fileID: 8300000, guid: 34f9275249d36814e94fc53309fcc586, type: 3}
+  emptyAudio: {fileID: 8300000, guid: 9f3d97a34ebd99e499a6757ff2165d80, type: 3}
+  altAudio: {fileID: 8300000, guid: 110763ca6fbe77e4c8511754363025e5, type: 3}
   currentAmmo: 0
 --- !u!1001 &6083588803507263535
 PrefabInstance:

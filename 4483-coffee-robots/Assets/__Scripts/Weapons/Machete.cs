@@ -9,9 +9,9 @@ public class Machete : MonoBehaviour
     public string weaponName = "machete";
     public int weaponInt = 1;
 
-    //[Header("Audio")]
-    //public AudioClip fireAudio;
-    //public AudioClip altAudio;
+    [Header("Audio")]
+    public AudioClip fireAudio;
+    public AudioClip altAudio;
 
     private float lastAttackTime;
     
@@ -45,8 +45,8 @@ public class Machete : MonoBehaviour
 
             lastAttackTime = Time.time;
 
-            //audioSource.clip = fireAudio;
-            //audioSource.Play();
+            audioSource.clip = fireAudio;
+            audioSource.Play();
         }
     }
 
@@ -68,8 +68,8 @@ public class Machete : MonoBehaviour
 
             lastAttackTime = Time.time;
 
-            //audioSource.clip = altAudio;
-            //audioSource.Play();
+            audioSource.clip = altAudio;
+            audioSource.Play();
         }
     }
 

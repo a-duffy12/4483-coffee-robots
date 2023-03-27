@@ -11,10 +11,10 @@ public class Shotgun : MonoBehaviour
     public string weaponName = "shotgun";
     public int weaponInt = 2;
 
-    //[Header("Audio")]
-    //public AudioClip fireAudio;
-    //public AudioClip emptyAudio;
-    //public AudioClip altAudio;
+    [Header("Audio")]
+    public AudioClip fireAudio;
+    public AudioClip emptyAudio;
+    public AudioClip altAudio;
 
     [HideInInspector] public int currentAmmo;
     private float lastFireTime;
@@ -141,8 +141,8 @@ public class Shotgun : MonoBehaviour
             currentAmmo--;
             lastFireTime = Time.time;
 
-            //audioSource.clip = fireAudio;
-            //audioSource.Play();
+            audioSource.clip = fireAudio;
+            audioSource.Play();
 
             if (muzzleFlash1.isPlaying)
             {
@@ -157,8 +157,8 @@ public class Shotgun : MonoBehaviour
         }
         else if (Time.time > (lastFireTime + (1/Config.fireRateShot))) // no ammo and can fire
         {
-            //audioSource.clip = emptyAudio;
-            //audioSource.Play();
+            audioSource.clip = emptyAudio;
+            audioSource.Play();
         }
     }
 
@@ -277,8 +277,8 @@ public class Shotgun : MonoBehaviour
             currentAmmo--;
             lastFireTime = Time.time;
 
-            //audioSource.clip = altAudio;
-            //audioSource.Play();
+            audioSource.clip = altAudio;
+            audioSource.Play();
 
             if (muzzleFlash1.isPlaying)
             {
@@ -293,8 +293,8 @@ public class Shotgun : MonoBehaviour
         }
         else if (Config.alternateShotgunUnlocked && Time.time > (lastFireTime + (1/Config.fireRateShot))) // no ammo and can fire
         {
-            //audioSource.clip = emptyAudio;
-            //audioSource.Play();
+            audioSource.clip = emptyAudio;
+            audioSource.Play();
         }
     }
 

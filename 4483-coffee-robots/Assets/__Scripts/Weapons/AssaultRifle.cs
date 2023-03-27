@@ -12,10 +12,10 @@ public class AssaultRifle : MonoBehaviour
     public string weaponName = "assault_rifle";
     public int weaponInt = 0;
 
-    //[Header("Audio")]
-    //public AudioClip fireAudio;
-    //public AudioClip emptyAudio;
-    //public AudioClip altAudio;
+    [Header("Audio")]
+    public AudioClip fireAudio;
+    public AudioClip emptyAudio;
+    public AudioClip altAudio;
 
     [HideInInspector] public int currentAmmo;
     private float lastFireTime;
@@ -63,8 +63,8 @@ public class AssaultRifle : MonoBehaviour
             currentAmmo--;
             lastFireTime = Time.time;
 
-            //audioSource.clip = fireAudio;
-            //audioSource.Play();
+            audioSource.clip = fireAudio;
+            audioSource.Play();
 
             if (muzzleFlash.isPlaying)
             {
@@ -74,8 +74,8 @@ public class AssaultRifle : MonoBehaviour
         }
         else if (Time.time > (lastFireTime + (1/Config.fireRateAR))) // no ammo and can fire
         {
-            //audioSource.clip = emptyAudio;
-            //audioSource.Play();
+            audioSource.clip = emptyAudio;
+            audioSource.Play();
         }
     }
 
@@ -90,8 +90,8 @@ public class AssaultRifle : MonoBehaviour
             currentAmmo--;
             lastFireTime = Time.time;
 
-            //audioSource.clip = altAudio;
-            //audioSource.Play();
+            audioSource.clip = altAudio;
+            audioSource.Play();
 
             if (muzzleFlash.isPlaying)
             {
@@ -101,8 +101,8 @@ public class AssaultRifle : MonoBehaviour
         }
         else if (Config.alternateARUnlocked && Time.time > (lastFireTime + (1/Config.altFireRateAR))) // no ammo and can fire
         {
-            //audioSource.clip = emptyAudio;
-            //audioSource.Play();
+            audioSource.clip = emptyAudio;
+            audioSource.Play();
         }
     }
 

@@ -337,4 +337,7 @@ MonoBehaviour:
   altPrefab: {fileID: 4496795142756872822, guid: cdb3fc8f6fc66e64991519c929b40b1f, type: 3}
   weaponName: assault_rifle
   weaponInt: 0
+  fireAudio: {fileID: 8300000, guid: 907351eb32a4e99409a3dcc047b21b10, type: 3}
+  emptyAudio: {fileID: 8300000, guid: 68f3e95fc3784b24e9b0452617894af0, type: 3}
+  altAudio: {fileID: 8300000, guid: 5ae6e4f3c3ed56246ad780f8a9d8ead2, type: 3}
   currentAmmo: 0

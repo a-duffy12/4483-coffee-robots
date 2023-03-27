@@ -2267,6 +2267,8 @@ MonoBehaviour:
   unbuiltPrefab: {fileID: 162171105}
   builtPrefab: {fileID: 876039926}
   promptText: {fileID: 1075848646}
+  succeedAudio: {fileID: 8300000, guid: df36fdbbb9b8c6c4982fd266db525fdd, type: 3}
+  failAudio: {fileID: 8300000, guid: ed17acc981225e543adbf57c3512530b, type: 3}
 --- !u!1 &107197717
 GameObject:
   m_ObjectHideFlags: 0
@@ -7460,6 +7462,8 @@ MonoBehaviour:
   spikesPrefab: {fileID: 2944132862210420059, guid: ea0619684bf87f341901466b8fa96932, type: 3}
   gammaGeneratorPrefab: {fileID: 2891950737483945394, guid: 654143146e8954443850568f7423023d, type: 3}
   rocketTowerPrefab: {fileID: 8861264582956316142, guid: ec4c76b2d6feef343bdc9c6079dfd4cd, type: 3}
+  succeedAudio: {fileID: 8300000, guid: df36fdbbb9b8c6c4982fd266db525fdd, type: 3}
+  failAudio: {fileID: 8300000, guid: ed17acc981225e543adbf57c3512530b, type: 3}
 --- !u!1 &350210950
 GameObject:
   m_ObjectHideFlags: 0
@@ -8077,6 +8081,8 @@ MonoBehaviour:
   ab4bButton: {fileID: 951964211}
   ab4cButton: {fileID: 804530230}
   ab4dButton: {fileID: 670488011}
+  succeedAudio: {fileID: 8300000, guid: df36fdbbb9b8c6c4982fd266db525fdd, type: 3}
+  failAudio: {fileID: 8300000, guid: ed17acc981225e543adbf57c3512530b, type: 3}
 --- !u!1 &385737629
 GameObject:
   m_ObjectHideFlags: 0
@@ -19064,6 +19070,8 @@ MonoBehaviour:
   sh4cButton: {fileID: 1815381232}
   sh4dButton: {fileID: 2020931454}
   sh4eButton: {fileID: 630398819}
+  succeedAudio: {fileID: 8300000, guid: df36fdbbb9b8c6c4982fd266db525fdd, type: 3}
+  failAudio: {fileID: 8300000, guid: ed17acc981225e543adbf57c3512530b, type: 3}
 --- !u!1 &861448271
 GameObject:
   m_ObjectHideFlags: 0
@@ -27931,6 +27939,8 @@ MonoBehaviour:
   buildingCanvas: {fileID: 915407835}
   progressBar: {fileID: 2035995772}
   progressBarObj: {fileID: 1133172193}
+  succeedAudio: {fileID: 8300000, guid: df36fdbbb9b8c6c4982fd266db525fdd, type: 3}
+  failAudio: {fileID: 8300000, guid: ed17acc981225e543adbf57c3512530b, type: 3}
   player: {fileID: 0}
   machineShop: {fileID: 0}
   armory: {fileID: 0}
@@ -31112,6 +31122,8 @@ MonoBehaviour:
     m_Bits: 8
   defaultTransform: {fileID: 1355201143}
   inventory: {fileID: 367016375}
+  dashAudio: {fileID: 8300000, guid: 4bee91322d950ef4787c1607042bf772, type: 3}
+  slowAudio: {fileID: 8300000, guid: 5f12614d546119e4d9fd9712d4554835, type: 3}
 --- !u!82 &1477272657
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31225,6 +31237,9 @@ MonoBehaviour:
   abilityBar: {fileID: 1546286701}
   abilityText: {fileID: 1611286292}
   damageOverlay: {fileID: 313436133}
+  deathAudio: {fileID: 8300000, guid: 64b5da9d4a3e1c349ae6ceb2c7679446, type: 3}
+  abilityAudio: {fileID: 8300000, guid: b48e8434ddbfcc74d8e4ff19120c6dbc, type: 3}
+  abilityRechargeAudio: {fileID: 8300000, guid: 5dbfa5fb3c6dc4941af530b28bb2ceb5, type: 3}
 --- !u!114 &1477272659
 MonoBehaviour:
   m_ObjectHideFlags: 0

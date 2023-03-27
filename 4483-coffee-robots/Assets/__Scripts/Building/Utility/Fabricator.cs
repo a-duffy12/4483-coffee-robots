@@ -68,6 +68,11 @@ public class Fabricator : MonoBehaviour, IBuilding
     [SerializeField] private GameObject gammaGeneratorPrefab;
     [SerializeField] private GameObject rocketTowerPrefab;
 
+    [Header("Audio")]
+    public AudioClip succeedAudio;
+    public AudioClip failAudio;
+    AudioSource source;
+
     GameObject player;
     PlayerInventory inventory;
     PlayerInput input;
@@ -80,6 +85,7 @@ public class Fabricator : MonoBehaviour, IBuilding
         player = GameObject.FindGameObjectWithTag("Player");
         inventory = player.GetComponent<PlayerInventory>();
         input = player.GetComponent<PlayerInput>();
+        source = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
     }
     
     void Start()
@@ -141,6 +147,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             builtPrefab.SetActive(true);
             buildStatus = BuildStatus.Built;
             PlayerInventory.scrap -= Config.fabricatorScrapCost;
+            PlayAudio(succeedAudio);
+        }
+        else
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -380,6 +391,12 @@ public class Fabricator : MonoBehaviour, IBuilding
                 Config.countTurret++;
                 UpdateStoreText();
             }
+
+            PlayAudio(succeedAudio);
+        }
+        else
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -408,6 +425,12 @@ public class Fabricator : MonoBehaviour, IBuilding
                 Config.countSpikes++;
                 UpdateStoreText();
             }
+
+            PlayAudio(succeedAudio);
+        }
+        else
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -431,6 +454,12 @@ public class Fabricator : MonoBehaviour, IBuilding
                 Config.countGG++;
                 UpdateStoreText();
             }
+
+            PlayAudio(succeedAudio);
+        }
+        else
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -469,6 +498,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.tu2a = true;
             Config.damageTurret = 11;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.tu2a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -480,6 +514,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.tu2b = true;
             Config.attackRateTurret = 2.3f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.tu2b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -491,6 +530,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.tu2c = true;
             Config.rangeTurret = 26;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.tu2c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -502,6 +546,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.tu3a = true;
             Config.damageTurret = 13;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.tu3a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -513,6 +562,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.tu3b = true;
             Config.attackRateTurret = 2.6f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.tu3b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -524,6 +578,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.tu3c = true;
             Config.rangeTurret = 28;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.tu3c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -535,6 +594,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.tu4a = true;
             Config.damageTurret = 15;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.tu4a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -546,6 +610,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.tu4b = true;
             Config.attackRateTurret = 3f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.tu4b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -557,6 +626,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.tu4c = true;
             Config.rangeTurret = 30;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.tu4c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -572,6 +646,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.sp2a = true;
             Config.damageSpikes = 12;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sp2a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -583,6 +662,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.sp3a = true;
             Config.damageSpikes = 15;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sp3a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -594,6 +678,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.sp4a = true;
             Config.damageSpikes = 20;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sp4a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -609,6 +698,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.gg3a = true;
             Config.damageGG = 9;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.gg3a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -620,6 +714,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.gg3b = true;
             Config.targetCountGG = 9;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.gg3b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -631,6 +730,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.gg4a = true;
             Config.damageGG = 11;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.gg4a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -642,6 +746,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.gg4b = true;
             Config.targetCountGG = 11;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.gg4b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -658,6 +767,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.damageRocket = 198;
             Config.splashDamageRocket = 22;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.rt3a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -670,6 +784,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.attackRateRocket = 0.454545f;
             Config.retargetDelayRocket = 2.2f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.rt3b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -682,6 +801,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.damageRocket = 225;
             Config.splashDamageRocket = 25;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.rt4a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -694,6 +818,11 @@ public class Fabricator : MonoBehaviour, IBuilding
             Config.attackRateRocket = 0.5f;
             Config.retargetDelayRocket = 2f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.rt4b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -1136,6 +1265,12 @@ public class Fabricator : MonoBehaviour, IBuilding
     }
 
     public void DamageBuilding(float damage, string source = "") {}
+
+    void PlayAudio(AudioClip clip)
+    {
+        source.clip = clip;
+        source.Play();
+    }
 
     #region input functions
 

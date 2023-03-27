@@ -13,9 +13,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform defaultTransform;
     [SerializeField] private Transform inventory;
 
-    [Header("GameObjects")]
-    //[Header("Audio")]
-    //public AudioClip slowAudio;
+    [Header("Audio")]
+    public AudioClip dashAudio;
+    public AudioClip slowAudio;
 
     #endregion public properties
 
@@ -82,6 +82,9 @@ public class PlayerController : MonoBehaviour
         {
             dash = false;
             playerVelocity += direction * Config.dashSpeed * Config.movementMod;
+
+            movementSource.clip = dashAudio;
+            movementSource.Play();
         }
 
         playerVelocity.y -= 9.8f; // apply gravity
@@ -92,8 +95,8 @@ public class PlayerController : MonoBehaviour
         unSlowTime = Time.time + duration;
         Config.movementMod = speedMultiplier;
 
-        //source.clip = slowAudio;
-        //source.Play();
+        movementSource.clip = slowAudio;
+        movementSource.Play();
     }
 
     #region  input functions

@@ -44,6 +44,11 @@ public class MachineShop : MonoBehaviour, IBuilding
     [SerializeField] private Button ab4cButton;
     [SerializeField] private Button ab4dButton;
 
+    [Header("Audio")]
+    public AudioClip succeedAudio;
+    public AudioClip failAudio;
+    AudioSource source;
+
     GameObject player;
     PlayerSystem system;
     PlayerInput input;
@@ -57,6 +62,7 @@ public class MachineShop : MonoBehaviour, IBuilding
         player = GameObject.FindGameObjectWithTag("Player");
         system = player.GetComponent<PlayerSystem>();
         input = player.GetComponent<PlayerInput>();
+        source = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
     }
     
     void Start()
@@ -91,6 +97,11 @@ public class MachineShop : MonoBehaviour, IBuilding
                     if (quickInteract && PlayerInventory.electronics >= repairCost)
                     {
                         RepairPlayer(repairCost);
+                        PlayAudio(succeedAudio);
+                    }
+                    else if (quickInteract)
+                    {
+                        PlayAudio(failAudio);
                     }
                 }
                 else
@@ -131,6 +142,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             builtPrefab.SetActive(true);
             buildStatus = BuildStatus.Built;
             PlayerInventory.scrap -= Config.machineShopScrapCost;
+            PlayAudio(succeedAudio);
+        }
+        else
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -300,6 +316,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             PlayerInventory.electronics -= Config.unlockAChasisElectronicsCost;
             Config.aChasisUnlocked = true;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.aChasisUnlocked)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -310,6 +331,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             PlayerInventory.electronics -= Config.unlockAAbilityElectronicsCost;
             Config.aAbilityUnlocked = true;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.aAbilityUnlocked)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -323,6 +349,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ch1a = true;
             Config.playerMaxHp = 120;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ch1a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -334,6 +365,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ch1b = true;
             Config.dashSpeed = 220;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ch1b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -345,6 +381,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ch2a = true;
             Config.playerMaxHp = 145;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ch2a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -356,6 +397,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ch2b = true;
             Config.dashSpeed = 245;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ch2b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -367,6 +413,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ch3a = true;
             Config.playerMaxHp = 170;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ch3a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -378,6 +429,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ch3b = true;
             Config.dashSpeed = 270;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ch3b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -389,6 +445,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ch3c = true;
             Config.dashCooldown = 0.75f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ch3c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -400,6 +461,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ch4a = true;
             Config.playerMaxHp = 200;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ch4a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -411,6 +477,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ch4b = true;
             Config.dashSpeed = 300;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ch4b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -422,6 +493,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ch4c = true;
             Config.dashCooldown = 0.5f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ch4c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -437,6 +513,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ab1a = true;
             Config.abilityDamageModifier = 0.45f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ab1a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -448,6 +529,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ab2a = true;
             Config.abilityDamageModifier = 0.4f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ab2a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -459,6 +545,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ab2b = true;
             Config.abilityDuration = 5.5f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ab2b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -470,6 +561,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ab2c = true;
             Config.abilityCooldown = 14;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ab2c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -481,6 +577,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ab3a = true;
             Config.abilityDamageModifier = 0.3f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ab3a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -492,6 +593,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ab3b = true;
             Config.abilityDuration = 6;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ab3b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -503,6 +609,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ab3d = true;
             Config.diversionModifier = 0.75f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ab3d)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -514,6 +625,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ab4a = true;
             Config.abilityDamageModifier = 0.2f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ab4a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -525,6 +641,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ab4b = true;
             Config.abilityDuration = 6.5f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ab4b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -536,6 +657,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ab4c = true;
             Config.abilityCooldown = 13;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ab4c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -547,6 +673,11 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.ab4d = true;
             Config.diversionModifier = 1f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ab4d)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -933,6 +1064,12 @@ public class MachineShop : MonoBehaviour, IBuilding
     }
 
     public void DamageBuilding(float damage, string source = "") {}
+
+    void PlayAudio(AudioClip clip)
+    {
+        source.clip = clip;
+        source.Play();
+    }
 
     #region input functions
 

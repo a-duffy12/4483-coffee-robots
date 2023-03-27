@@ -61,6 +61,11 @@ public class Armory : MonoBehaviour, IBuilding
     [SerializeField] private Button sh4dButton;
     [SerializeField] private Button sh4eButton;
 
+    [Header("Audio")]
+    public AudioClip succeedAudio;
+    public AudioClip failAudio;
+    AudioSource source;
+
     GameObject player;
     PlayerInventory inventory;
     PlayerInput input;
@@ -74,6 +79,7 @@ public class Armory : MonoBehaviour, IBuilding
         player = GameObject.FindGameObjectWithTag("Player");
         inventory = player.GetComponent<PlayerInventory>();
         input = player.GetComponent<PlayerInput>();
+        source = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
     }
     
     void Start()
@@ -111,6 +117,11 @@ public class Armory : MonoBehaviour, IBuilding
                     if (quickInteract && PlayerInventory.tech >= refillCost)
                     {
                         RefillAmmo(refillCost);
+                        PlayAudio(succeedAudio);
+                    }
+                    else if (quickInteract)
+                    {
+                        PlayAudio(failAudio);
                     }
                 }
                 else
@@ -151,6 +162,11 @@ public class Armory : MonoBehaviour, IBuilding
             builtPrefab.SetActive(true);
             buildStatus = BuildStatus.Built;
             PlayerInventory.scrap -= Config.armoryScrapCost;
+            PlayAudio(succeedAudio);
+        }
+        else
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -404,6 +420,11 @@ public class Armory : MonoBehaviour, IBuilding
             PlayerInventory.tech -= Config.unlockAltTechCostAR;
             Config.alternateARUnlocked = true;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.alternateARUnlocked)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -414,6 +435,11 @@ public class Armory : MonoBehaviour, IBuilding
             PlayerInventory.tech -= Config.unlockAltTechCostMachete;
             Config.alternateMacheteUnlocked = true;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.alternateMacheteUnlocked)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -424,6 +450,11 @@ public class Armory : MonoBehaviour, IBuilding
             PlayerInventory.tech -= Config.unlockAltTechCostShotgun;
             Config.alternateShotgunUnlocked = true;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.alternateShotgunUnlocked)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -437,6 +468,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar1a = true;
             Config.maxAmmoAR = 165;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar1a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -448,6 +484,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar1b = true;
             Config.damageAR = 11;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar1b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -459,6 +500,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar2a = true;
             Config.maxAmmoAR = 185;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar2a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -470,6 +516,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar2b = true;
             Config.damageAR = 12;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar2b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -481,6 +532,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar2c = true;
             Config.altDamageAR = 100;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar2c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -492,6 +548,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar3a = true;
             Config.maxAmmoAR = 210;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar3a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -503,6 +564,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar3b = true;
             Config.damageAR = 13;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar3b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -514,6 +580,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar3c = true;
             Config.altDamageAR = 125;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar3c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -525,6 +596,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar3d = true;
             Config.altRadiusAR = 5;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar3d)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -536,6 +612,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar4a = true;
             Config.maxAmmoAR = 240;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar4a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -547,6 +628,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar4b = true;
             Config.damageAR = 15;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar4b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -558,6 +644,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar4c = true;
             Config.altDamageAR = 150;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar4c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -569,6 +660,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.ar4d = true;
             Config.altRadiusAR = 6;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.ar4d)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -584,6 +680,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.mc1a = true;
             Config.damageMachete = 90;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.mc1a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -595,6 +696,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.mc2a = true;
             Config.damageMachete = 100;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.mc2a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -606,6 +712,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.mc2b = true;
             Config.rateMachete = 1.7f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.mc2b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -617,6 +728,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.mc3a = true;
             Config.damageMachete = 110;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.mc3a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -628,6 +744,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.mc3b = true;
             Config.rateMachete = 1.9f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.mc3b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -639,6 +760,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.mc3c = true;
             Config.altRateMachete = 0.7f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.mc3c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -650,6 +776,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.mc4a = true;
             Config.damageMachete = 125;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.mc4a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -661,6 +792,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.mc4b = true;
             Config.rateMachete = 2.1f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.mc4b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -672,6 +808,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.mc4c = true;
             Config.altRateMachete = 0.8f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.mc4c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -687,6 +828,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.sh2a = true;
             Config.maxAmmoShot = 28;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sh2a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -698,6 +844,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.sh2b = true;
             Config.damageShot = 17;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sh2b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -709,6 +860,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.sh3a = true;
             Config.maxAmmoShot = 32;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sh3a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -720,6 +876,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.sh3b = true;
             Config.damageShot = 18;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sh3b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -731,6 +892,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.sh3c = true;
             Config.fireRateShot = 1.1f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sh3c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -742,6 +908,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.sh4a = true;
             Config.maxAmmoShot = 36;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sh4a)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -753,6 +924,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.sh4b = true;
             Config.damageShot = 20;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sh4b)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -764,6 +940,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.sh4c = true;
             Config.fireRateShot = 1.2f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sh4c)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -775,6 +956,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.sh4d = true;
             Config.rangeShot = 15;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sh4d)
+        {
+            PlayAudio(failAudio);
         }
     }
 
@@ -786,6 +972,11 @@ public class Armory : MonoBehaviour, IBuilding
             Config.sh4e = true;
             Config.altKnockDistanceShot = 1.1f;
             SetButtonTextValues();
+            PlayAudio(succeedAudio);
+        }
+        else if (!Config.sh4e)
+        {
+            PlayAudio(failAudio);
         }
     }
     
@@ -1403,6 +1594,12 @@ public class Armory : MonoBehaviour, IBuilding
     }
 
     public void DamageBuilding(float damage, string source = "") {}
+
+    void PlayAudio(AudioClip clip)
+    {
+        source.clip = clip;
+        source.Play();
+    }
 
     #region input functions
 

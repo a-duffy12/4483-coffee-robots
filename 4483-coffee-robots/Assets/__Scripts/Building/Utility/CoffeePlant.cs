@@ -22,6 +22,11 @@ public class CoffeePlant : MonoBehaviour, IBuilding
     [SerializeField] private Image progressBar;
     [SerializeField] private GameObject progressBarObj;
 
+    [Header("Audio")]
+    public AudioClip succeedAudio;
+    public AudioClip failAudio;
+    AudioSource source;
+
     [HideInInspector] public GameObject player;
     PlayerInput input;
     [HideInInspector] public MachineShop machineShop;
@@ -38,6 +43,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         armory = GameObject.FindGameObjectWithTag("Armory").GetComponent<Armory>();
         fabricator = GameObject.FindGameObjectWithTag("Fabricator").GetComponent<Fabricator>();
         coffeeMachine = GameObject.FindGameObjectWithTag("CoffeeMachine").GetComponent<CoffeeMachine>();
+        source = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
     }
     
     void Start()
@@ -152,6 +158,8 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         machineShop.Unlock();
         armory.Unlock();
         fabricator.Unlock();
+
+        PlayAudio(succeedAudio);
     }
 
     void Stage2Start()
@@ -162,6 +170,8 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage3Prefab.SetActive(false);
         stage4Prefab.SetActive(false);
         buildingCanvas.transform.position += new Vector3(0, 0.5f, 0);
+
+        PlayAudio(succeedAudio);
     }
 
     void Stage3Start()
@@ -174,6 +184,8 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         buildingCanvas.transform.position += new Vector3(0, 1.25f, 0);
 
         coffeeMachine.Unlock();
+        
+        PlayAudio(succeedAudio);
     }
 
     void Stage4Start()
@@ -184,6 +196,8 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage3Prefab.SetActive(false);
         stage4Prefab.SetActive(true);
         buildingCanvas.transform.position += new Vector3(0, 1.25f, 0);
+
+        PlayAudio(succeedAudio);
     }
 
     void StageProgress()
@@ -293,6 +307,12 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         promptText.text = "The coffee has been lost...";
         PlayerSystem system = player.GetComponent<PlayerSystem>();
         system.DamagePlayer(Config.playerMaxHp * 2, "coffee_plant");
+    }
+
+    void PlayAudio(AudioClip clip)
+    {
+        source.clip = clip;
+        source.Play();
     }
 
     #region input functions

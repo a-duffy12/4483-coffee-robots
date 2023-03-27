@@ -16,13 +16,18 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private TMP_Text abilityText;
     [SerializeField] private GameObject damageOverlay;
 
-    //[Header("Audio")]
+    [Header("Audio")]
+    //public AudioClip damageAudio;
+    public AudioClip deathAudio;
+    public AudioClip abilityAudio;
+    public AudioClip abilityRechargeAudio;
     
     public static bool sleepProtected = false;
     [HideInInspector] public float hp { get { return currentHp; } }
     private float currentHp;
     private float abilityEndTime;
     private float nextAbilityTime;
+    private bool recharged = true;
 
     AudioSource playerSource;
     CoffeePlant plant;
@@ -52,15 +57,30 @@ public class PlayerSystem : MonoBehaviour
         {
             abilityBar.fillAmount = Mathf.Clamp((abilityEndTime - Time.time)/Config.abilityDuration, 0, Config.abilityDuration);
             abilityText.text = "";
+
+            playerSource.volume = 0.25f;
+            if (!playerSource.isPlaying)
+            {
+                playerSource.clip = abilityAudio;
+                playerSource.Play();
+            }
         }
         else if (Time.time >= abilityEndTime && Time.time < nextAbilityTime)
         {
             abilityBar.fillAmount = 1 - Mathf.Clamp((nextAbilityTime - Time.time)/Config.abilityCooldown, 0, Config.abilityCooldown);
             abilityText.text = (nextAbilityTime - Time.time).ToString("F1");
+            playerSource.volume = 1f;
         }
         else
         {
             abilityText.text = "";
+
+            if (!recharged)
+            {
+                recharged = true;
+                playerSource.clip = abilityRechargeAudio;
+                playerSource.Play();
+            }
         }
 
         if (currentHp > 0)
@@ -139,7 +159,8 @@ public class PlayerSystem : MonoBehaviour
 
     IEnumerator KillPlayer()
     {
-        // death audio
+        playerSource.clip = deathAudio;
+        playerSource.Play();
 
         Time.timeScale = 0.0001f;
 
@@ -157,6 +178,7 @@ public class PlayerSystem : MonoBehaviour
 		{
             abilityEndTime = Time.time + Config.abilityDuration;
             nextAbilityTime = abilityEndTime + Config.abilityCooldown;
+            recharged = false;
 		}
 	}
 

@@ -12,6 +12,11 @@ public class CoffeeMachine : MonoBehaviour, IBuilding
     [SerializeField] private GameObject builtPrefab;
     [SerializeField] private TMP_Text promptText;
 
+    [Header("Audio")]
+    public AudioClip succeedAudio;
+    public AudioClip failAudio;
+    AudioSource source;
+
     GameObject player;
     private BuildStatus buildStatus = BuildStatus.Locked;
     private bool quickInteract;
@@ -19,6 +24,7 @@ public class CoffeeMachine : MonoBehaviour, IBuilding
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        source = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
     }
 
     void Start()
@@ -70,10 +76,22 @@ public class CoffeeMachine : MonoBehaviour, IBuilding
             buildStatus = BuildStatus.Built;
             PlayerInventory.scrap -= Config.coffeeMachineScrapCost;
             Config.coffeeMachineBuilt = true;
+
+            PlayAudio(succeedAudio);
+        }
+        else
+        {
+            PlayAudio(failAudio);
         }
     }
 
     public void DamageBuilding(float damage, string source = "") {}
+
+    void PlayAudio(AudioClip clip)
+    {
+        source.clip = clip;
+        source.Play();
+    }
 
     #region input functions
 

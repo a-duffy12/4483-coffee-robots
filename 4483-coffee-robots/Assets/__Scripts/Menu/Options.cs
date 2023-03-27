@@ -13,8 +13,12 @@ public class Options : MonoBehaviour
     [Header("GameObjects")]
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private TMP_Text difficultyText;
+    [SerializeField] private TMP_Text currentScoreText;
+    [SerializeField] private TMP_Text highScoreText;
+    [SerializeField] private TMP_Text winsText;
 
     PlayerInput input;
+    private int demoCount;
 
     void Awake()
     {
@@ -25,6 +29,9 @@ public class Options : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         difficultyText.text = $"Current Difficulty: {Config.difficultyLevel.ToString()}";
+        currentScoreText.text = $"Current Score: {Config.currentScore.ToString()}";
+        highScoreText.text = $"High Score: {Config.highScore.ToString()}";
+        winsText.text = $"Wins: {Config.winCount.ToString()}";
         Cursor.SetCursor(cursor, new Vector2(650, 650), CursorMode.Auto);
     }
 
@@ -34,6 +41,8 @@ public class Options : MonoBehaviour
         Config.difficultyDamageMod = 0.5f;
         Config.difficultyMovementMod = 0.8f;
         difficultyText.text = $"Current Difficulty: {Config.difficultyLevel.ToString()}";
+
+        demoCount = 0;
     }
 
     public void Normal()
@@ -42,6 +51,16 @@ public class Options : MonoBehaviour
         Config.difficultyDamageMod = 1f;
         Config.difficultyMovementMod = 1f;
         difficultyText.text = $"Current Difficulty: {Config.difficultyLevel.ToString()}";
+        
+        demoCount++;
+
+        if (demoCount >= 5) // hidden demo difficulty
+        {
+            Config.difficultyLevel = Difficulty.Demo;
+            Config.difficultyDamageMod = 0.1f;
+            Config.difficultyMovementMod = 1f;
+            difficultyText.text = $"Current Difficulty: {Config.difficultyLevel.ToString()}";
+        }
     }
 
     public void Hard()
@@ -50,6 +69,8 @@ public class Options : MonoBehaviour
         Config.difficultyDamageMod = 1.5f;
         Config.difficultyMovementMod = 1.2f;
         difficultyText.text = $"Current Difficulty: {Config.difficultyLevel.ToString()}";
+
+        demoCount = 0;
     }
 
     public void OpenPauseMenu()
@@ -59,6 +80,12 @@ public class Options : MonoBehaviour
             pauseMenu.SetActive(true);
             input.SwitchCurrentActionMap("Menu");
             Time.timeScale = 0f;
+
+            currentScoreText.text = $"Current Score: {Config.currentScore.ToString()}";
+            highScoreText.text = $"High Score: {Config.highScore.ToString()}";
+            winsText.text = $"Wins: {Config.winCount.ToString()}";
+
+            demoCount = 0;
         }
     }
 

@@ -11,6 +11,11 @@ public class Config
     public static float difficultyMovementMod = 1f;
     public static float fieldOfView = 90f;
 
+    [Header("Saved Stats")]
+    public static int currentScore = 0;
+    public static int highScore = 0;
+    public static int winCount = 0;
+
     [Header("Game Progress")]
     public static int gameStage = 0;
     public static float stage1Time;
@@ -332,12 +337,24 @@ public class Config
             Config.difficultyDamageMod = savedData.difficultyDamageMod;
             Config.difficultyMovementMod = savedData.difficultyMovementMod;
             Config.fieldOfView = savedData.fieldOfView;
+            Config.highScore = savedData.highScore;
+            Config.winCount = savedData.winCount;
+        }
+    }
+
+    public static void UpdateHighScore()
+    {
+        if (Config.highScore < Config.currentScore)
+        {
+            Config.highScore = Config.currentScore;
+            SaveLoad.SaveData();
         }
     }
 
     public static void ResetConfigValues()
     {
         // game progression
+        Config.currentScore = 0;
         Config.gameStage = 0;
         Config.coffeeMachineBuilt = false;
         Config.shotgunUnlocked = false;
@@ -490,5 +507,6 @@ public enum BuildStatus {
 public enum Difficulty {
     Easy = 0,
     Normal = 1,
-    Hard = 2
+    Hard = 2,
+    Demo = 3
 }

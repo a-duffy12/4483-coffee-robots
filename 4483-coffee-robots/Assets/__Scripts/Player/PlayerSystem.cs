@@ -164,7 +164,14 @@ public class PlayerSystem : MonoBehaviour
 
         Time.timeScale = 0.0001f;
 
+        Config.currentScore += PlayerInventory.scrap;
+        Config.currentScore += PlayerInventory.electronics;
+        Config.currentScore += PlayerInventory.tech;
+        Config.UpdateHighScore();
+
         yield return new WaitForSeconds(0.0005f);
+
+        Config.ResetConfigValues();
 
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);

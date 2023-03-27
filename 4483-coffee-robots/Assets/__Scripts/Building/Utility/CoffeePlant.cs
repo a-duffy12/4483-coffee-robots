@@ -128,6 +128,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
                 if (startStage)
                 {
+                    Config.currentScore += 7500;
                     StartCoroutine(WinGame());
                 }
             }
@@ -171,6 +172,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage4Prefab.SetActive(false);
         buildingCanvas.transform.position += new Vector3(0, 0.5f, 0);
 
+        Config.currentScore += 250;
         PlayAudio(succeedAudio);
     }
 
@@ -185,6 +187,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
         coffeeMachine.Unlock();
         
+        Config.currentScore += 1000;
         PlayAudio(succeedAudio);
     }
 
@@ -197,6 +200,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage4Prefab.SetActive(true);
         buildingCanvas.transform.position += new Vector3(0, 1.25f, 0);
 
+        Config.currentScore += 3000;
         PlayAudio(succeedAudio);
     }
 
@@ -293,9 +297,20 @@ public class CoffeePlant : MonoBehaviour, IBuilding
             Destroy(ienemy);
         }
 
+        Config.currentScore += Mathf.FloorToInt(currentHp * 5);
+        Config.currentScore += PlayerInventory.scrap;
+        Config.currentScore += PlayerInventory.electronics;
+        Config.currentScore += PlayerInventory.tech;
+        Config.UpdateHighScore();
+        
+        Config.winCount++;
+        SaveLoad.SaveData();
+        
         // win audio
 
         yield return new WaitForSeconds(0.0005f);
+
+        Config.ResetConfigValues();
 
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);

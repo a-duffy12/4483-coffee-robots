@@ -10,6 +10,8 @@ public class GameData
     public float difficultyDamageMod;
     public float difficultyMovementMod;
     public float fieldOfView;
+    public bool showFps;
+    public bool showEnemyCount;
     public int highScore;
     public int winCount;
 
@@ -19,6 +21,8 @@ public class GameData
         difficultyDamageMod = Config.difficultyDamageMod;
         difficultyMovementMod = Config.difficultyMovementMod;
         fieldOfView = Config.fieldOfView;
+        showFps = Config.showFps;
+        showEnemyCount = Config.showEnemyCount;
         highScore = Config.highScore;
         winCount = Config.winCount;
     }

@@ -84,7 +84,6 @@ public class DefenseBuildPoint : MonoBehaviour
         inventory.defenses.RemoveAt(0);
 
         Destroy(gameObject, source.clip.length);
-        //Destroy(gameObject);
     }
 
     #region input functions

@@ -117,6 +117,5 @@ public class Missile : MonoBehaviour
         source.Play();
     
         Destroy(gameObject, source.clip.length);
-        //Destroy(gameObject);
     }
 }

@@ -60,9 +60,16 @@ public class RocketTower : MonoBehaviour
             }
             else if (target != null) // already have a target
             {
-                retargetStartTime = Time.time;
+                if (target.tag == "Enemy")
+                {
+                    retargetStartTime = Time.time;
                 
-                Attack();
+                    Attack();    
+                }
+                else
+                {
+                    target = null;
+                }
             }
         }
     }

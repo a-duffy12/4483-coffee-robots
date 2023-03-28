@@ -8,6 +8,7 @@ public class Payload : MonoBehaviour, IEnemy
     [Header("GameObjects")]
     public Image healthBar;
     public GameObject canvas;
+    public GameObject model;
     [SerializeField] private ParticleSystem explosionParticle;
 
     [Header("Audio")]
@@ -92,9 +93,15 @@ public class Payload : MonoBehaviour, IEnemy
             
 
             enemySource.clip = deathAudio;
-            enemySource.Play();
+            if (!enemySource.isPlaying)
+            {
+                enemySource.Play();
+            }
 
-            Destroy(gameObject);
+            canvas.SetActive(false);
+            model.SetActive(false);
+            gameObject.tag = "InvisibleEnemy";
+            Destroy(gameObject, enemySource.clip.length);
         }
     }
 
@@ -120,7 +127,10 @@ public class Payload : MonoBehaviour, IEnemy
         }
 
         plant.DamageBuilding(Config.payloadDamage * Config.difficultyDamageMod, "payload");
+        
+        canvas.SetActive(false);
+        model.SetActive(false);
+        gameObject.tag = "InvisibleEnemy";
         Destroy(gameObject, enemySource.clip.length);
-        //Destroy(gameObject);
     }
 }

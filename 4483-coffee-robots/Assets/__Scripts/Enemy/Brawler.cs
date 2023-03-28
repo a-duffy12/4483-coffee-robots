@@ -9,6 +9,7 @@ public class Brawler : MonoBehaviour, IEnemy
     [Header("GameObjects")]
     public Image healthBar;
     public GameObject canvas;
+    public GameObject model;
 
     [Header("Audio")]
     public AudioClip attackAudio;
@@ -99,8 +100,13 @@ public class Brawler : MonoBehaviour, IEnemy
             }
             
             enemySource.clip = deathAudio;
-            enemySource.Play();
+            if (!enemySource.isPlaying)
+            {
+                enemySource.Play();
+            }
 
+            canvas.SetActive(false);
+            model.SetActive(false);
             Destroy(gameObject);
         }
     }

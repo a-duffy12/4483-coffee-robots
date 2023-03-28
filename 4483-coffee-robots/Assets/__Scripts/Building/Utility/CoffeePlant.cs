@@ -128,7 +128,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
                 if (startStage)
                 {
-                    Config.currentScore += 7500;
+                    Config.currentScore += Mathf.FloorToInt(7500 * Config.scoreMod);
                     StartCoroutine(WinGame());
                 }
             }
@@ -160,6 +160,23 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         armory.Unlock();
         fabricator.Unlock();
 
+        if (Config.difficultyLevel == Difficulty.Easy)
+        {
+            Config.scoreMod = 0.5f;
+        }
+        else if (Config.difficultyLevel == Difficulty.Normal)
+        {
+            Config.scoreMod = 1f;
+        }
+        else if (Config.difficultyLevel == Difficulty.Hard)
+        {
+            Config.scoreMod = 1.5f;
+        }
+        else if (Config.difficultyLevel == Difficulty.Demo)
+        {
+            Config.scoreMod = 0.25f;
+        }
+
         PlayAudio(succeedAudio);
     }
 
@@ -172,7 +189,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage4Prefab.SetActive(false);
         buildingCanvas.transform.position += new Vector3(0, 0.5f, 0);
 
-        Config.currentScore += 250;
+        Config.currentScore += Mathf.FloorToInt(250 * Config.scoreMod);
         PlayAudio(succeedAudio);
     }
 
@@ -187,7 +204,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
         coffeeMachine.Unlock();
         
-        Config.currentScore += 1000;
+        Config.currentScore += Mathf.FloorToInt(1000 * Config.scoreMod);
         PlayAudio(succeedAudio);
     }
 
@@ -200,7 +217,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage4Prefab.SetActive(true);
         buildingCanvas.transform.position += new Vector3(0, 1.25f, 0);
 
-        Config.currentScore += 3000;
+        Config.currentScore += Mathf.FloorToInt(3000 * Config.scoreMod);
         PlayAudio(succeedAudio);
     }
 
@@ -297,10 +314,10 @@ public class CoffeePlant : MonoBehaviour, IBuilding
             Destroy(ienemy);
         }
 
-        Config.currentScore += Mathf.FloorToInt(currentHp * 5);
-        Config.currentScore += PlayerInventory.scrap;
-        Config.currentScore += PlayerInventory.electronics;
-        Config.currentScore += PlayerInventory.tech;
+        Config.currentScore += Mathf.FloorToInt(currentHp * 5 * Config.scoreMod);
+        Config.currentScore += Mathf.FloorToInt(PlayerInventory.scrap * Config.scoreMod);
+        Config.currentScore += Mathf.FloorToInt(PlayerInventory.electronics * Config.scoreMod);
+        Config.currentScore += Mathf.FloorToInt(PlayerInventory.tech * Config.scoreMod);
         Config.UpdateHighScore();
         
         Config.winCount++;

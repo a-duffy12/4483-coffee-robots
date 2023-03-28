@@ -164,9 +164,9 @@ public class PlayerSystem : MonoBehaviour
 
         Time.timeScale = 0.0001f;
 
-        Config.currentScore += PlayerInventory.scrap;
-        Config.currentScore += PlayerInventory.electronics;
-        Config.currentScore += PlayerInventory.tech;
+        Config.currentScore += Mathf.FloorToInt(PlayerInventory.scrap * Config.scoreMod);
+        Config.currentScore += Mathf.FloorToInt(PlayerInventory.electronics * Config.scoreMod);
+        Config.currentScore += Mathf.FloorToInt(PlayerInventory.tech * Config.scoreMod);
         Config.UpdateHighScore();
 
         yield return new WaitForSeconds(0.0005f);

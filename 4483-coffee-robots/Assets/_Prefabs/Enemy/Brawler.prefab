@@ -176,6 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2188492944940970599}
   canvas: {fileID: 2188492946756188305}
+  model: {fileID: 8003939480242237478}
   attackAudio: {fileID: 8300000, guid: 09b73874299cf33448b58dab1da34888, type: 3}
   deathAudio: {fileID: 8300000, guid: 1055812c996188e47b9aa9499a9d0fbf, type: 3}
   targetingPlayer: 0

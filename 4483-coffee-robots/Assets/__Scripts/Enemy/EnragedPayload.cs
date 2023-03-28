@@ -8,6 +8,7 @@ public class EnragedPayload : MonoBehaviour, IEnemy
     [Header("GameObjects")]
     public Image healthBar;
     public GameObject canvas;
+    public GameObject model;
     [SerializeField] private ParticleSystem explosionParticle;
 
     [Header("Audio")]
@@ -90,11 +91,16 @@ public class EnragedPayload : MonoBehaviour, IEnemy
                 PlayerInventory.tech += Config.payloadTechReward;
             }
             
-
             enemySource.clip = deathAudio;
-            enemySource.Play();
+            if (!enemySource.isPlaying)
+            {
+                enemySource.Play();
+            }
 
-            Destroy(gameObject);
+            canvas.SetActive(false);
+            model.SetActive(false);
+            gameObject.tag = "InvisibleEnemy";
+            Destroy(gameObject, enemySource.clip.length);
         }
     }
 
@@ -120,7 +126,10 @@ public class EnragedPayload : MonoBehaviour, IEnemy
         }
 
         plant.DamageBuilding(Config.enragedPayloadDamage * Config.difficultyDamageMod, "payload");
+        
+        canvas.SetActive(false);
+        model.SetActive(false);
+        gameObject.tag = "InvisibleEnemy";
         Destroy(gameObject, enemySource.clip.length);
-        //Destroy(gameObject);
     }
 }

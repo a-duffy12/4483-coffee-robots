@@ -10,11 +10,14 @@ public class Config
     public static float difficultyDamageMod = 1f;
     public static float difficultyMovementMod = 1f;
     public static float fieldOfView = 90f;
+    public static bool showFps = false;
+    public static bool showEnemyCount = false;
 
     [Header("Saved Stats")]
     public static int currentScore = 0;
     public static int highScore = 0;
     public static int winCount = 0;
+    public static float scoreMod = 1f;
 
     [Header("Game Progress")]
     public static int gameStage = 0;
@@ -337,6 +340,8 @@ public class Config
             Config.difficultyDamageMod = savedData.difficultyDamageMod;
             Config.difficultyMovementMod = savedData.difficultyMovementMod;
             Config.fieldOfView = savedData.fieldOfView;
+            Config.showFps = savedData.showFps;
+            Config.showEnemyCount = savedData.showEnemyCount;
             Config.highScore = savedData.highScore;
             Config.winCount = savedData.winCount;
         }

@@ -86,6 +86,5 @@ public class Cluster : MonoBehaviour
         }
     
         Destroy(gameObject, source.clip.length);
-        //Destroy(gameObject);
     }
 }

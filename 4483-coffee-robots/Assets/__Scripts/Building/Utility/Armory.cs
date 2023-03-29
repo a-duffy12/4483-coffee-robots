@@ -178,6 +178,7 @@ public class Armory : MonoBehaviour, IBuilding
             inventory.shotgun.currentAmmo = Config.maxAmmoShot;
         }
         PlayerInventory.tech -= cost;
+        PlayAudio(succeedAudio);
     }
 
     void OpenMenu()
@@ -363,6 +364,7 @@ public class Armory : MonoBehaviour, IBuilding
         }
 
         SetButtonTextValues();
+        PlayAudio(succeedAudio);
     }
 
     public void CloseMenu()
@@ -370,6 +372,7 @@ public class Armory : MonoBehaviour, IBuilding
         PlayerSystem.sleepProtected = false;
         input.SwitchCurrentActionMap("Player");
         menu.SetActive(false);
+        PlayAudio(failAudio);
     }
 
     public void ARPanel()

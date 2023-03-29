@@ -26,7 +26,7 @@ public class Machete : MonoBehaviour
     {
         audioSource.playOnAwake = false;
         audioSource.spatialBlend = 1f;
-        audioSource.volume = 0.5f;
+        audioSource.volume = 1f;
         audioSource.priority = 150;
     }
 

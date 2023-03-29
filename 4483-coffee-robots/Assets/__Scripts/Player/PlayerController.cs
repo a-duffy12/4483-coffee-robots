@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         movementSource.playOnAwake = false;
         movementSource.spatialBlend = 1f;
-        movementSource.volume = 0.7f;
+        movementSource.volume = 1f;
         movementSource.priority = 128;
     }
 

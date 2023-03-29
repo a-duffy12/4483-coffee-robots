@@ -152,8 +152,9 @@ public class MachineShop : MonoBehaviour, IBuilding
 
     void RepairPlayer(int cost)
     {
-        system.DamagePlayer(Config.playerMaxHp * -1, "machine_shop");
+        system.DamagePlayer(Config.playerMaxHp * -10, "machine_shop");
         PlayerInventory.electronics -= cost;
+        PlayAudio(succeedAudio);
     }
 
     void OpenMenu()
@@ -282,6 +283,7 @@ public class MachineShop : MonoBehaviour, IBuilding
         }
 
         SetButtonTextValues();
+        PlayAudio(succeedAudio);
     }
 
     public void CloseMenu()
@@ -289,6 +291,7 @@ public class MachineShop : MonoBehaviour, IBuilding
         PlayerSystem.sleepProtected = false;
         input.SwitchCurrentActionMap("Player");
         menu.SetActive(false);
+        PlayAudio(failAudio);
     }
 
     public void ChasisPanel()
@@ -350,7 +353,7 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.playerMaxHp = 120;
             SetButtonTextValues();
             PlayAudio(succeedAudio);
-            system.DamagePlayer(Config.playerMaxHp * -1, "machine_shop");
+            system.DamagePlayer(Config.playerMaxHp * -10, "machine_shop");
         }
         else if (!Config.ch1a)
         {
@@ -383,7 +386,7 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.playerMaxHp = 145;
             SetButtonTextValues();
             PlayAudio(succeedAudio);
-            system.DamagePlayer(Config.playerMaxHp * -1, "machine_shop");
+            system.DamagePlayer(Config.playerMaxHp * -10, "machine_shop");
         }
         else if (!Config.ch2a)
         {
@@ -416,7 +419,7 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.playerMaxHp = 170;
             SetButtonTextValues();
             PlayAudio(succeedAudio);
-            system.DamagePlayer(Config.playerMaxHp * -1, "machine_shop");
+            system.DamagePlayer(Config.playerMaxHp * -10, "machine_shop");
         }
         else if (!Config.ch3a)
         {
@@ -465,7 +468,7 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.playerMaxHp = 200;
             SetButtonTextValues();
             PlayAudio(succeedAudio);
-            system.DamagePlayer(Config.playerMaxHp * -1, "machine_shop");
+            system.DamagePlayer(Config.playerMaxHp * -10, "machine_shop");
         }
         else if (!Config.ch4a)
         {

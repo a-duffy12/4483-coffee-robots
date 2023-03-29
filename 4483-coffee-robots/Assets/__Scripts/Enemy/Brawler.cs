@@ -109,18 +109,18 @@ public class Brawler : MonoBehaviour, IEnemy
                 }
 
                 rewarded = true;
-            }
-            
-            enemySource.clip = deathAudio;
-            if (!enemySource.isPlaying)
-            {
-                enemySource.Play();
-            }
 
-            canvas.SetActive(false);
-            model.SetActive(false);
-            gameObject.tag = "InvisibleEnemy";
-            Destroy(gameObject, enemySource.clip.length);
+                enemySource.clip = deathAudio;
+                if (!enemySource.isPlaying)
+                {
+                    enemySource.Play();
+                }
+
+                canvas.SetActive(false);
+                model.SetActive(false);
+                gameObject.tag = "InvisibleEnemy";
+                Destroy(gameObject, enemySource.clip.length);
+            }
         }
     }
 

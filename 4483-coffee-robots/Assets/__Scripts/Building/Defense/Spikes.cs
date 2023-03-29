@@ -20,7 +20,7 @@ public class Spikes : MonoBehaviour
     {
         source.playOnAwake = false;
         source.spatialBlend = 1f;
-        source.volume = 0.7f;
+        source.volume = 1f;
         source.priority = 150;
         
         buildStatus = BuildStatus.Built;

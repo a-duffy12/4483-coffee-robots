@@ -5,7 +5,7 @@ using UnityEngine;
 public class Missile : MonoBehaviour
 {
     float riseTime = 1f;
-    float flyTime = 10f;
+    float flyTime = 7f;
     
     [Header("GameObjects")]
     [HideInInspector] public GameObject target;
@@ -45,7 +45,7 @@ public class Missile : MonoBehaviour
         }
         else if (Time.time < launchTime + flyTime && Time.time >= launchTime + riseTime)
         {
-            if (target == null)
+            if (target.tag != "Enemy" || target == null)
             {
                 Destroy(gameObject);
             }
@@ -53,7 +53,7 @@ public class Missile : MonoBehaviour
             transform.LookAt(target.transform.position + new Vector3(0, 1, 0));
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.transform.position.x, target.transform.position.y + 1, target.transform.position.z), Config.rocketMissileSpeed * Time.deltaTime);
         }
-        else
+        else if (!impacted)
         {
             Impact(false);
         }
@@ -65,8 +65,7 @@ public class Missile : MonoBehaviour
             {
                 Impact(true);
             }
-        }
-        
+        }  
     }
 
     void OnCollisionEnter(Collision collision)

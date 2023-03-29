@@ -308,6 +308,7 @@ public class Fabricator : MonoBehaviour, IBuilding
 
         UpdateStoreText();
         SetButtonTextValues();
+        PlayAudio(succeedAudio);
     }
 
     public void CloseMenu()
@@ -315,6 +316,7 @@ public class Fabricator : MonoBehaviour, IBuilding
         PlayerSystem.sleepProtected = false;
         input.SwitchCurrentActionMap("Player");
         menu.SetActive(false);
+        PlayAudio(failAudio);
     }
 
     public void TurretPanel()

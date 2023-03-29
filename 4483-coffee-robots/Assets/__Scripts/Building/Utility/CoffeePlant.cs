@@ -363,7 +363,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         input.SwitchCurrentActionMap("Menu");
         promptText.text = "The coffee has been lost...";
         PlayerSystem system = player.GetComponent<PlayerSystem>();
-        system.DamagePlayer(Config.playerMaxHp * 2, "coffee_plant");
+        system.DamagePlayer(Config.playerMaxHp * 10, "coffee_plant");
     }
 
     void PlayAudio(AudioClip clip)

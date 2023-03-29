@@ -30,7 +30,7 @@ public class Shotgun : MonoBehaviour
     {
         audioSource.playOnAwake = false;
         audioSource.spatialBlend = 1f;
-        audioSource.volume = 0.5f;
+        audioSource.volume = 0.65f;
         audioSource.priority = 150;
 
         currentAmmo = Config.maxAmmoShot;

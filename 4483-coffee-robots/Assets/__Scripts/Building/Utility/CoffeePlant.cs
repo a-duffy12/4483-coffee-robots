@@ -34,6 +34,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
     [HideInInspector] public Fabricator fabricator;
     [HideInInspector] public CoffeeMachine coffeeMachine;
     private bool startStage;
+    private bool activeStageDone;
 
     void Awake()
     {
@@ -99,6 +100,12 @@ public class CoffeePlant : MonoBehaviour, IBuilding
                 {
                     Stage2Start();
                 }
+
+                if (!activeStageDone)
+                {
+                    activeStageDone = true;
+                    Config.currentScore += Mathf.FloorToInt(250 * Config.scoreMod);
+                }
             }
             else if (Config.gameStage == 2 && Time.time > Config.stage2Time + Config.stage2Duration)
             {
@@ -107,6 +114,12 @@ public class CoffeePlant : MonoBehaviour, IBuilding
                 if (startStage)
                 {
                     Stage3Start();
+                }
+
+                if (!activeStageDone)
+                {
+                    activeStageDone = true;
+                    Config.currentScore += Mathf.FloorToInt(1000 * Config.scoreMod);
                 }
             }
             else if (Config.gameStage == 3 && Time.time > Config.stage3Time + Config.stage3Duration && !Config.coffeeMachineBuilt)
@@ -121,6 +134,12 @@ public class CoffeePlant : MonoBehaviour, IBuilding
                 {
                     Stage4Start();
                 }
+
+                if (!activeStageDone)
+                {
+                    activeStageDone = true;
+                    Config.currentScore += Mathf.FloorToInt(3000 * Config.scoreMod);
+                }
             }
             else if (Config.gameStage == 4 && Time.time > Config.stage4Time + Config.stage4Duration && Config.coffeeMachineBuilt)
             {
@@ -128,8 +147,13 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
                 if (startStage)
                 {
-                    Config.currentScore += Mathf.FloorToInt(7500 * Config.scoreMod);
                     StartCoroutine(WinGame());
+                }
+
+                if (!activeStageDone)
+                {
+                    activeStageDone = true;
+                    Config.currentScore += Mathf.FloorToInt(7500 * Config.scoreMod);
                 }
             }
             else
@@ -177,6 +201,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
             Config.scoreMod = 0.25f;
         }
 
+        activeStageDone = false;
         PlayAudio(succeedAudio);
     }
 
@@ -189,7 +214,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage4Prefab.SetActive(false);
         buildingCanvas.transform.position += new Vector3(0, 0.5f, 0);
 
-        Config.currentScore += Mathf.FloorToInt(250 * Config.scoreMod);
+        activeStageDone = false;
         PlayAudio(succeedAudio);
     }
 
@@ -204,7 +229,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
         coffeeMachine.Unlock();
         
-        Config.currentScore += Mathf.FloorToInt(1000 * Config.scoreMod);
+        activeStageDone = false;
         PlayAudio(succeedAudio);
     }
 
@@ -217,7 +242,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         stage4Prefab.SetActive(true);
         buildingCanvas.transform.position += new Vector3(0, 1.25f, 0);
 
-        Config.currentScore += Mathf.FloorToInt(3000 * Config.scoreMod);
+        activeStageDone = false;
         PlayAudio(succeedAudio);
     }
 

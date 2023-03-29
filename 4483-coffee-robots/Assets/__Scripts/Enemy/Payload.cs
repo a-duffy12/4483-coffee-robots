@@ -27,6 +27,7 @@ public class Payload : MonoBehaviour, IEnemy
     CoffeePlant plant;
 
     private bool delivered = false;
+    private bool rewarded = false;
 
     void Awake()
     {
@@ -53,19 +54,26 @@ public class Payload : MonoBehaviour, IEnemy
 
     void Update()
     {
-        float distanceToCoffeePlant = Vector3.Distance(coffeePlant.transform.position, transform.position);
-        transform.LookAt(coffeePlant.transform.position);
-
-        if (!delivered && distanceToCoffeePlant <= Config.payloadRange)
+        if (currentHp > 0)
         {
-            DeliverPayload();
+            float distanceToCoffeePlant = Vector3.Distance(coffeePlant.transform.position, transform.position);
+            transform.LookAt(coffeePlant.transform.position);
+
+            if (!delivered && distanceToCoffeePlant <= Config.payloadRange)
+            {
+                DeliverPayload();
+            }
+            else
+            {
+                Move(coffeePlant.transform);
+            }
+
+            canvas.transform.rotation = Quaternion.Euler(45 - transform.rotation.x, 0 - transform.rotation.y, 0 - transform.rotation.z);
         }
         else
         {
-            Move(coffeePlant.transform);
+            rb.detectCollisions = false;
         }
-
-        canvas.transform.rotation = Quaternion.Euler(45 - transform.rotation.x, 0 - transform.rotation.y, 0 - transform.rotation.z);
     }
 
     public void DamageEnemy(float damage, string source = "")
@@ -77,21 +85,24 @@ public class Payload : MonoBehaviour, IEnemy
 
         if (currentHp <= 0)
         {
+            if (!rewarded)
+            {
+                if (source == "assault_rifle" || source == "machete" || source == "shotgun") // player killed enemy
+                {
+                    PlayerInventory.scrap += (int)(Config.payloadScrapReward * Config.activeKillMod);
+                    PlayerInventory.electronics += (int)(Config.payloadElectronicsReward  * Config.activeKillMod);
+                    PlayerInventory.tech += (int)(Config.payloadTechReward  * Config.activeKillMod);
+                }
+                else
+                {
+                    PlayerInventory.scrap += Config.payloadScrapReward;
+                    PlayerInventory.electronics += Config.payloadElectronicsReward;
+                    PlayerInventory.tech += Config.payloadTechReward;
+                }
 
-            if (source == "assault_rifle" || source == "machete" || source == "shotgun") // player killed enemy
-            {
-                PlayerInventory.scrap += (int)(Config.payloadScrapReward * Config.activeKillMod);
-                PlayerInventory.electronics += (int)(Config.payloadElectronicsReward  * Config.activeKillMod);
-                PlayerInventory.tech += (int)(Config.payloadTechReward  * Config.activeKillMod);
-            }
-            else
-            {
-                PlayerInventory.scrap += Config.payloadScrapReward;
-                PlayerInventory.electronics += Config.payloadElectronicsReward;
-                PlayerInventory.tech += Config.payloadTechReward;
+                rewarded = true;
             }
             
-
             enemySource.clip = deathAudio;
             if (!enemySource.isPlaying)
             {

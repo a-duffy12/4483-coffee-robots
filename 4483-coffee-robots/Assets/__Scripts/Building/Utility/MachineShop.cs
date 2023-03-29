@@ -350,6 +350,7 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.playerMaxHp = 120;
             SetButtonTextValues();
             PlayAudio(succeedAudio);
+            system.DamagePlayer(Config.playerMaxHp * -1, "machine_shop");
         }
         else if (!Config.ch1a)
         {
@@ -382,6 +383,7 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.playerMaxHp = 145;
             SetButtonTextValues();
             PlayAudio(succeedAudio);
+            system.DamagePlayer(Config.playerMaxHp * -1, "machine_shop");
         }
         else if (!Config.ch2a)
         {
@@ -414,6 +416,7 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.playerMaxHp = 170;
             SetButtonTextValues();
             PlayAudio(succeedAudio);
+            system.DamagePlayer(Config.playerMaxHp * -1, "machine_shop");
         }
         else if (!Config.ch3a)
         {
@@ -462,6 +465,7 @@ public class MachineShop : MonoBehaviour, IBuilding
             Config.playerMaxHp = 200;
             SetButtonTextValues();
             PlayAudio(succeedAudio);
+            system.DamagePlayer(Config.playerMaxHp * -1, "machine_shop");
         }
         else if (!Config.ch4a)
         {

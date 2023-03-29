@@ -186,7 +186,7 @@ public class Config
     
     [Header("Machine Shop")]
     public static int machineShopScrapCost = 10;
-    public static int repairElectronicsCost = 50;
+    public static int repairElectronicsCost = 25;
 
     [Header("Armory")]
     public static int armoryScrapCost = 25;
@@ -258,7 +258,7 @@ public class Config
     public static float sentinelMovementSpeed = 4.5f;
     public static int sentinelScrapReward = 25;
     public static int sentinelElectronicsReward = 15;
-    public static int sentinelTechReward = 15;
+    public static int sentinelTechReward = 20;
 
     [Header("Payload")]
     public static float payloadMaxHp = 1000;
@@ -268,8 +268,8 @@ public class Config
     public static float enragedPayloadDamage = 750;
     public static float enragedPayloadMovementSpeed = 1.5f;
     public static int payloadScrapReward = 100;
-    public static int payloadElectronicsReward = 50;
-    public static int payloadTechReward = 75;
+    public static int payloadElectronicsReward = 65;
+    public static int payloadTechReward = 135;
 
     [Header("Assassin")]
     public static float assassinMaxHp = 150;
@@ -283,8 +283,8 @@ public class Config
     public static float enragedAssassinDamage = 38;
     public static float enragedAssassinMovementSpeed = 9f;
     public static int assassinScrapReward = 75;
-    public static int assassinElectronicsReward = 35;
-    public static int assassinTechReward = 50;
+    public static int assassinElectronicsReward = 45;
+    public static int assassinTechReward = 60;
 
     [Header("Whale")]
     public static float whaleMaxHp = 2500;
@@ -304,7 +304,7 @@ public class Config
     public static float brawlerSlowDuration = 4f;
     public static int brawlerScrapReward = 100;
     public static int brawlerElectronicsReward = 50;
-    public static int brawlerTechReward = 50;
+    public static int brawlerTechReward = 75;
 
     [Header("Phantom")]
     public static float phantomMaxHp = 70;
@@ -314,7 +314,7 @@ public class Config
     public static float phantomMovementSpeed = 5.5f;
     public static int phantomScrapReward = 35;
     public static int phantomElectronicsReward = 35;
-    public static int phantomTechReward = 20;
+    public static int phantomTechReward = 35;
 
     [Header("Meteor")]
     public static float meteorMaxHp = 750;
@@ -325,9 +325,9 @@ public class Config
     public static float meteorRange = 35;
     public static float meteorRangeMG = 10;
     public static float meteorMovementSpeed = 3f;
-    public static int meteorScrapReward = 75;
-    public static int meteorElectronicsReward = 75;
-    public static int meteorTechReward = 75;
+    public static int meteorScrapReward = 125;
+    public static int meteorElectronicsReward = 125;
+    public static int meteorTechReward = 125;
     public static float meteorProjectileSpeed = 1500;
 
     public static void GetSaveData()

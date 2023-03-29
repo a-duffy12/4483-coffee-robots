@@ -28,6 +28,7 @@ public class Brawler : MonoBehaviour, IEnemy
 
     private float lastAttackTime;
     private float lastStatusTime;
+    private bool rewarded = false;
 
     void Awake()
     {
@@ -53,26 +54,33 @@ public class Brawler : MonoBehaviour, IEnemy
 
     void Update()
     {
-        float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-        transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
-
-        if (targetingPlayer)
+        if (currentHp > 0)
         {
-            if (distanceToPlayer > Config.brawlerRange)
+            float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
+            transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
+
+            if (targetingPlayer)
             {
-                Move(player.transform);
+                if (distanceToPlayer > Config.brawlerRange)
+                {
+                    Move(player.transform);
+                }
+                else
+                {
+                    Attack();
+                }
             }
-            else
+
+            canvas.transform.rotation = Quaternion.Euler(45 - transform.rotation.x, 0 - transform.rotation.y, 0 - transform.rotation.z);
+            
+            if (Time.time > lastStatusTime + 2f)
             {
-                Attack();
+                CheckBrawlerStatuses(distanceToPlayer);
             }
         }
-
-        canvas.transform.rotation = Quaternion.Euler(45 - transform.rotation.x, 0 - transform.rotation.y, 0 - transform.rotation.z);
-        
-        if (Time.time > lastStatusTime + 2f)
+        else
         {
-            CheckBrawlerStatuses(distanceToPlayer);
+            rb.detectCollisions = false;
         }
     }
 
@@ -85,18 +93,22 @@ public class Brawler : MonoBehaviour, IEnemy
 
         if (currentHp <= 0)
         {
+            if (!rewarded)
+            {
+                if (source == "assault_rifle" || source == "machete" || source == "shotgun") // player killed enemy
+                {
+                    PlayerInventory.scrap += (int)(Config.brawlerScrapReward * Config.activeKillMod);
+                    PlayerInventory.electronics += (int)(Config.brawlerElectronicsReward  * Config.activeKillMod);
+                    PlayerInventory.tech += (int)(Config.brawlerTechReward  * Config.activeKillMod);
+                }
+                else
+                {
+                    PlayerInventory.scrap += Config.brawlerScrapReward;
+                    PlayerInventory.electronics += Config.brawlerElectronicsReward;
+                    PlayerInventory.tech += Config.brawlerTechReward;
+                }
 
-            if (source == "assault_rifle" || source == "machete" || source == "shotgun") // player killed enemy
-            {
-                PlayerInventory.scrap += (int)(Config.brawlerScrapReward * Config.activeKillMod);
-                PlayerInventory.electronics += (int)(Config.brawlerElectronicsReward  * Config.activeKillMod);
-                PlayerInventory.tech += (int)(Config.brawlerTechReward  * Config.activeKillMod);
-            }
-            else
-            {
-                PlayerInventory.scrap += Config.brawlerScrapReward;
-                PlayerInventory.electronics += Config.brawlerElectronicsReward;
-                PlayerInventory.tech += Config.brawlerTechReward;
+                rewarded = true;
             }
             
             enemySource.clip = deathAudio;
@@ -107,7 +119,8 @@ public class Brawler : MonoBehaviour, IEnemy
 
             canvas.SetActive(false);
             model.SetActive(false);
-            Destroy(gameObject);
+            gameObject.tag = "InvisibleEnemy";
+            Destroy(gameObject, enemySource.clip.length);
         }
     }
 

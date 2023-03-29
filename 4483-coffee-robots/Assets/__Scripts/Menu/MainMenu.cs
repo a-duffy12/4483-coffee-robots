@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System;
 
 public class MainMenu : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private TMP_Text currentScoreText;
     [SerializeField] private TMP_Text highScoreText;
     [SerializeField] private TMP_Text winsText;
+    [SerializeField] private TMP_Text splashText;
 
     [Header("Audio")]
     public AudioClip succeedAudio;
@@ -27,6 +29,25 @@ public class MainMenu : MonoBehaviour
 
     PlayerInput input;
     private int demoCount;
+    private List<string> splashTexts = new List<string> {
+        "Press Q to reduce incoming damage",
+        "Check out BOOM!",
+        "CS4483 >>> sleep",
+        "The Machete sucks no cap",
+        "#*@! Brawlers",
+        "Click 'Normal' 5 times for Demo mode!",
+        "Players get 2x resources from kills",
+        "Players deal 4x damage to Whales",
+        "Purple healthbar = ENRAGED",
+        "ENRAGED = 1.5x damage and speed",
+        "3.14159265358979323846264338327950288419716939937510",
+        "Sleep Protection is a must",
+        "'Alt Damage I' one-shots Sentinels!",
+        "Quick swap to deal more DPS",
+        "Phantoms are invisible to Defenses",
+        "Spikes are underrated",
+        "Hard gives a higher score!"
+    };
  
     void Awake()
     {
@@ -65,6 +86,8 @@ public class MainMenu : MonoBehaviour
         {
             enemyCountText.text = "Disabled";
         }
+
+        UpdateSplashText();
     }
 
     public void Easy()
@@ -165,6 +188,8 @@ public class MainMenu : MonoBehaviour
             SaveLoad.SaveData();
             pauseMenu.SetActive(false);
             titleMenu.SetActive(true);
+
+            UpdateSplashText();
         }
     }
 
@@ -187,5 +212,10 @@ public class MainMenu : MonoBehaviour
     {
         source.clip = clip;
         source.Play();
+    }
+
+    void UpdateSplashText()
+    {
+        splashText.text = splashTexts[UnityEngine.Random.Range(0, splashTexts.Count)];
     }
 }

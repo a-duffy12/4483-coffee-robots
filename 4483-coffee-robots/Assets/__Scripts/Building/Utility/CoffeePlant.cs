@@ -22,6 +22,12 @@ public class CoffeePlant : MonoBehaviour, IBuilding
     [SerializeField] private Image progressBar;
     [SerializeField] private GameObject progressBarObj;
 
+    [Header("Tutorials")]
+    [SerializeField] private GameObject stage1Intro;
+    [SerializeField] private GameObject stage2Intro;
+    [SerializeField] private GameObject stage3Intro;
+    [SerializeField] private GameObject stage4Intro;
+
     [Header("Audio")]
     public AudioClip succeedAudio;
     public AudioClip failAudio;
@@ -50,6 +56,11 @@ public class CoffeePlant : MonoBehaviour, IBuilding
     void Start()
     {
         currentHp = Config.coffeePlantMaxHp;
+
+        stage1Intro.SetActive(false);
+        stage2Intro.SetActive(false);
+        stage3Intro.SetActive(false);
+        stage4Intro.SetActive(false);
 
         stage2Prefab.SetActive(false);
         stage3Prefab.SetActive(false);
@@ -89,7 +100,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
                 if (startStage)
                 {
-                    Stage1Start();
+                    Stage1Intro();
                 }
             }
             else if (Config.gameStage == 1 && Time.time > Config.stage1Time + Config.stage1Duration)
@@ -98,7 +109,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
                 if (startStage)
                 {
-                    Stage2Start();
+                    Stage2Intro();
                 }
 
                 if (!activeStageDone)
@@ -113,7 +124,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
                 if (startStage)
                 {
-                    Stage3Start();
+                    Stage3Intro();
                 }
 
                 if (!activeStageDone)
@@ -132,7 +143,7 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
                 if (startStage)
                 {
-                    Stage4Start();
+                    Stage4Intro();
                 }
 
                 if (!activeStageDone)
@@ -172,10 +183,36 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         startStage = false;
     }
 
-    void Stage1Start()
+    void Stage1Intro()
+    {
+        stage1Intro.SetActive(true);
+        input.SwitchCurrentActionMap("Menu");
+    }
+
+    void Stage2Intro()
+    {
+        stage2Intro.SetActive(true);
+        input.SwitchCurrentActionMap("Menu");
+    }
+
+    void Stage3Intro()
+    {
+        stage3Intro.SetActive(true);
+        input.SwitchCurrentActionMap("Menu");
+    }
+
+    void Stage4Intro()
+    {
+        stage4Intro.SetActive(true);
+        input.SwitchCurrentActionMap("Menu");
+    }
+    
+    public void Stage1Start()
     {
         Config.gameStage = 1;
         Config.stage1Time = Time.time;
+        input.SwitchCurrentActionMap("Player");
+        stage1Intro.SetActive(false);
         stage2Prefab.SetActive(false);
         stage3Prefab.SetActive(false);
         stage4Prefab.SetActive(false);
@@ -205,10 +242,12 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         PlayAudio(succeedAudio);
     }
 
-    void Stage2Start()
+    public void Stage2Start()
     {
         Config.gameStage = 2;
         Config.stage2Time = Time.time;
+        input.SwitchCurrentActionMap("Player");
+        stage2Intro.SetActive(false);
         stage2Prefab.SetActive(true);
         stage3Prefab.SetActive(false);
         stage4Prefab.SetActive(false);
@@ -218,10 +257,12 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         PlayAudio(succeedAudio);
     }
 
-    void Stage3Start()
+    public void Stage3Start()
     {
         Config.gameStage = 3;
         Config.stage3Time = Time.time;
+        input.SwitchCurrentActionMap("Player");
+        stage3Intro.SetActive(false);
         stage2Prefab.SetActive(false);
         stage3Prefab.SetActive(true);
         stage4Prefab.SetActive(false);
@@ -233,10 +274,12 @@ public class CoffeePlant : MonoBehaviour, IBuilding
         PlayAudio(succeedAudio);
     }
 
-    void Stage4Start()
+    public void Stage4Start()
     {
         Config.gameStage = 4;
         Config.stage4Time = Time.time;
+        input.SwitchCurrentActionMap("Player");
+        stage4Intro.SetActive(false);
         stage2Prefab.SetActive(false);
         stage3Prefab.SetActive(false);
         stage4Prefab.SetActive(true);

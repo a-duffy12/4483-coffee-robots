@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private TMP_Text difficultyText;
     [SerializeField] private TMP_Text fpsText;
     [SerializeField] private TMP_Text enemyCountText;
+    [SerializeField] private TMP_Text tutorialsText;
     [SerializeField] private TMP_Text currentScoreText;
     [SerializeField] private TMP_Text highScoreText;
     [SerializeField] private TMP_Text winsText;
@@ -85,6 +86,15 @@ public class MainMenu : MonoBehaviour
         else
         {
             enemyCountText.text = "Disabled";
+        }
+
+        if (Config.showTutorials)
+        {
+            tutorialsText.text = "Enabled";
+        }
+        else
+        {
+            tutorialsText.text = "Disabled";
         }
 
         UpdateSplashText();
@@ -161,6 +171,22 @@ public class MainMenu : MonoBehaviour
             PlayAudio(succeedAudio);
             Config.showEnemyCount = true;
             enemyCountText.text = "Enabled";
+        }
+    }
+
+    public void Tutorials()
+    {
+        if (Config.showTutorials)
+        {
+            PlayAudio(failAudio);
+            Config.showTutorials = false;
+            tutorialsText.text = "Disabled";
+        }
+        else
+        {
+            PlayAudio(succeedAudio);
+            Config.showTutorials = true;
+            tutorialsText.text = "Enabled";
         }
     }
 

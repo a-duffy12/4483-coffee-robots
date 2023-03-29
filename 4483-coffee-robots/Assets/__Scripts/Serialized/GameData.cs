@@ -12,6 +12,7 @@ public class GameData
     public float fieldOfView;
     public bool showFps;
     public bool showEnemyCount;
+    public bool showTutorials;
     public int highScore;
     public int winCount;
 
@@ -23,6 +24,7 @@ public class GameData
         fieldOfView = Config.fieldOfView;
         showFps = Config.showFps;
         showEnemyCount = Config.showEnemyCount;
+        showTutorials = Config.showTutorials;
         highScore = Config.highScore;
         winCount = Config.winCount;
     }

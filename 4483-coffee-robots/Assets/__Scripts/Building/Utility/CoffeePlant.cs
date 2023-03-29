@@ -100,7 +100,14 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
                 if (startStage)
                 {
-                    Stage1Intro();
+                    if (Config.showTutorials)
+                    {
+                        Stage1Intro();
+                    }
+                    else
+                    {
+                        Stage1Start();
+                    }
                 }
             }
             else if (Config.gameStage == 1 && Time.time > Config.stage1Time + Config.stage1Duration)
@@ -109,7 +116,14 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
                 if (startStage)
                 {
-                    Stage2Intro();
+                    if (Config.showTutorials)
+                    {
+                        Stage2Intro();
+                    }
+                    else
+                    {
+                        Stage2Start();
+                    }
                 }
 
                 if (!activeStageDone)
@@ -124,7 +138,14 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
                 if (startStage)
                 {
-                    Stage3Intro();
+                    if (Config.showTutorials)
+                    {
+                        Stage3Intro();
+                    }
+                    else
+                    {
+                        Stage3Start();
+                    }
                 }
 
                 if (!activeStageDone)
@@ -143,7 +164,14 @@ public class CoffeePlant : MonoBehaviour, IBuilding
 
                 if (startStage)
                 {
-                    Stage4Intro();
+                    if (Config.showTutorials)
+                    {
+                        Stage4Intro();
+                    }
+                    else
+                    {
+                        Stage4Start();
+                    }
                 }
 
                 if (!activeStageDone)

@@ -12,6 +12,7 @@ public class Config
     public static float fieldOfView = 90f;
     public static bool showFps = false;
     public static bool showEnemyCount = false;
+    public static bool showTutorials = true;
 
     [Header("Saved Stats")]
     public static int currentScore = 0;
@@ -295,7 +296,7 @@ public class Config
     public static int whaleTechReward = 100;
 
     [Header("Brawler")]
-    public static float brawlerMaxHp = 550;
+    public static float brawlerMaxHp = 500;
     public static float brawlerAttackRate = 0.5f;
     public static float brawlerDamage = 40;
     public static float brawlerRange = 1.5f;
@@ -342,6 +343,7 @@ public class Config
             Config.fieldOfView = savedData.fieldOfView;
             Config.showFps = savedData.showFps;
             Config.showEnemyCount = savedData.showEnemyCount;
+            Config.showTutorials = savedData.showTutorials;
             Config.highScore = savedData.highScore;
             Config.winCount = savedData.winCount;
         }
